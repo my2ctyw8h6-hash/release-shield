@@ -191,15 +191,15 @@ export function LeakChecker() {
           {!unlocked && (
             <form className="lead" onSubmit={submitLead}>
               <div>
-                <strong>{hidden > 0 ? `Unlock ${hidden} more finding${hidden === 1 ? "" : "s"}` : "Get this report and free release monitoring"}</strong>
+                <strong>{hidden > 0 ? `Unlock ${hidden} more finding${hidden === 1 ? "" : "s"}` : "Get release-safety tips for your team"}</strong>
                 <p className="muted small">
-                  We&apos;ll email the full report and alert you if a future version of {report.target} ships a leak.
+                  Leave your work email to see every finding. We&apos;ll occasionally follow up with tips on keeping secrets out of your releases.
                 </p>
               </div>
               <div className="lead-row">
                 <input className="input" type="email" required placeholder="you@company.com" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Work email" />
                 <button className="btn btn-primary" disabled={leadState === "sending"}>
-                  {leadState === "sending" ? "…" : hidden > 0 ? "Unlock report" : "Send report"}
+                  {leadState === "sending" ? "…" : hidden > 0 ? "Unlock report" : "Subscribe"}
                 </button>
               </div>
               {leadState === "error" && <div className="alert small">Couldn&apos;t save that. Please check the email and try again.</div>}

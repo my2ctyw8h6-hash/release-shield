@@ -54,6 +54,11 @@ export function PricingCards({ plans }: { plans: Plan[] }) {
               {p.features.map((f) => (
                 <li key={f}>{f}</li>
               ))}
+              {p.roadmap?.map((f) => (
+                <li key={f} className="soon">
+                  {f} <span className="soon-tag">Coming soon</span>
+                </li>
+              ))}
             </ul>
             <button className={`btn ${p.highlighted ? "btn-primary" : "btn-outline"}`} onClick={() => checkout(p.id)} disabled={loading !== null}>
               {loading === p.id ? <span className="spinner" aria-label="Loading" /> : `Start ${p.name}`}

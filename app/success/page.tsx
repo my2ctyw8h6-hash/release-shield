@@ -53,7 +53,7 @@ export default async function Success({ searchParams }: { searchParams: Promise<
             {license.message} If you were charged, reply to your Stripe receipt and we&apos;ll send your license token manually.
           </div>
         ) : (
-          <p className="muted">Thanks for subscribing! Your license token will arrive by email shortly.</p>
+          <p className="muted">Thanks for subscribing! Your license token appears on this page right after checkout. If you don&apos;t see it, reply to your Stripe receipt and we&apos;ll send it to you.</p>
         )}
 
         <ol className="success-steps">

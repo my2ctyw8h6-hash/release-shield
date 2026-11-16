@@ -16,7 +16,7 @@ const CATCHES = [
 const STEPS = [
   { n: "1", t: "Build", d: "Your pipeline runs npm pack, python -m build or docker build as usual." },
   { n: "2", t: "Unpack & inspect", d: "ReleaseShield opens the final artifact, exactly what users will download, and scans every file." },
-  { n: "3", t: "Block or ship", d: "Critical findings fail the job before publish. Clean builds go out with a signed scan record." },
+  { n: "3", t: "Block or ship", d: "Critical findings fail the job before publish. Clean builds ship, with a report in the job summary." },
 ];
 
 const FAQ = [
@@ -26,15 +26,15 @@ const FAQ = [
   },
   {
     q: "Do you store my code?",
-    a: "No. Artifacts are unpacked and scanned in memory and discarded. We keep only findings metadata (file path, rule, severity) for your history.",
+    a: "No. The free checker scans artifacts in memory and discards them. The CLI and GitHub Action run entirely on your own CI runner, so your code and scan results never reach our servers.",
   },
   {
     q: "Which registries are supported?",
-    a: "npm, PyPI (sdist & wheel), Docker/OCI images and GitHub Packages. Pro adds private registries like Artifactory and ECR.",
+    a: "npm tarballs, PyPI wheels and sdists, and Docker images (via docker save, so images pulled from any registry work). Pro can also fetch packages from private npm registries such as GitHub Packages and Artifactory.",
   },
   {
     q: "Can I cancel anytime?",
-    a: "Yes. Plans are month-to-month, billed through Stripe, and you can cancel any time from the customer portal.",
+    a: "Yes. Plans are month-to-month and billed through Stripe. Reply to any Stripe receipt to cancel and you won't be charged again.",
   },
 ];
 

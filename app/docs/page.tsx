@@ -12,11 +12,11 @@ const OPTIONS: [string, string, string][] = [
   ["--format <fmt>", "text | json | sarif | markdown", "Standard"],
   ["-o, --output <file>", "Write the report to a file", "Free"],
   ["--slack-webhook <url>", "Alert Slack on critical/high findings (or RELEASESHIELD_SLACK_WEBHOOK)", "Standard"],
-  ["--config <file>", "Policy file (default .releaseshield.json)", "Pro"],
-  ["--ignore <glob>", "Skip matching files (repeatable)", "Pro"],
-  ["--ignore-rule <id>", "Suppress a rule such as source-map (repeatable)", "Pro"],
-  ["--baseline <spec>", "Diff vs a previous release: auto | npm:<pkg>@<ver> | file", "Pro"],
-  ["--registry <url>", "Private npm registry (auth via NPM_TOKEN)", "Pro"],
+  ["--config <file>", "Policy file (default .releaseshield.json)", "Pro / Team"],
+  ["--ignore <glob>", "Skip matching files (repeatable)", "Pro / Team"],
+  ["--ignore-rule <id>", "Suppress a rule such as source-map (repeatable)", "Pro / Team"],
+  ["--baseline <spec>", "Diff vs a previous release: auto | npm:<pkg>@<ver> | file", "Pro / Team"],
+  ["--registry <url>", "Private npm registry (auth via NPM_TOKEN)", "Pro / Team"],
 ];
 
 export default function Docs() {
@@ -41,7 +41,8 @@ export default function Docs() {
         <h2>1. Get your license token</h2>
         <p className="muted">
           After checkout you land on a page that shows your token (<code>rs_…</code>). Add it to your CI secrets as{" "}
-          <code>RELEASESHIELD_TOKEN</code>. Without a token everything still runs, in free report-only mode.
+          <code>RELEASESHIELD_TOKEN</code>. Standard ($19/mo) covers up to 5 packages or repos; Pro / Team ($49/mo) is unlimited.
+          Without a token everything still runs, in free report-only mode.
         </p>
 
         <h2>2. GitHub Actions</h2>
@@ -110,7 +111,7 @@ RELEASESHIELD_TOKEN=$TOKEN npx releaseshield scan --fail-on high --format sarif 
         </table>
         <p className="muted small">Exit codes: 0 pass · 1 release blocked · 2 scan error.</p>
 
-        <h2>4. Policies (Pro)</h2>
+        <h2>4. Policies (Pro / Team)</h2>
         <pre className="code">
           <code>{`// .releaseshield.json
 {

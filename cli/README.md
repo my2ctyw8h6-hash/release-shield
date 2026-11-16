@@ -11,6 +11,6 @@ RELEASESHIELD_TOKEN=rs_… npx releaseshield scan --fail-on high --format sarif 
 ```
 
 Without `RELEASESHIELD_TOKEN` it runs in free, report-only mode (always exits 0 unless the scan errors).
-Standard unlocks `--fail-on` enforcement, json/sarif/markdown output and Slack alerts. Pro adds policies (`--ignore`, `--ignore-rule`, `.releaseshield.json`), `--baseline` release diffs and private registries.
+Standard ($19/mo, up to 5 packages/repos) unlocks `--fail-on` enforcement, json/sarif/markdown output and Slack alerts. Pro / Team ($49/mo, unlimited) adds policies (`--ignore`, `--ignore-rule`, `.releaseshield.json`), `--baseline` release diffs and private registries.
 
 Exit codes: `0` pass · `1` release blocked · `2` scan error. Run `releaseshield --help` for every option.

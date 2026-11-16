@@ -1,7 +1,7 @@
 import { Logo } from "@/components/Logo";
 import { LeakChecker } from "@/components/LeakChecker";
 import { PricingCards } from "@/components/PricingCards";
-import { PLANS } from "@/lib/plans";
+import { PLANS, toPublicPlan } from "@/lib/plans";
 import { ACTION_REF } from "@/lib/site";
 
 const CATCHES = [
@@ -114,7 +114,7 @@ export default function Home() {
           <div className="container">
             <h2>Simple pricing for teams that ship</h2>
             <p className="muted center">A single leaked source map can cost more than a decade of ReleaseShield.</p>
-            <PricingCards plans={[PLANS.standard, PLANS.pro]} />
+            <PricingCards plans={[PLANS.standard, PLANS.pro].map(toPublicPlan)} />
           </div>
         </section>
 

@@ -786,7 +786,7 @@ function renderText(input, color) {
       input.failed ? c("1;31", `\u2716 ReleaseShield: findings at or above "${input.failOn}". Release blocked.`) : c("1;32", `\u2713 ReleaseShield: no findings at or above "${input.failOn}". Safe to publish.`)
     );
   } else if (input.license.tier === "free") {
-    lines.push(c("33", "\u2139 Free mode: report only. Add RELEASESHIELD_TOKEN (Standard/Pro) to block releases in CI, plus SARIF/JSON output and Slack alerts."));
+    lines.push(c("33", "\u2139 Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $19/mo or Pro / Team $49/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts."));
   }
   return lines.join("\n") + "\n";
 }
@@ -959,7 +959,7 @@ async function run(opts) {
   const failOn = opts.failOn ?? config.failOn ?? "critical";
   const enforced = has(tier, "standard");
   if (format !== "text" && !has(tier, "standard")) {
-    log(`note: --format ${format} requires a Standard or Pro license; showing text output.`);
+    log(`note: --format ${format} requires a Standard or Pro / Team license; showing text output.`);
     format = "text";
   }
   let ignore = [...config.ignore ?? [], ...opts.ignore ?? []];
@@ -968,16 +968,16 @@ async function run(opts) {
   let registry = opts.registry ?? config.registry;
   let slack = opts.slackWebhook;
   if (!has(tier, "pro")) {
-    if (ignore.length || ignoreRules.length) log("note: custom ignore policies require Pro; scanning everything.");
-    if (baseline) log("note: release diffing (--baseline) requires Pro; skipped.");
-    if (registry) log("note: private registries require Pro; using the public npm registry.");
+    if (ignore.length || ignoreRules.length) log("note: custom ignore policies require Pro / Team; scanning everything.");
+    if (baseline) log("note: release diffing (--baseline) requires Pro / Team; skipped.");
+    if (registry) log("note: private registries require Pro / Team; using the public npm registry.");
     ignore = [];
     ignoreRules = [];
     baseline = void 0;
     registry = void 0;
   }
   if (slack && !has(tier, "standard")) {
-    log("note: Slack alerts require a Standard or Pro license; skipped.");
+    log("note: Slack alerts require a Standard or Pro / Team license; skipped.");
     slack = void 0;
   }
   const ws = new Workspace();
@@ -1041,15 +1041,15 @@ Targets (default: npm pack the current package, or dist/*.whl|*.tar.gz)
   docker:<image>[:tag]             A local Docker image (uses docker save)
 
 Options
-  --fail-on <level>     critical | high | medium | low | none   (default: critical)   [Standard]
-  --format <fmt>        text | json | sarif | markdown          (default: text)       [Standard]
+  --fail-on <level>     critical | high | medium | low | none (default: critical)   [Standard]
+  --format <fmt>        text | json | sarif | markdown (default: text)              [Standard]
   -o, --output <file>   Write the report to a file instead of stdout
-  --config <file>       Policy file (default: .releaseshield.json)
-  --ignore <glob>       Skip files matching glob (repeatable)                         [Pro]
-  --ignore-rule <id>    Suppress a rule, e.g. source-map (repeatable)                 [Pro]
-  --baseline <spec>     Diff against a previous release: auto | npm:<pkg>@<ver> | file [Pro]
-  --registry <url>      npm registry for npm: targets (auth: NPM_TOKEN)              [Pro]
-  --slack-webhook <url> Alert Slack on critical/high findings                          [Standard]
+  --config <file>       Policy file (default: .releaseshield.json)                  [Pro/Team]
+  --ignore <glob>       Skip files matching glob (repeatable)                       [Pro/Team]
+  --ignore-rule <id>    Suppress a rule, e.g. source-map (repeatable)               [Pro/Team]
+  --baseline <spec>     Diff vs previous release: auto | npm:<pkg>@<ver> | file     [Pro/Team]
+  --registry <url>      npm registry for npm: targets (auth: NPM_TOKEN)             [Pro/Team]
+  --slack-webhook <url> Alert Slack on critical/high findings                       [Standard]
   --token <token>       License token (default: $RELEASESHIELD_TOKEN)
   --no-color            Disable colored output
   -q, --quiet           Only print the report
@@ -1058,6 +1058,7 @@ Options
 
 Exit codes: 0 = pass, 1 = findings at/above --fail-on (licensed), 2 = scan error.
 Without a license the CLI runs in free, report-only mode.
+Plans: Standard $19/mo (up to 5 packages/repos) \xB7 Pro/Team $49/mo (unlimited).
 `;
 var UsageError = class extends Error {
 };

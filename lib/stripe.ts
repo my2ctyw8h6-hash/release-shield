@@ -33,6 +33,22 @@ function isPublicUrl(siteUrl: string | null): siteUrl is string {
   }
 }
 
+/** One Stripe Product per plan, reused across price changes and kept in sync with the plan name. */
+async function findOrCreateProduct(stripe: Stripe, planId: PlanId): Promise<string> {
+  const plan = PLANS[planId];
+  const name = `ReleaseShield ${plan.name}`;
+  let scanned = 0;
+  for await (const product of stripe.products.list({ active: true, limit: 100 })) {
+    if (product.metadata?.app === "release-shield" && product.metadata?.plan === planId) {
+      if (product.name !== name) await stripe.products.update(product.id, { name });
+      return product.id;
+    }
+    if (++scanned >= 500) break;
+  }
+  const created = await stripe.products.create({ name, metadata: { app: "release-shield", plan: planId } });
+  return created.id;
+}
+
 async function findOrCreatePrice(stripe: Stripe, planId: PlanId): Promise<Stripe.Price> {
   const plan = PLANS[planId];
   const amount = plan.priceMonthly * 100;
@@ -41,16 +57,15 @@ async function findOrCreatePrice(stripe: Stripe, planId: PlanId): Promise<Stripe
   if (found && found.unit_amount === amount && found.currency === "usd" && found.recurring?.interval === "month") {
     return found;
   }
+  // Price changed (or first run): new Price on the plan's product; the lookup key moves to it.
   return stripe.prices.create({
     currency: "usd",
     unit_amount: amount,
     recurring: { interval: "month" },
     lookup_key: plan.lookupKey,
     transfer_lookup_key: Boolean(found),
-    product_data: {
-      name: `ReleaseShield ${plan.name}`,
-      metadata: { app: "release-shield", plan: plan.id },
-    },
+    product: await findOrCreateProduct(stripe, planId),
+    nickname: `${plan.name} $${plan.priceMonthly}/mo`,
     metadata: { app: "release-shield", plan: plan.id },
   });
 }
@@ -60,19 +75,36 @@ async function findOrCreateLink(planId: PlanId, siteUrl: string | null): Promise
   const price = await findOrCreatePrice(stripe, planId);
   const redirectBase = isPublicUrl(siteUrl) ? siteUrl.replace(/\/$/, "") : "";
 
-  // Reuse an existing active link for this exact price + redirect target.
+  // Reuse an existing active link for this exact price + redirect target, and collect links that
+  // still sell an outdated price for this plan so they can be switched off.
   let scanned = 0;
+  let reuse: string | null = null;
+  const stale: string[] = [];
   for await (const link of stripe.paymentLinks.list({ active: true, limit: 100 })) {
-    if (
+    if (link.metadata?.app === "release-shield" && link.metadata?.plan === planId && link.metadata?.price_id !== price.id) {
+      stale.push(link.id);
+    } else if (
+      !reuse &&
       link.metadata?.app === "release-shield" &&
       link.metadata?.price_id === price.id &&
       link.metadata?.link_version === LINK_VERSION &&
       (link.metadata?.site_url ?? "") === redirectBase
     ) {
-      return link.url;
+      reuse = link.url;
     }
     if (++scanned >= 500) break;
   }
+
+  // Old price points must stop being purchasable once the plan price changes.
+  for (const id of stale) {
+    try {
+      await stripe.paymentLinks.update(id, { active: false });
+      console.info(`[checkout] deactivated outdated payment link ${id} for plan ${planId}`);
+    } catch (err) {
+      console.error(`[checkout] could not deactivate payment link ${id}`, err instanceof Error ? err.message : err);
+    }
+  }
+  if (reuse) return reuse;
 
   const link = await stripe.paymentLinks.create({
     line_items: [{ price: price.id, quantity: 1 }],
@@ -112,7 +144,7 @@ function planFromSubscription(sub: Stripe.Subscription): PlanId | undefined {
   if (isPlanId(sub.metadata?.plan)) return sub.metadata.plan;
   for (const item of sub.items.data) {
     const key = item.price.lookup_key;
-    const match = Object.values(PLANS).find((p) => p.lookupKey === key);
+    const match = Object.values(PLANS).find((p) => p.lookupKey === key || (key && p.legacyLookupKeys?.includes(key)));
     if (match) return match.id;
   }
   return undefined;

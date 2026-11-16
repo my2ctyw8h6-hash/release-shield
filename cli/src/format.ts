@@ -59,7 +59,7 @@ export function renderText(input: RenderInput, color: boolean): string {
         : c("1;32", `✓ ReleaseShield: no findings at or above "${input.failOn}". Safe to publish.`),
     );
   } else if (input.license.tier === "free") {
-    lines.push(c("33", "ℹ Free mode: report only. Add RELEASESHIELD_TOKEN (Standard/Pro) to block releases in CI, plus SARIF/JSON output and Slack alerts."));
+    lines.push(c("33", "ℹ Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $19/mo or Pro / Team $49/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts."));
   }
   return lines.join("\n") + "\n";
 }

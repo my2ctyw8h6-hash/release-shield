@@ -4,7 +4,12 @@ export interface Plan {
   id: PlanId;
   name: string;
   priceMonthly: number;
+  /** Stable Stripe lookup key. Changing priceMonthly creates a new Price and moves this key to it. */
   lookupKey: string;
+  /** Lookup keys from earlier price points, so existing subscribers still map to the right plan. */
+  legacyLookupKeys?: string[];
+  /** Plan limit on packages/repos protected (null = unlimited). */
+  packageLimit: number | null;
   tagline: string;
   features: string[];
   /** Planned features, shown separately and labelled "coming soon". Not yet built. */
@@ -16,11 +21,13 @@ export const PLANS: Record<PlanId, Plan> = {
   standard: {
     id: "standard",
     name: "Standard",
-    priceMonthly: 79,
-    lookupKey: "release_shield_standard_monthly_usd_79",
-    tagline: "For teams shipping a handful of packages",
+    priceMonthly: 19,
+    lookupKey: "release_shield_standard_monthly",
+    legacyLookupKeys: ["release_shield_standard_monthly_usd_79"],
+    packageLimit: 5,
+    tagline: "For small teams shipping a few packages",
     features: [
-      "Use on up to 15 packages / images",
+      "Up to 5 packages / repos",
       "GitHub Action + CLI for GitLab, CircleCI & any CI",
       "npm, PyPI and Docker artifact scanning",
       "Fail-the-build on critical findings",
@@ -31,13 +38,16 @@ export const PLANS: Record<PlanId, Plan> = {
   },
   pro: {
     id: "pro",
-    name: "Pro",
-    priceMonthly: 249,
-    lookupKey: "release_shield_pro_monthly_usd_249",
-    tagline: "For platform teams with many release pipelines",
+    name: "Pro / Team",
+    priceMonthly: 49,
+    lookupKey: "release_shield_pro_monthly",
+    legacyLookupKeys: ["release_shield_pro_monthly_usd_249"],
+    packageLimit: null,
+    tagline: "For teams with many packages & release pipelines",
     highlighted: true,
     features: [
-      "Everything in Standard, unlimited packages & images",
+      "Unlimited packages / repos",
+      "Everything in Standard, plus:",
       "Private npm registries (GitHub Packages, Artifactory & more)",
       "Custom policies: ignore files & rules per repo",
       "Diff vs. previous release: new files flagged",
@@ -46,6 +56,14 @@ export const PLANS: Record<PlanId, Plan> = {
     roadmap: ["Audit log & SOC 2 evidence export", "Hosted scan history"],
   },
 };
+
+/** Plan fields safe to send to the browser (no Stripe internals). */
+export type PublicPlan = Omit<Plan, "lookupKey" | "legacyLookupKeys">;
+
+export function toPublicPlan(plan: Plan): PublicPlan {
+  const { lookupKey: _lookupKey, legacyLookupKeys: _legacy, ...rest } = plan;
+  return rest;
+}
 
 export function isPlanId(v: unknown): v is PlanId {
   return v === "standard" || v === "pro";

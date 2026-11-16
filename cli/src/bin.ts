@@ -17,15 +17,15 @@ Targets (default: npm pack the current package, or dist/*.whl|*.tar.gz)
   docker:<image>[:tag]             A local Docker image (uses docker save)
 
 Options
-  --fail-on <level>     critical | high | medium | low | none   (default: critical)   [Standard]
-  --format <fmt>        text | json | sarif | markdown          (default: text)       [Standard]
+  --fail-on <level>     critical | high | medium | low | none (default: critical)   [Standard]
+  --format <fmt>        text | json | sarif | markdown (default: text)              [Standard]
   -o, --output <file>   Write the report to a file instead of stdout
-  --config <file>       Policy file (default: .releaseshield.json)
-  --ignore <glob>       Skip files matching glob (repeatable)                         [Pro]
-  --ignore-rule <id>    Suppress a rule, e.g. source-map (repeatable)                 [Pro]
-  --baseline <spec>     Diff against a previous release: auto | npm:<pkg>@<ver> | file [Pro]
-  --registry <url>      npm registry for npm: targets (auth: NPM_TOKEN)              [Pro]
-  --slack-webhook <url> Alert Slack on critical/high findings                          [Standard]
+  --config <file>       Policy file (default: .releaseshield.json)                  [Pro/Team]
+  --ignore <glob>       Skip files matching glob (repeatable)                       [Pro/Team]
+  --ignore-rule <id>    Suppress a rule, e.g. source-map (repeatable)               [Pro/Team]
+  --baseline <spec>     Diff vs previous release: auto | npm:<pkg>@<ver> | file     [Pro/Team]
+  --registry <url>      npm registry for npm: targets (auth: NPM_TOKEN)             [Pro/Team]
+  --slack-webhook <url> Alert Slack on critical/high findings                       [Standard]
   --token <token>       License token (default: $RELEASESHIELD_TOKEN)
   --no-color            Disable colored output
   -q, --quiet           Only print the report
@@ -33,7 +33,7 @@ Options
   -v, --version         Show version
 
 Exit codes: 0 = pass, 1 = findings at/above --fail-on (licensed), 2 = scan error.
-Without a license the CLI runs in free, report-only mode.
+Without a license the CLI runs in free, report-only mode.\nPlans: Standard $19/mo (up to 5 packages/repos) · Pro/Team $49/mo (unlimited).
 `;
 
 class UsageError extends Error {}

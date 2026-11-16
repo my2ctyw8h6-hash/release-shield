@@ -116,7 +116,7 @@ export async function run(opts: RunOptions): Promise<RunResult> {
   const enforced = has(tier, "standard");
 
   if (format !== "text" && !has(tier, "standard")) {
-    log(`note: --format ${format} requires a Standard or Pro license; showing text output.`);
+    log(`note: --format ${format} requires a Standard or Pro / Team license; showing text output.`);
     format = "text";
   }
 
@@ -126,16 +126,16 @@ export async function run(opts: RunOptions): Promise<RunResult> {
   let registry = opts.registry ?? config.registry;
   let slack = opts.slackWebhook;
   if (!has(tier, "pro")) {
-    if (ignore.length || ignoreRules.length) log("note: custom ignore policies require Pro; scanning everything.");
-    if (baseline) log("note: release diffing (--baseline) requires Pro; skipped.");
-    if (registry) log("note: private registries require Pro; using the public npm registry.");
+    if (ignore.length || ignoreRules.length) log("note: custom ignore policies require Pro / Team; scanning everything.");
+    if (baseline) log("note: release diffing (--baseline) requires Pro / Team; skipped.");
+    if (registry) log("note: private registries require Pro / Team; using the public npm registry.");
     ignore = [];
     ignoreRules = [];
     baseline = undefined;
     registry = undefined;
   }
   if (slack && !has(tier, "standard")) {
-    log("note: Slack alerts require a Standard or Pro license; skipped.");
+    log("note: Slack alerts require a Standard or Pro / Team license; skipped.");
     slack = undefined;
   }
 

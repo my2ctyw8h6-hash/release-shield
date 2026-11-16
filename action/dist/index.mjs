@@ -785,7 +785,7 @@ function renderText(input2, color) {
       input2.failed ? c("1;31", `\u2716 ReleaseShield: findings at or above "${input2.failOn}". Release blocked.`) : c("1;32", `\u2713 ReleaseShield: no findings at or above "${input2.failOn}". Safe to publish.`)
     );
   } else if (input2.license.tier === "free") {
-    lines.push(c("33", "\u2139 Free mode: report only. Add RELEASESHIELD_TOKEN (Standard/Pro) to block releases in CI, plus SARIF/JSON output and Slack alerts."));
+    lines.push(c("33", "\u2139 Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $19/mo or Pro / Team $49/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts."));
   }
   return lines.join("\n") + "\n";
 }
@@ -958,7 +958,7 @@ async function run(opts) {
   const failOn = opts.failOn ?? config.failOn ?? "critical";
   const enforced = has(tier, "standard");
   if (format !== "text" && !has(tier, "standard")) {
-    log(`note: --format ${format} requires a Standard or Pro license; showing text output.`);
+    log(`note: --format ${format} requires a Standard or Pro / Team license; showing text output.`);
     format = "text";
   }
   let ignore = [...config.ignore ?? [], ...opts.ignore ?? []];
@@ -967,16 +967,16 @@ async function run(opts) {
   let registry = opts.registry ?? config.registry;
   let slack = opts.slackWebhook;
   if (!has(tier, "pro")) {
-    if (ignore.length || ignoreRules.length) log("note: custom ignore policies require Pro; scanning everything.");
-    if (baseline) log("note: release diffing (--baseline) requires Pro; skipped.");
-    if (registry) log("note: private registries require Pro; using the public npm registry.");
+    if (ignore.length || ignoreRules.length) log("note: custom ignore policies require Pro / Team; scanning everything.");
+    if (baseline) log("note: release diffing (--baseline) requires Pro / Team; skipped.");
+    if (registry) log("note: private registries require Pro / Team; using the public npm registry.");
     ignore = [];
     ignoreRules = [];
     baseline = void 0;
     registry = void 0;
   }
   if (slack && !has(tier, "standard")) {
-    log("note: Slack alerts require a Standard or Pro license; skipped.");
+    log("note: Slack alerts require a Standard or Pro / Team license; skipped.");
     slack = void 0;
   }
   const ws = new Workspace();

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import type { Plan, PlanId } from "@/lib/plans";
+import type { PublicPlan, PlanId } from "@/lib/plans";
 
-export function PricingCards({ plans }: { plans: Plan[] }) {
+export function PricingCards({ plans }: { plans: PublicPlan[] }) {
   const [loading, setLoading] = useState<PlanId | null>(null);
   const [error, setError] = useState<string | null>(null);
 

@@ -1,0 +1,23 @@
+# dependencies & build output
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+
+# secrets: never commit env files (only the .env.example template)
+.env
+.env.local
+.env.*
+.env*.local
+!.env.example
+*.pem
+*.key
+
+# runtime data (captured leads)
+data/
+
+# OS / editor
+.DS_Store
+*.log

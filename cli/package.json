@@ -1,0 +1,11 @@
+{
+  "name": "releaseshield",
+  "version": "1.0.0",
+  "description": "Scan the npm, PyPI or Docker artifact you're about to publish for source maps, .env files, secrets and internal code.",
+  "type": "module",
+  "bin": { "releaseshield": "dist/releaseshield.mjs" },
+  "files": ["dist", "README.md"],
+  "engines": { "node": ">=20" },
+  "keywords": ["security", "secrets", "npm", "pypi", "docker", "ci", "source-maps", "leak", "pre-publish"],
+  "license": "UNLICENSED"
+}

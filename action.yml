@@ -1,0 +1,75 @@
+name: "ReleaseShield Scan"
+description: "Scan the npm / PyPI / Docker artifact you are about to publish for source maps, .env files, secrets and internal code."
+author: "ReleaseShield"
+branding:
+  icon: "shield"
+  color: "green"
+inputs:
+  artifact:
+    description: "Artifacts to scan (newline/comma separated): paths, globs (dist/*.whl), npm:<pkg>, docker:<image>. Default: npm pack the package in working-directory, or dist/*.whl|*.tar.gz."
+    required: false
+    default: ""
+  working-directory:
+    description: "Directory to run in."
+    required: false
+    default: ""
+  token:
+    description: "ReleaseShield license token (store as a secret). Without it the action runs in free, report-only mode."
+    required: false
+    default: ""
+  fail-on:
+    description: "Fail the job on findings at or above: critical | high | medium | low | none. Defaults to .releaseshield.json or critical."
+    required: false
+    default: ""
+  format:
+    description: "Log output format: text | json | sarif | markdown."
+    required: false
+    default: "text"
+  sarif-output:
+    description: "Write a SARIF file here (upload with github/codeql-action/upload-sarif)."
+    required: false
+    default: ""
+  config:
+    description: "Path to a policy file (default .releaseshield.json). Pro."
+    required: false
+    default: ""
+  ignore:
+    description: "Globs of files to ignore (newline/comma separated). Pro."
+    required: false
+    default: ""
+  baseline:
+    description: "Diff against a previous release: auto | npm:<pkg>@<ver> | path. Pro."
+    required: false
+    default: ""
+  registry:
+    description: "npm registry URL for npm: targets / baselines. Pro."
+    required: false
+    default: ""
+  npm-token:
+    description: "Auth token for a private npm registry."
+    required: false
+    default: ""
+  slack-webhook:
+    description: "Slack incoming webhook to alert on critical/high findings."
+    required: false
+    default: ""
+outputs:
+  grade:
+    description: "Worst grade across scanned artifacts (A-F)."
+  score:
+    description: "Worst score (0-100)."
+  findings:
+    description: "Total number of findings."
+  critical:
+    description: "Number of critical findings."
+  failed:
+    description: "true if the release was blocked."
+  plan:
+    description: "License plan in effect (free | standard | pro)."
+  report-path:
+    description: "Path to the JSON report (licensed)."
+  sarif-path:
+    description: "Path to the SARIF report, if requested."
+runs:
+  using: "node24"
+  main: "action/dist/index.mjs"

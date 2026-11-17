@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import type { PublicPlan, PlanId } from "@/lib/plans";
+import { track } from "@/lib/track";
 
 export function PricingCards({ plans }: { plans: PublicPlan[] }) {
   const [loading, setLoading] = useState<PlanId | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   async function checkout(plan: PlanId) {
+    track("checkout_click", { plan });
     setLoading(plan);
     setError(null);
     try {

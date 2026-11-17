@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import type { ScanReport, Finding } from "@/lib/scanner";
+import { track } from "@/lib/track";
 
 type Mode = "npm" | "upload";
 const FREE_VISIBLE = 3;
@@ -44,6 +45,7 @@ export function LeakChecker() {
 
   async function runScan(e?: React.FormEvent, override?: string) {
     e?.preventDefault();
+    track("scan_run");
     setError(null);
     setReport(null);
     setLoading(true);

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { fetchNpmTarball } from "@/lib/npm";
-import { scanArchive } from "@/lib/scanner";
+import { scanArchive, scanEntries } from "@/lib/scanner";
+import { SAMPLE_NAME, SAMPLE_VERSION, sampleEntries } from "@/lib/sample";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
@@ -37,7 +38,12 @@ export async function POST(req: Request) {
       return NextResponse.json(report);
     }
 
-    const body = (await req.json().catch(() => null)) as { package?: unknown } | null;
+    const body = (await req.json().catch(() => null)) as { package?: unknown; sample?: unknown } | null;
+    if (body?.sample === true) {
+      // Fake in-memory package for the homepage demo; runs the real scanner.
+      const report = scanEntries(sampleEntries(), { target: SAMPLE_NAME, version: SAMPLE_VERSION, source: "npm" });
+      return NextResponse.json({ ...report, sample: true });
+    }
     const spec = typeof body?.package === "string" ? body.package : "";
     if (!spec.trim()) return NextResponse.json({ error: "Enter an npm package name." }, { status: 400 });
 

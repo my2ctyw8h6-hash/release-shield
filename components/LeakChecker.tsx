@@ -39,7 +39,7 @@ export function LeakChecker() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [report, setReport] = useState<ScanReport | null>(null);
+  const [report, setReport] = useState<(ScanReport & { sample?: boolean }) | null>(null);
   const [email, setEmail] = useState("");
   const [unlocked, setUnlocked] = useState(false);
   const [leadState, setLeadState] = useState<"idle" | "sending" | "error">("idle");
@@ -55,7 +55,7 @@ export function LeakChecker() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function runScan(e?: React.FormEvent, override?: string) {
+  async function runScan(e?: React.FormEvent, override?: string, sample = false) {
     e?.preventDefault();
     track("scan_run");
     setError(null);
@@ -63,7 +63,13 @@ export function LeakChecker() {
     setLoading(true);
     try {
       let res: Response;
-      if (mode === "upload") {
+      if (sample) {
+        res = await fetch("/api/scan", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ sample: true }),
+        });
+      } else if (mode === "upload") {
         if (!file) throw new Error("Choose a .tgz file produced by `npm pack`.");
         const fd = new FormData();
         fd.append("file", file);
@@ -110,7 +116,9 @@ export function LeakChecker() {
     }
   }
 
-  const hidden = report && !unlocked ? Math.max(0, report.findings.length - FREE_VISIBLE) : 0;
+  // The demo package is fake, so show everything and skip the email gate.
+  const open = unlocked || !!report?.sample;
+  const hidden = report && !open ? Math.max(0, report.findings.length - FREE_VISIBLE) : 0;
 
   return (
     <div className="checker card" id="check">
@@ -147,7 +155,18 @@ export function LeakChecker() {
 
       {mode === "npm" && (
         <div className="examples">
-          Try:{" "}
+          <button
+            className="chip chip-demo"
+            type="button"
+            disabled={loading}
+            onClick={() => {
+              setPkg("");
+              runScan(undefined, undefined, true);
+            }}
+          >
+            Scan a leaky demo package
+          </button>
+          Real ones:{" "}
           {EXAMPLES.map((ex) => (
             <button
               key={ex}
@@ -197,7 +216,7 @@ export function LeakChecker() {
           ) : (
             <ul className="findings">
               {report.findings.map((f, i) => (
-                <FindingRow key={`${f.ruleId}-${f.file}-${i}`} f={f} locked={!unlocked && i >= FREE_VISIBLE} />
+                <FindingRow key={`${f.ruleId}-${f.file}-${i}`} f={f} locked={!open && i >= FREE_VISIBLE} />
               ))}
             </ul>
           )}
@@ -206,7 +225,7 @@ export function LeakChecker() {
             <>
               <FixPanel
                 title={hidden > 0 ? `Fix it (covers the ${FREE_VISIBLE} visible findings; unlock below for the other ${hidden})` : "Fix it"}
-                fix={buildFix(unlocked ? report.findings : report.findings.slice(0, FREE_VISIBLE), fixTargetFor(report.kind, report.source))}
+                fix={buildFix(open ? report.findings : report.findings.slice(0, FREE_VISIBLE), fixTargetFor(report.kind, report.source))}
               />
               <p className="small muted">
                 The ignore file fixes this release. To stop it coming back, <a href="#pricing">fail the publish in CI</a> when a new leak shows up.
@@ -214,7 +233,23 @@ export function LeakChecker() {
             </>
           )}
 
-          {!unlocked && (
+          {report.sample && (
+            <div className="clean">
+              That was a fake package (<code>{report.target}</code>, built in memory, never published). Your real tarball is what matters:{" "}
+              <a
+                href="#check"
+                onClick={() => {
+                  setReport(null);
+                  setPkg("");
+                }}
+              >
+                scan your package
+              </a>{" "}
+              or run <code>npm pack</code> and upload the <code>.tgz</code>. To block these at publish time, see{" "}
+              <a href="#pricing">CI plans</a>.
+            </div>
+          )}
+          {!open && (
             <form className="lead" onSubmit={submitLead}>
               <div>
                 <strong>{hidden > 0 ? `Unlock ${hidden} more finding${hidden === 1 ? "" : "s"}` : "Get release-safety tips for your team"}</strong>
@@ -231,7 +266,7 @@ export function LeakChecker() {
               {leadState === "error" && <div className="alert small">Couldn&apos;t save that. Please check the email and try again.</div>}
             </form>
           )}
-          {unlocked && (
+          {unlocked && !report.sample && (
             <div className="clean">
               Thanks! The full report is unlocked. To block leaks automatically, <a href="#pricing">add ReleaseShield to your CI →</a>
             </div>

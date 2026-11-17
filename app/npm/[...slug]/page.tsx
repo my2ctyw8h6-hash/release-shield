@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import { allReports, formatBytes, formatNum, getReport, reportPath, slugFor, SITE_URL } from "@/lib/reports";
 import { ACTION_REF } from "@/lib/site";
+import { buildFix } from "@/lib/remediation";
+import { FixPanel } from "@/components/FixPanel";
 import type { NpmReport, PublicFinding } from "@/lib/reports-types";
 
 export const dynamicParams = false;
@@ -118,6 +120,9 @@ export default async function PackageReport({ params }: Props) {
               </li>
             ))}
           </ul>
+        )}
+        {groups.length > 0 && (
+          <FixPanel title={`Maintainer fix: keep these out of the next ${r.name} release`} fix={buildFix(r.findings, "npm")} />
         )}
         {r.withheld > 0 && (
           <div className="alert" style={{ color: "var(--text)" }}>

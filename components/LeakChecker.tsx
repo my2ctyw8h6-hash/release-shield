@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { ScanReport, Finding } from "@/lib/scanner";
 import { track } from "@/lib/track";
+import { buildFix, fixTargetFor } from "@/lib/remediation";
+import { FixPanel } from "./FixPanel";
 
 type Mode = "npm" | "upload";
 const FREE_VISIBLE = 3;
@@ -198,6 +200,18 @@ export function LeakChecker() {
                 <FindingRow key={`${f.ruleId}-${f.file}-${i}`} f={f} locked={!unlocked && i >= FREE_VISIBLE} />
               ))}
             </ul>
+          )}
+
+          {report.findings.length > 0 && (
+            <>
+              <FixPanel
+                title={hidden > 0 ? `Fix it (covers the ${FREE_VISIBLE} visible findings; unlock below for the other ${hidden})` : "Fix it"}
+                fix={buildFix(unlocked ? report.findings : report.findings.slice(0, FREE_VISIBLE), fixTargetFor(report.kind, report.source))}
+              />
+              <p className="small muted">
+                The ignore file fixes this release. To stop it coming back, <a href="#pricing">fail the publish in CI</a> when a new leak shows up.
+              </p>
+            </>
           )}
 
           {!unlocked && (

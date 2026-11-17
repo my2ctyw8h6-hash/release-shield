@@ -171,3 +171,10 @@ h3 { font-size: 1.1rem; }
 .plan-features li.soon { color: var(--muted); }
 .plan-features li.soon::before { content: "○"; color: var(--muted); }
 .soon-tag { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid var(--border); border-radius: 999px; padding: 0.05rem 0.45rem; margin-left: 0.3rem; white-space: nowrap; }
+
+/* Remediation panel (scanner results + /npm report pages) */
+.fix { display: grid; gap: 0.75rem; margin: 1.25rem 0; text-align: left; }
+.fix-block .code { margin: 0.35rem 0 0; max-width: none; white-space: pre-wrap; word-break: break-all; }
+.fix-head { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.fix-head code { font-size: 0.85rem; color: var(--muted, #8b98ad); }
+.fix-notes { margin: 0; padding-left: 1.1rem; }

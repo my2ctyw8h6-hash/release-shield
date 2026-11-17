@@ -6,25 +6,33 @@ import { getStats } from "@/lib/stats";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const MAX_CHANGES = 10;
-const MAX_STR = 280;
+const STATUS_FIELDS = [
+  "updatedAt",
+  "revenue",
+  "recentCodeCommits",
+  "evolutionLog",
+  "recentSocialPostsAndReplies",
+  "latestIdeasAndLeads",
+] as const;
 
 /** Strip anything that looks like a secret or a server path before it leaves the box. */
-function scrub(v: unknown): string | null {
-  if (v == null) return null;
-  return String(v)
+function scrubStr(v: string): string {
+  return v
     .replace(/\b(sk|rk|pk)_(live|test)_[A-Za-z0-9]+/g, "[redacted]")
     .replace(/\bwhsec_[A-Za-z0-9]+/g, "[redacted]")
     .replace(/\bgh[pousr]_[A-Za-z0-9]+/g, "[redacted]")
     .replace(/\bgithub_pat_[A-Za-z0-9_]+/g, "[redacted]")
     .replace(/https?:\/\/[^\s/@]+:[^\s/@]+@/g, "https://[redacted]@")
-    .replace(/(?:\/(?:root|home|usr|var|etc|opt|tmp)\b)[^\s"'`)]*/g, "[path]")
-    .slice(0, MAX_STR);
+    .replace(/(?:\/(?:root|home|usr|var|etc|opt|tmp)\b)[^\s"'`)]*/g, "[path]");
 }
 
-function num(v: unknown): number | null {
-  const n = typeof v === "string" ? Number(v.replace(/[$,]/g, "")) : v;
-  return typeof n === "number" && Number.isFinite(n) ? n : null;
+function scrub(v: unknown): unknown {
+  if (typeof v === "string") return scrubStr(v);
+  if (Array.isArray(v)) return v.map(scrub);
+  if (v && typeof v === "object") {
+    return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, scrub(x)]));
+  }
+  return v;
 }
 
 type Status = Record<string, unknown>;
@@ -39,38 +47,12 @@ async function readStudioStatus(): Promise<Status | null> {
   }
 }
 
-function pick(s: Status, ...keys: string[]): unknown {
-  for (const k of keys) if (s[k] !== undefined) return s[k];
-  return undefined;
+function studio(s: Status | null) {
+  return Object.fromEntries(STATUS_FIELDS.map((k) => [k, s ? scrub(s[k] ?? null) : null]));
 }
 
-/** Whitelist only the fields we intend to expose; everything else in the file is ignored. */
-function summarise(s: Status | null) {
-  if (!s) return { revenueSummary: null, recentChanges: [] as unknown[] };
-
-  const revenueSummary = {
-    mrrUsd: num(pick(s, "mrr", "mrrUsd", "revenue", "latestRevenue")),
-    activeSubscribers: num(pick(s, "subscribers", "subscriberCount", "activeSubscribers")),
-    updatedAt: scrub(pick(s, "updatedAt", "lastUpdated", "timestamp")),
-  };
-
-  const entries = pick(s, "recentChanges", "evolutionLog", "recentEvolution", "changes");
-  const recentChanges = (Array.isArray(entries) ? entries : []).slice(0, MAX_CHANGES).map((e) =>
-    e && typeof e === "object"
-      ? {
-          date: scrub(pick(e as Status, "date", "time", "timestamp")),
-          summary: scrub(pick(e as Status, "summary", "title", "message", "change")),
-        }
-      : { date: null, summary: scrub(e) },
-  );
-
-  return { revenueSummary, recentChanges };
-}
-
-/** Public, read-only. Output is whitelisted + scrubbed: no keys, secrets, or server paths. */
+/** Public, read-only. Studio fields are scrubbed of secrets and server paths. */
 export async function GET() {
-  const noStore = { "cache-control": "no-store" };
-
   const [s, status] = await Promise.all([getStats(), readStudioStatus()]);
   const rate = (a: number, b: number) => (b > 0 ? Math.round((a / b) * 1000) / 10 : 0);
 
@@ -89,8 +71,8 @@ export async function GET() {
         checkoutByPlan: s.checkoutByPlan,
         note: "Per-instance, best-effort; resets on cold start.",
       },
-      ...summarise(status),
+      ...studio(status),
     },
-    { headers: noStore },
+    { headers: { "cache-control": "no-store" } },
   );
 }

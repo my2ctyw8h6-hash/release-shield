@@ -1,6 +1,7 @@
-import { NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { timingSafeEqual } from "node:crypto";
 import { getStats } from "@/lib/stats";
 
 export const runtime = "nodejs";
@@ -35,11 +36,23 @@ function scrub(v: unknown): unknown {
   return v;
 }
 
+/**
+ * Key comes from env only. The repo is public, so a hardcoded key is no key.
+ * Unset env => endpoint is closed.
+ */
+function keyMatches(given: string | null): boolean {
+  const expected = process.env.MUSE_BRIEFING_KEY;
+  if (!expected || !given) return false;
+  const a = Buffer.from(given);
+  const b = Buffer.from(expected);
+  return a.length === b.length && timingSafeEqual(a, b);
+}
+
 type Status = Record<string, unknown>;
 
 async function readStudioStatus(): Promise<Status | null> {
   try {
-    const raw = await readFile(path.join(process.cwd(), "public", "studio-status.json"), "utf8");
+    const raw = await readFile(path.join(process.cwd(), "data", "studio-status.json"), "utf8");
     const parsed = JSON.parse(raw);
     return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : null;
   } catch {
@@ -51,8 +64,11 @@ function studio(s: Status | null) {
   return Object.fromEntries(STATUS_FIELDS.map((k) => [k, s ? scrub(s[k] ?? null) : null]));
 }
 
-/** Public, read-only. Studio fields are scrubbed of secrets and server paths. */
-export async function GET() {
+/** Key-gated, read-only. Studio fields are scrubbed of secrets and server paths. */
+export async function GET(req: NextRequest) {
+  if (!keyMatches(req.nextUrl.searchParams.get("key"))) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401, headers: { "cache-control": "no-store" } });
+  }
   const [s, status] = await Promise.all([getStats(), readStudioStatus()]);
   const rate = (a: number, b: number) => (b > 0 ? Math.round((a / b) * 1000) / 10 : 0);
 

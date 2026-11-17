@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   serverExternalPackages: ["stripe"],
-  outputFileTracingIncludes: { "/api/briefing": ["./public/studio-status.json"] },
+  outputFileTracingIncludes: { "/api/briefing": ["./data/studio-status.json"] },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

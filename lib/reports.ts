@@ -1,10 +1,10 @@
 import data from "@/content/npm-reports.json";
 import type { NpmReport, ReportsFile } from "./reports-types";
-import { configuredSiteUrl } from "./site";
+import { SITE_URL } from "./site";
 
 const db = data as unknown as ReportsFile;
 
-export const SITE_URL = configuredSiteUrl() ?? "https://release-shield-app.vercel.app";
+export { SITE_URL };
 
 export function allReports(): NpmReport[] {
   return Object.values(db.reports);

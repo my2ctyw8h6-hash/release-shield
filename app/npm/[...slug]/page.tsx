@@ -25,6 +25,8 @@ function headline(r: NpmReport): string {
   return `${r.name}@${r.version} ships ${r.fileCount} files; ${other} item${other === 1 ? "" : "s"} worth a look.`;
 }
 
+const ogImage = (name: string) => `${SITE_URL}/api/og/npm/${name}.png`;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = getReport(nameFrom((await params).slug));
   if (!r) return {};
@@ -33,7 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description: `${headline(r)} Automated pre-publish audit of the ${r.name} npm package by ReleaseShield.`,
     alternates: { canonical: `${SITE_URL}${reportPath(r.name)}` },
-    openGraph: { title, description: headline(r), type: "article" },
+    openGraph: { title, description: headline(r), type: "article", images: [{ url: ogImage(r.name), width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", title, description: headline(r), images: [ogImage(r.name)] },
   };
 }
 

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-17T01:46:08.572Z",
+ "generatedAt": "2026-11-17T01:48:17.472Z",
  "reports": {
   "@agentclientprotocol/claude-agent-acp": {
    "name": "@agentclientprotocol/claude-agent-acp",
@@ -822,6 +822,44 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.737Z"
   },
+  "@inquirer/figures": {
+   "name": "@inquirer/figures",
+   "version": "2.1.0",
+   "description": "Vendored version of figures, for CJS compatibility",
+   "weeklyDownloads": 85416479,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 20001,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:48:15.430Z"
+  },
+  "@inquirer/input": {
+   "name": "@inquirer/input",
+   "version": "5.2.0",
+   "description": "Inquirer input text prompt",
+   "weeklyDownloads": 56180508,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 13443,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:48:16.567Z"
+  },
   "@inquirer/password": {
    "name": "@inquirer/password",
    "version": "5.3.0",
@@ -840,6 +878,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.562Z"
+  },
+  "@inquirer/select": {
+   "name": "@inquirer/select",
+   "version": "5.3.0",
+   "description": "Inquirer select/list prompt",
+   "weeklyDownloads": 57681590,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 18708,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:48:16.228Z"
   },
   "@inquirer/type": {
    "name": "@inquirer/type",
@@ -1155,6 +1212,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:50.530Z"
+  },
+  "@nestjs/cli": {
+   "name": "@nestjs/cli",
+   "version": "12.0.13",
+   "description": "The Nest CLI: create NestJS applications, generate modules, controllers and CRUD resources, and build, run and watch projects and monorepos.",
+   "weeklyDownloads": 12248942,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 259,
+   "totalBytes": 346257,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:48:15.750Z"
   },
   "@octokit/auth-oauth-device": {
    "name": "@octokit/auth-oauth-device",
@@ -2457,6 +2533,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.193Z"
   },
+  "ansis": {
+   "name": "ansis",
+   "version": "4.5.0",
+   "description": "ANSI color lib",
+   "weeklyDownloads": 60184777,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 5705,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:48:17.096Z"
+  },
   "argparse": {
    "name": "argparse",
    "version": "3.0.4",
@@ -2570,6 +2665,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.669Z"
+  },
+  "cli-truncate": {
+   "name": "cli-truncate",
+   "version": "6.2.0",
+   "description": "Truncate a string to a specific width in the terminal",
+   "weeklyDownloads": 69360732,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 15528,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:48:17.471Z"
   },
   "cliui": {
    "name": "cliui",
@@ -2887,6 +3001,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.650Z"
+  },
+  "is-in-ci": {
+   "name": "is-in-ci",
+   "version": "2.0.0",
+   "description": "Check if the process is running in a Continuous Integration (CI) environment",
+   "weeklyDownloads": 11668854,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 4015,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:48:16.620Z"
   },
   "jackspeak": {
    "name": "jackspeak",
@@ -3240,6 +3373,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.416Z"
+  },
+  "progress": {
+   "name": "progress",
+   "version": "2.0.3",
+   "description": "Flexible ascii progress bar",
+   "weeklyDownloads": 78683570,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 15499,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:48:15.519Z"
   },
   "prompts": {
    "name": "prompts",

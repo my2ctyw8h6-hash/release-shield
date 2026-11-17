@@ -135,7 +135,7 @@ export default function Home() {
       <footer className="footer">
         <div className="container footer-inner">
           <Logo />
-          <span className="muted small"><a href="/npm">npm package reports</a> · <a href="/docs">Docs</a> · © {new Date().getFullYear()} ReleaseShield. Ship code, not secrets.</span>
+          <span className="muted small"><a href="/npm">npm package reports</a> · <a href="/docs">Docs</a> · © {new Date().getFullYear()} Line Answered LLC. ReleaseShield is a product of Line Answered LLC. Ship code, not secrets.</span>
         </div>
       </footer>
     </>

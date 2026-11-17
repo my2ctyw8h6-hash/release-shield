@@ -5,6 +5,7 @@ import type { ScanReport, Finding } from "@/lib/scanner";
 import { track } from "@/lib/track";
 import { buildFix, fixTargetFor } from "@/lib/remediation";
 import { FixPanel } from "./FixPanel";
+import { CopyBox } from "./CopyBox";
 
 type Mode = "npm" | "upload";
 const FREE_VISIBLE = 3;
@@ -14,6 +15,13 @@ function formatBytes(n: number) {
   if (n < 1024) return `${n} B`;
   if (n < 1024 * 1024) return `${(n / 1024).toFixed(1)} KB`;
   return `${(n / 1024 / 1024).toFixed(1)} MB`;
+}
+
+/** README badge; the link reruns a live scan of the package. Scoped names keep their slash (catch-all route). */
+function badgeMarkdown(name: string) {
+  const origin = window.location.origin;
+  const path = name.split("/").map(encodeURIComponent).join("/");
+  return `[![ReleaseShield](${origin}/api/badge/npm/${path}.svg)](${origin}/?scan=${encodeURIComponent(name)})`;
 }
 
 function FindingRow({ f, locked }: { f: Finding; locked: boolean }) {
@@ -212,7 +220,18 @@ export function LeakChecker() {
           </div>
 
           {report.findings.length === 0 ? (
-            <div className="clean">No leaks detected in this artifact. Keep it that way: add ReleaseShield to CI so every future release is checked automatically.</div>
+            <div className="clean">
+              No leaks detected in this artifact. Keep it that way: add ReleaseShield to CI so every future release is checked automatically.
+              {report.source === "npm" && !report.sample && (
+                <div className="badge-snippet">
+                  <p className="small">
+                    Clean tarball. Put it in your README:{" "}
+                    <img src={`/api/badge/npm/${report.target}.svg`} alt="ReleaseShield: clean tarball" height={20} style={{ verticalAlign: "middle" }} />
+                  </p>
+                  <CopyBox label="README badge Markdown" value={badgeMarkdown(report.target)} />
+                </div>
+              )}
+            </div>
           ) : (
             <ul className="findings">
               {report.findings.map((f, i) => (

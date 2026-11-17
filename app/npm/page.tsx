@@ -44,7 +44,7 @@ export default function NpmIndex() {
 
         <p className="muted small">
           Shipping source maps isn&apos;t a problem for open-source code, but for a closed-source package it hands over the original
-          source. <a href="/#check">Scan your own package free</a>, or <a href="/docs">gate every release in CI</a>.
+          source. <a href="/report/npm-tarball-audit-2026">Read the 2026 audit</a>, <a href="/#check">scan your own package free</a>, or <a href="/docs">gate every release in CI</a>.
         </p>
 
         <div style={{ overflowX: "auto" }}>

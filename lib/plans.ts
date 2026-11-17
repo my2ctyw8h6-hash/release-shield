@@ -27,6 +27,7 @@ export const PLANS: Record<PlanId, Plan> = {
     packageLimit: 5,
     tagline: "For small teams shipping a few packages",
     features: [
+      "Every release scanned before publish, not just once",
       "Up to 5 packages / repos",
       "GitHub Action + CLI for GitLab, CircleCI & any CI",
       "npm, PyPI and Docker artifact scanning",
@@ -34,7 +35,7 @@ export const PLANS: Record<PlanId, Plan> = {
       "Slack alerts on critical & high findings",
       "JSON, SARIF & Markdown reports",
     ],
-    roadmap: ["Hosted scan history"],
+    roadmap: ["24/7 tarball monitoring: we inspect every new version you publish to npm and alert you if a secret or .env slips in", "Hosted scan history"],
   },
   pro: {
     id: "pro",
@@ -53,7 +54,7 @@ export const PLANS: Record<PlanId, Plan> = {
       "Diff vs. previous release: new files flagged",
       "Priority support",
     ],
-    roadmap: ["Audit log & SOC 2 evidence export", "Hosted scan history"],
+    roadmap: ["24/7 tarball monitoring: we inspect every new version you publish to npm and alert you if a secret or .env slips in", "Audit log & SOC 2 evidence export", "Hosted scan history"],
   },
 };
 

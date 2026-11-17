@@ -11,8 +11,13 @@ export interface BadgeState {
  */
 export function badgeState(r: NpmReport | undefined): BadgeState {
   if (!r) return { message: "not scanned", color: "#9f9f9f" };
-  const nonMap = r.findings.filter((f) => !f.ruleId.startsWith("source-map")).length + r.withheld;
-  const hasMaps = r.findings.some((f) => f.ruleId.startsWith("source-map"));
+  return badgeStateFor(r.findings.map((f) => f.ruleId), r.withheld);
+}
+
+/** Badge state from raw rule ids (crawled report or live scan). */
+export function badgeStateFor(ruleIds: string[], withheld = 0): BadgeState {
+  const nonMap = ruleIds.filter((id) => !id.startsWith("source-map")).length + withheld;
+  const hasMaps = ruleIds.some((id) => id.startsWith("source-map"));
   if (nonMap === 0 && !hasMaps) return { message: "clean tarball", color: "#3fb950" };
   if (nonMap === 0) return { message: "ships source maps", color: "#0a84ff" };
   return { message: `${nonMap} to review`, color: "#d29922" };

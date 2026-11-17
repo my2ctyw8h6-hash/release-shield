@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ScanReport, Finding } from "@/lib/scanner";
 import { track } from "@/lib/track";
 
@@ -42,6 +42,16 @@ export function LeakChecker() {
   const [unlocked, setUnlocked] = useState(false);
   const [leadState, setLeadState] = useState<"idle" | "sending" | "error">("idle");
   const resultsRef = useRef<HTMLDivElement>(null);
+
+  // Deep link from /npm/<pkg> report pages: /?scan=<pkg> runs a live scan on load.
+  useEffect(() => {
+    const target = new URLSearchParams(window.location.search).get("scan");
+    if (target) {
+      setPkg(target);
+      void runScan(undefined, target);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   async function runScan(e?: React.FormEvent, override?: string) {
     e?.preventDefault();

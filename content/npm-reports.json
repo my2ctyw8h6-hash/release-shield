@@ -1,0 +1,3736 @@
+{
+ "generatedAt": "2026-11-17T01:46:08.572Z",
+ "reports": {
+  "@agentclientprotocol/claude-agent-acp": {
+   "name": "@agentclientprotocol/claude-agent-acp",
+   "version": "0.107.3",
+   "description": "An ACP-compatible coding agent powered by the Claude Agent SDK (TypeScript)",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 468,
+   "totalBytes": 2981760,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (155 files)",
+     "severity": "medium",
+     "file": "dist/v1/acp-agent.d.ts.map",
+     "occurrences": 155,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:44.294Z"
+  },
+  "@angular-devkit/architect": {
+   "name": "@angular-devkit/architect",
+   "version": "0.2202.7",
+   "description": "Angular Build Facade",
+   "weeklyDownloads": 10744102,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 114,
+   "totalBytes": 262778,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (34 files)",
+     "severity": "medium",
+     "file": "builders/all-of.js.map",
+     "occurrences": 34,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:32.101Z"
+  },
+  "@angular-devkit/build-webpack": {
+   "name": "@angular-devkit/build-webpack",
+   "version": "0.2202.7",
+   "description": "Webpack Builder for Architect",
+   "weeklyDownloads": 4092492,
+   "grade": "B",
+   "score": 89,
+   "fileCount": 27,
+   "totalBytes": 34845,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (7 files)",
+     "severity": "medium",
+     "file": "index.js.map",
+     "occurrences": 7,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:35.685Z"
+  },
+  "@angular-devkit/core": {
+   "name": "@angular-devkit/core",
+   "version": "22.2.7",
+   "description": "Angular DevKit - Core Utility Library",
+   "weeklyDownloads": 37352133,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 168,
+   "totalBytes": 407175,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (55 files)",
+     "severity": "medium",
+     "file": "src/virtual-fs/host/alias.js.map",
+     "occurrences": 55,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:27.458Z"
+  },
+  "@angular-devkit/schematics": {
+   "name": "@angular-devkit/schematics",
+   "version": "22.2.7",
+   "description": "Angular Schematics - Library",
+   "weeklyDownloads": 32278030,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 178,
+   "totalBytes": 365407,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (57 files)",
+     "severity": "medium",
+     "file": "src/tree/action.js.map",
+     "occurrences": 57,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:27.620Z"
+  },
+  "@angular-devkit/schematics-cli": {
+   "name": "@angular-devkit/schematics-cli",
+   "version": "22.2.7",
+   "description": "Angular Schematics - CLI",
+   "weeklyDownloads": 12128579,
+   "grade": "A",
+   "score": 90,
+   "fileCount": 44,
+   "totalBytes": 67882,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (5 files)",
+     "severity": "medium",
+     "file": "blank/factory.js.map",
+     "occurrences": 5,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:30.759Z"
+  },
+  "@angular/build": {
+   "name": "@angular/build",
+   "version": "22.2.7",
+   "description": "Official build system for Angular",
+   "weeklyDownloads": 6608988,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 654,
+   "totalBytes": 2453900,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (213 files)",
+     "severity": "medium",
+     "file": "src/utils/index-file/add-event-dispatch-contract.js.map",
+     "occurrences": 213,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:33.265Z"
+  },
+  "@angular/cli": {
+   "name": "@angular/cli",
+   "version": "22.2.7",
+   "description": "CLI tool for Angular",
+   "weeklyDownloads": 7279251,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 351,
+   "totalBytes": 1600740,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (109 files)",
+     "severity": "medium",
+     "file": "src/commands/mcp/tools/ai-tutor.js.map",
+     "occurrences": 109,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:27.886Z"
+  },
+  "@anthropic-ai/claude-agent-sdk": {
+   "name": "@anthropic-ai/claude-agent-sdk",
+   "version": "0.3.326",
+   "description": "SDK for building AI agents with Claude Code's capabilities. Programmatically interact with Claude to build autonomous agents that can understand codebases, edit files, and execute workflows.",
+   "weeklyDownloads": 19150368,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 32,
+   "totalBytes": 5474496,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:28.179Z"
+  },
+  "@argos-ci/core": {
+   "name": "@argos-ci/core",
+   "version": "6.9.0",
+   "description": "Node.js SDK for visual testing with Argos.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 102569,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:01.908Z"
+  },
+  "@assistant-ui/react": {
+   "name": "@assistant-ui/react",
+   "version": "0.15.36",
+   "description": "Open-source TypeScript/React library for building production-grade AI chat experiences",
+   "weeklyDownloads": 3204725,
+   "grade": "F",
+   "score": 8,
+   "fileCount": 1152,
+   "totalBytes": 3045329,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (192 files)",
+     "severity": "critical",
+     "file": "dist/primitives/actionBar.js.map",
+     "occurrences": 192,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (214 files)",
+     "severity": "medium",
+     "file": "dist/primitives/actionBar.d.ts.map",
+     "occurrences": 214,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:37.214Z"
+  },
+  "@base-org/account": {
+   "name": "@base-org/account",
+   "version": "2.6.0",
+   "description": "Base Account SDK",
+   "weeklyDownloads": 3263849,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 531,
+   "totalBytes": 10069066,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (264 files)",
+     "severity": "medium",
+     "file": "dist/interface/payment/utils/assertPermissionAuthorization.d.ts.map",
+     "occurrences": 264,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:36.296Z"
+  },
+  "@base44/sdk": {
+   "name": "@base44/sdk",
+   "version": "0.8.62",
+   "description": "JavaScript SDK for Base44 API",
+   "weeklyDownloads": 10444498,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 105,
+   "totalBytes": 455331,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:31.271Z"
+  },
+  "@clerk/express": {
+   "name": "@clerk/express",
+   "version": "2.1.91",
+   "description": "Clerk server SDK for usage with Express",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 29,
+   "fileCount": 27,
+   "totalBytes": 125657,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (6 files)",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 6,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:57.601Z"
+  },
+  "@cloudflare/ai-chat": {
+   "name": "@cloudflare/ai-chat",
+   "version": "0.12.2",
+   "description": "Cloudflare Agents (x) AI SDK Chat",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 13,
+   "totalBytes": 698658,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/ai-chat-v5-migration.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:51.953Z"
+  },
+  "@coinbase/cdp-sdk": {
+   "name": "@coinbase/cdp-sdk",
+   "version": "1.62.0",
+   "description": "SDK for interacting with the Coinbase Developer Platform Wallet API",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 0,
+   "fileCount": 2652,
+   "totalBytes": 8738523,
+   "counts": {
+    "critical": 13,
+    "high": 0,
+    "medium": 17,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (1134 files)",
+     "severity": "medium",
+     "file": "_types/x402/account-signers.d.ts.map",
+     "occurrences": 1134,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 29,
+   "scannedAt": "2026-11-17T01:45:40.715Z"
+  },
+  "@commitlint/cli": {
+   "name": "@commitlint/cli",
+   "version": "21.2.4",
+   "description": "Lint your commit messages",
+   "weeklyDownloads": 15130010,
+   "grade": "B",
+   "score": 89,
+   "fileCount": 17,
+   "totalBytes": 37383,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (6 files)",
+     "severity": "medium",
+     "file": "lib/cli-error.d.ts.map",
+     "occurrences": 6,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:07.323Z"
+  },
+  "@daytona/sdk": {
+   "name": "@daytona/sdk",
+   "version": "0.232.0",
+   "description": "Daytona TypeScript SDK for sandbox management and code execution",
+   "weeklyDownloads": 905119,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 205,
+   "totalBytes": 2071763,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (66 files)",
+     "severity": "medium",
+     "file": "cjs/utils/Binary.js.map",
+     "occurrences": 66,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:38.473Z"
+  },
+  "@deepgram/captions": {
+   "name": "@deepgram/captions",
+   "version": "1.2.0",
+   "description": "Node implementation of Deepgram's WebVTT and SRT formatting. Given a transcription, this package can return a valid string to store as WebVTT or SRT caption files.",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 76,
+   "totalBytes": 86067,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (32 files)",
+     "severity": "medium",
+     "file": "dist/main/converters/AssemblyAiConverter.d.ts.map",
+     "occurrences": 32,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:53.366Z"
+  },
+  "@devcycle/nodejs-server-sdk": {
+   "name": "@devcycle/nodejs-server-sdk",
+   "version": "1.56.1",
+   "description": "The DevCycle NodeJS Server SDK used for feature management.",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 122,
+   "totalBytes": 383854,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (36 files)",
+     "severity": "critical",
+     "file": "src/bucketing.js.map",
+     "occurrences": 36,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:00.149Z"
+  },
+  "@fullstory/browser": {
+   "name": "@fullstory/browser",
+   "version": "2.1.2",
+   "description": "The official Fullstory browser SDK",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 11,
+   "totalBytes": 68842,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:46.454Z"
+  },
+  "@gemini-wallet/core": {
+   "name": "@gemini-wallet/core",
+   "version": "0.3.2",
+   "description": "Core SDK for Gemini Wallet integration with popup communication",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 39,
+   "totalBytes": 446620,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:50.824Z"
+  },
+  "@github/copilot-sdk": {
+   "name": "@github/copilot-sdk",
+   "version": "1.0.34",
+   "description": "TypeScript SDK for programmatic control of GitHub Copilot CLI via JSON-RPC",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 91,
+   "totalBytes": 4305643,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:42.809Z"
+  },
+  "@graphiql/react": {
+   "name": "@graphiql/react",
+   "version": "1.0.2",
+   "description": "[Changelog](https://github.com/graphql/graphiql/blob/main/packages/graphiql-react/CHANGELOG.md) | [API Docs](https://graphiql-test.netlify.app/typedoc/modules/graphiql_react.html) | [NPM](https://www.",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 256,
+   "totalBytes": 1166100,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (89 files)",
+     "severity": "critical",
+     "file": "dist/utility/active-operation.js.map",
+     "occurrences": 89,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:46.817Z"
+  },
+  "@hey-api/openapi-ts": {
+   "name": "@hey-api/openapi-ts",
+   "version": "0.99.0",
+   "description": "🌀 OpenAPI to TypeScript code generator. Production-grade SDKs, Zod schemas, TanStack Query hooks, and 20+ plugins. Used by Vercel, OpenCode, and PayPal.",
+   "weeklyDownloads": 7578826,
+   "grade": "D",
+   "score": 36,
+   "fileCount": 61,
+   "totalBytes": 2926092,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "critical",
+     "file": "dist/init-D6Y8JFUS.mjs.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:34.219Z"
+  },
+  "@hiero-ledger/cryptography": {
+   "name": "@hiero-ledger/cryptography",
+   "version": "1.24.0",
+   "description": "Cryptographic utilities and primitives for the Hiero SDK",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 120,
+   "totalBytes": 717959,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:03.458Z"
+  },
+  "@hubspot/api-client": {
+   "name": "@hubspot/api-client",
+   "version": "14.1.3",
+   "description": "NodeJS v3 [HubSpot API](https://developers.hubspot.com/docs/api/overview) SDK(Client) files",
+   "weeklyDownloads": 2139915,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 8280,
+   "totalBytes": 20545691,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (2759 files)",
+     "severity": "medium",
+     "file": "lib/codegen/cms/pages/models/AbTestCreateRequestVNext.js.map",
+     "occurrences": 2759,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:40.270Z"
+  },
+  "@inquirer/ansi": {
+   "name": "@inquirer/ansi",
+   "version": "2.1.0",
+   "description": "A lightweight package providing ANSI escape sequences for terminal cursor manipulation and screen clearing.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 6025,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.888Z"
+  },
+  "@inquirer/checkbox": {
+   "name": "@inquirer/checkbox",
+   "version": "5.3.0",
+   "description": "Inquirer checkbox prompt",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 21747,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.491Z"
+  },
+  "@inquirer/confirm": {
+   "name": "@inquirer/confirm",
+   "version": "6.4.0",
+   "description": "Inquirer confirm prompt",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 11864,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.788Z"
+  },
+  "@inquirer/core": {
+   "name": "@inquirer/core",
+   "version": "12.1.0",
+   "description": "Core Inquirer prompt API",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 37,
+   "totalBytes": 60962,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.219Z"
+  },
+  "@inquirer/external-editor": {
+   "name": "@inquirer/external-editor",
+   "version": "3.1.0",
+   "description": "Edit a string with the users preferred text editor using $VISUAL or $ENVIRONMENT",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 18202,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.737Z"
+  },
+  "@inquirer/password": {
+   "name": "@inquirer/password",
+   "version": "5.3.0",
+   "description": "Inquirer password prompt",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 11592,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.562Z"
+  },
+  "@inquirer/type": {
+   "name": "@inquirer/type",
+   "version": "4.3.0",
+   "description": "Inquirer core TS types",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 8,
+   "totalBytes": 6401,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.959Z"
+  },
+  "@isaacs/cliui": {
+   "name": "@isaacs/cliui",
+   "version": "9.0.0",
+   "description": "easily create complex multi-column command-line-interfaces",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 8,
+   "fileCount": 73,
+   "totalBytes": 522445,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (18 files)",
+     "severity": "critical",
+     "file": "dist/commonjs/ansi-regex/index.js.map",
+     "occurrences": 18,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (16 files)",
+     "severity": "medium",
+     "file": "dist/commonjs/ansi-regex/index.d.ts.map",
+     "occurrences": 16,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.289Z"
+  },
+  "@larksuiteoapi/node-sdk": {
+   "name": "@larksuiteoapi/node-sdk",
+   "version": "1.76.0",
+   "description": "larksuite open sdk for nodejs",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 30259126,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:47.827Z"
+  },
+  "@launchdarkly/js-client-sdk": {
+   "name": "@launchdarkly/js-client-sdk",
+   "version": "4.14.2",
+   "description": "LaunchDarkly SDK for JavaScript in Browsers",
+   "weeklyDownloads": 0,
+   "grade": "D",
+   "score": 36,
+   "fileCount": 18,
+   "totalBytes": 1886668,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "critical",
+     "file": "dist/fetch-eventsource.cjs.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:53.817Z"
+  },
+  "@lemonsqueezy/lemonsqueezy.js": {
+   "name": "@lemonsqueezy/lemonsqueezy.js",
+   "version": "4.0.0",
+   "description": "The official Lemon Squeezy JavaScript SDK.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 329276,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:58.981Z"
+  },
+  "@line/bot-sdk": {
+   "name": "@line/bot-sdk",
+   "version": "11.4.0",
+   "description": "Node.js SDK for LINE Messaging API",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 3523,
+   "totalBytes": 4070252,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (1552 files)",
+     "severity": "medium",
+     "file": "dist/cjs/webhook/model/accountLinkEvent.d.ts.map",
+     "occurrences": 1552,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:47.214Z"
+  },
+  "@lokalise/node-api": {
+   "name": "@lokalise/node-api",
+   "version": "17.0.1",
+   "description": "Official Node.js SDK for Lokalise Expert and Vantage APIs",
+   "weeklyDownloads": 0,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 7,
+   "totalBytes": 459239,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/main.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:00.492Z"
+  },
+  "@mapbox/mapbox-sdk": {
+   "name": "@mapbox/mapbox-sdk",
+   "version": "0.16.2",
+   "description": "JS SDK for accessing Mapbox APIs",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 69,
+   "totalBytes": 576826,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:58.284Z"
+  },
+  "@mendable/firecrawl-js": {
+   "name": "@mendable/firecrawl-js",
+   "version": "4.54.0",
+   "description": "JavaScript SDK for Firecrawl, the context API for AI agents: search, scrape, parse, crawl, map, and interact with the web, run Agent and Monitor jobs, and search scientific papers (PubMed, bioRxiv, me",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 103,
+   "totalBytes": 1174903,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:42.983Z"
+  },
+  "@module-federation/inject-external-runtime-core-plugin": {
+   "name": "@module-federation/inject-external-runtime-core-plugin",
+   "version": "2.9.3",
+   "description": "A sdk for support module federation",
+   "weeklyDownloads": 3935888,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 11,
+   "totalBytes": 13314,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:35.142Z"
+  },
+  "@module-federation/sdk": {
+   "name": "@module-federation/sdk",
+   "version": "2.9.3",
+   "description": "A sdk for support module federation",
+   "weeklyDownloads": 14866334,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 120,
+   "totalBytes": 377950,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (32 files)",
+     "severity": "critical",
+     "file": "dist/constant.cjs.map",
+     "occurrences": 32,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:28.410Z"
+  },
+  "@neon/sdk": {
+   "name": "@neon/sdk",
+   "version": "7.13.1",
+   "description": "The official TypeScript SDK for the Neon API, generated from Neon's OpenAPI specification. A modern, fetch-based replacement for @neondatabase/api-client.",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 8,
+   "fileCount": 238,
+   "totalBytes": 2842189,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (54 files)",
+     "severity": "critical",
+     "file": "dist/neon/resources/account.js.map",
+     "occurrences": 54,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (60 files)",
+     "severity": "medium",
+     "file": "dist/neon/resources/account.d.ts.map",
+     "occurrences": 60,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:50.530Z"
+  },
+  "@octokit/auth-oauth-device": {
+   "name": "@octokit/auth-oauth-device",
+   "version": "8.0.5",
+   "description": "GitHub OAuth Device authentication strategy for JavaScript",
+   "weeklyDownloads": 10090541,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 16,
+   "totalBytes": 38737,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-bundle/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:29.077Z"
+  },
+  "@octokit/auth-oauth-user": {
+   "name": "@octokit/auth-oauth-user",
+   "version": "6.0.4",
+   "description": "Octokit authentication strategy for OAuth clients",
+   "weeklyDownloads": 10063980,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 18,
+   "totalBytes": 61359,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-bundle/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:29.581Z"
+  },
+  "@octokit/core": {
+   "name": "@octokit/core",
+   "version": "7.0.8",
+   "description": "Extendable client for GitHub's REST & GraphQL APIs",
+   "weeklyDownloads": 47206925,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 8,
+   "totalBytes": 23157,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:27.303Z"
+  },
+  "@octokit/oauth-app": {
+   "name": "@octokit/oauth-app",
+   "version": "8.0.4",
+   "description": "GitHub OAuth toolset for Node.js",
+   "weeklyDownloads": 4798740,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 59,
+   "totalBytes": 147563,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-node/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:35.912Z"
+  },
+  "@octokit/oauth-methods": {
+   "name": "@octokit/oauth-methods",
+   "version": "6.0.5",
+   "description": "Set of stateless request methods to create, check, reset, refresh, and delete user access tokens for OAuth and GitHub Apps",
+   "weeklyDownloads": 10180635,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 32,
+   "totalBytes": 96575,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-bundle/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:30.201Z"
+  },
+  "@octokit/plugin-paginate-graphql": {
+   "name": "@octokit/plugin-paginate-graphql",
+   "version": "6.0.0",
+   "description": "Octokit plugin to paginate GraphQL API endpoint responses",
+   "weeklyDownloads": 4194763,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 23,
+   "totalBytes": 35277,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-bundle/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:37.621Z"
+  },
+  "@octokit/plugin-paginate-rest": {
+   "name": "@octokit/plugin-paginate-rest",
+   "version": "16.0.0",
+   "description": "Octokit plugin to paginate REST API endpoint responses",
+   "weeklyDownloads": 47441877,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 22,
+   "totalBytes": 199130,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-bundle/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:26.409Z"
+  },
+  "@octokit/plugin-request-log": {
+   "name": "@octokit/plugin-request-log",
+   "version": "6.0.0",
+   "description": "Log all requests and request errors",
+   "weeklyDownloads": 26515525,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 5915,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:28.484Z"
+  },
+  "@octokit/plugin-rest-endpoint-methods": {
+   "name": "@octokit/plugin-rest-endpoint-methods",
+   "version": "18.0.0",
+   "description": "Octokit plugin adding one method for all of api.github.com REST API endpoints",
+   "weeklyDownloads": 41415024,
+   "grade": "D",
+   "score": 36,
+   "fileCount": 18,
+   "totalBytes": 1421662,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "critical",
+     "file": "dist-src/endpoints-to-methods.js.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:27.107Z"
+  },
+  "@octokit/types": {
+   "name": "@octokit/types",
+   "version": "18.0.0",
+   "description": "Shared TypeScript definitions for Octokit projects",
+   "weeklyDownloads": 91905162,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 24,
+   "totalBytes": 324105,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:26.320Z"
+  },
+  "@octokit/webhooks-methods": {
+   "name": "@octokit/webhooks-methods",
+   "version": "6.0.0",
+   "description": "Methods to handle GitHub Webhook requests",
+   "weeklyDownloads": 6555648,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 17,
+   "totalBytes": 23731,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-node/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-web/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:33.894Z"
+  },
+  "@openai/codex-sdk": {
+   "name": "@openai/codex-sdk",
+   "version": "0.169.0",
+   "description": "TypeScript SDK for Codex APIs.",
+   "weeklyDownloads": 2411392,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 6,
+   "totalBytes": 80303,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:36.498Z"
+  },
+  "@openapitools/openapi-generator-cli": {
+   "name": "@openapitools/openapi-generator-cli",
+   "version": "2.42.2",
+   "description": "A npm package wrapper for OpenAPI Generator (https://github.com/OpenAPITools/openapi-generator), generates which API client libraries (SDK generation), server stubs, documentation and configuration au",
+   "weeklyDownloads": 2090444,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 93306,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:39.358Z"
+  },
+  "@openrouter/sdk": {
+   "name": "@openrouter/sdk",
+   "version": "1.5.107",
+   "description": "The OpenRouter TypeScript SDK is a type-safe toolkit for building AI applications with access to 400+ language models through a unified API.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 2835,
+   "totalBytes": 6215758,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:44.049Z"
+  },
+  "@paypal/paypal-js": {
+   "name": "@paypal/paypal-js",
+   "version": "11.3.0",
+   "description": "Loading wrapper and TypeScript types for the PayPal JS SDK",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 41,
+   "totalBytes": 696471,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:44.765Z"
+  },
+  "@polar-sh/sdk": {
+   "name": "@polar-sh/sdk",
+   "version": "1.3.0",
+   "description": "Polar SDK — A billing platform for the intelligence era",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 1082,
+   "totalBytes": 13992260,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (264 files)",
+     "severity": "critical",
+     "file": "dist/base-CR_XRB8d.mjs.map",
+     "occurrences": 264,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:43.570Z"
+  },
+  "@prisma/management-api-sdk": {
+   "name": "@prisma/management-api-sdk",
+   "version": "1.96.0",
+   "description": "TypeScript SDK for the Prisma Developer Platform Management API",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 8,
+   "totalBytes": 1607674,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:55.008Z"
+  },
+  "@react-native-ai/apple": {
+   "name": "@react-native-ai/apple",
+   "version": "0.13.0",
+   "description": "Apple LLM provider for Vercel AI SDK",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 91,
+   "totalBytes": 475001,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (30 files)",
+     "severity": "medium",
+     "file": "lib/typescript/ai-sdk.d.ts.map",
+     "occurrences": 30,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:03.904Z"
+  },
+  "@safe-global/safe-apps-sdk": {
+   "name": "@safe-global/safe-apps-sdk",
+   "version": "9.1.0",
+   "description": "SDK developed to integrate third-party apps with Safe app.",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 200,
+   "totalBytes": 247011,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (63 files)",
+     "severity": "medium",
+     "file": "dist/types/eth/constants.d.ts.map",
+     "occurrences": 63,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:45.022Z"
+  },
+  "@sanity/sdk": {
+   "name": "@sanity/sdk",
+   "version": "3.13.0",
+   "description": "Sanity SDK",
+   "weeklyDownloads": 1454493,
+   "grade": "F",
+   "score": 8,
+   "fileCount": 399,
+   "totalBytes": 4703702,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (14 files)",
+     "severity": "critical",
+     "file": "dist/_exports/_internal.js.map",
+     "occurrences": 14,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (9 files)",
+     "severity": "medium",
+     "file": "dist/_exports/_internal.d.ts.map",
+     "occurrences": 9,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:41.517Z"
+  },
+  "@sanity/sdk-react": {
+   "name": "@sanity/sdk-react",
+   "version": "3.13.0",
+   "description": "Sanity SDK React toolkit for Content OS",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 16,
+   "fileCount": 305,
+   "totalBytes": 2167031,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (7 files)",
+     "severity": "critical",
+     "file": "dist/_exports/collaboration.js.map",
+     "occurrences": 7,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (5 files)",
+     "severity": "medium",
+     "file": "dist/_exports/collaboration.d.ts.map",
+     "occurrences": 5,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:53.070Z"
+  },
+  "@schematics/angular": {
+   "name": "@schematics/angular",
+   "version": "22.2.7",
+   "description": "Schematics specific to Angular",
+   "weeklyDownloads": 8525612,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 443,
+   "totalBytes": 1051387,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (109 files)",
+     "severity": "medium",
+     "file": "utility/add-declaration-to-ng-module.js.map",
+     "occurrences": 109,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:32.575Z"
+  },
+  "@splitsoftware/splitio": {
+   "name": "@splitsoftware/splitio",
+   "version": "11.12.1",
+   "description": "Split SDK",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 104,
+   "totalBytes": 285203,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:57.175Z"
+  },
+  "@splitsoftware/splitio-commons": {
+   "name": "@splitsoftware/splitio-commons",
+   "version": "3.2.0",
+   "description": "Split JavaScript SDK common components",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 98,
+   "fileCount": 852,
+   "totalBytes": 2327564,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+   },
+   "findings": [],
+   "withheld": 1,
+   "scannedAt": "2026-11-17T01:45:54.389Z"
+  },
+  "@splitsoftware/splitio-react": {
+   "name": "@splitsoftware/splitio-react",
+   "version": "2.6.3",
+   "description": "A React library to easily integrate and use Split JS SDK",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 101,
+   "totalBytes": 367404,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:02.772Z"
+  },
+  "@strands-agents/sdk": {
+   "name": "@strands-agents/sdk",
+   "version": "1.25.0",
+   "description": "TypeScript SDK for Strands Agents framework",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 1217,
+   "totalBytes": 5286569,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (606 files)",
+     "severity": "medium",
+     "file": "dist/src/a2a/a2a-agent.d.ts.map",
+     "occurrences": 606,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:54.723Z"
+  },
+  "@superset-ui/embedded-sdk": {
+   "name": "@superset-ui/embedded-sdk",
+   "version": "0.4.0",
+   "description": "SDK for embedding resources from Superset into your own application",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 26,
+   "fileCount": 22,
+   "totalBytes": 125438,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (7 files)",
+     "severity": "critical",
+     "file": "lib/const.js.map",
+     "occurrences": 7,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:59.302Z"
+  },
+  "@tldraw/driver": {
+   "name": "@tldraw/driver",
+   "version": "5.6.1",
+   "description": "Imperative API for driving the tldraw editor programmatically.",
+   "weeklyDownloads": 0,
+   "grade": "D",
+   "score": 36,
+   "fileCount": 15,
+   "totalBytes": 172646,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:42.369Z"
+  },
+  "@tldraw/editor": {
+   "name": "@tldraw/editor",
+   "version": "5.6.1",
+   "description": "tldraw infinite canvas SDK (editor).",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 9,
+   "fileCount": 994,
+   "totalBytes": 8631461,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (362 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 362,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (8 files)",
+     "severity": "medium",
+     "file": "dist-esm/lib/editor/managers/PerformanceManager/perf-types.mjs.map",
+     "occurrences": 8,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:45.880Z"
+  },
+  "@tldraw/state": {
+   "name": "@tldraw/state",
+   "version": "5.6.1",
+   "description": "tldraw infinite canvas SDK (state).",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 97,
+   "totalBytes": 632954,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (30 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 30,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:48.986Z"
+  },
+  "@tldraw/state-react": {
+   "name": "@tldraw/state-react",
+   "version": "5.6.1",
+   "description": "tldraw infinite canvas SDK (react bindings for state).",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 53,
+   "totalBytes": 175266,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (16 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 16,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:52.414Z"
+  },
+  "@tldraw/store": {
+   "name": "@tldraw/store",
+   "version": "5.6.1",
+   "description": "tldraw infinite canvas SDK (store).",
+   "weeklyDownloads": 759331,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 110,
+   "totalBytes": 1666128,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (34 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 34,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:56.418Z"
+  },
+  "@tldraw/sync": {
+   "name": "@tldraw/sync",
+   "version": "5.6.1",
+   "description": "tldraw infinite canvas SDK (multiplayer sync react bindings).",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 29,
+   "fileCount": 24,
+   "totalBytes": 196485,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (6 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 6,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:55.679Z"
+  },
+  "@tldraw/sync-core": {
+   "name": "@tldraw/sync-core",
+   "version": "5.6.1",
+   "description": "tldraw infinite canvas SDK (multiplayer sync).",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 14,
+   "fileCount": 131,
+   "totalBytes": 1967601,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (39 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 39,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist-esm/lib/server-types.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:50.102Z"
+  },
+  "@tldraw/tlschema": {
+   "name": "@tldraw/tlschema",
+   "version": "5.6.1",
+   "description": "tldraw infinite canvas SDK (schema).",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 10,
+   "fileCount": 342,
+   "totalBytes": 2391598,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (125 files)",
+     "severity": "critical",
+     "file": "dist-cjs/TLStore.js.map",
+     "occurrences": 125,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (5 files)",
+     "severity": "medium",
+     "file": "dist-esm/records/TLRecord.mjs.map",
+     "occurrences": 5,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:49.561Z"
+  },
+  "@tldraw/utils": {
+   "name": "@tldraw/utils",
+   "version": "5.6.1",
+   "description": "tldraw infinite canvas SDK (private utilities).",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 8,
+   "fileCount": 239,
+   "totalBytes": 1195393,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (78 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 78,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist-esm/lib/json-value.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist-esm/lib/types.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:48.421Z"
+  },
+  "@tldraw/validate": {
+   "name": "@tldraw/validate",
+   "version": "5.6.1",
+   "description": "A runtime validation library by tldraw.",
+   "weeklyDownloads": 0,
+   "grade": "D",
+   "score": 36,
+   "fileCount": 33,
+   "totalBytes": 495983,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:52.882Z"
+  },
+  "@twilio/voice-sdk": {
+   "name": "@twilio/voice-sdk",
+   "version": "2.19.0",
+   "description": "Twilio's JavaScript Voice SDK",
+   "weeklyDownloads": 2283255,
+   "grade": "A",
+   "score": 92,
+   "fileCount": 227,
+   "totalBytes": 3838695,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 4
+   },
+   "findings": [],
+   "withheld": 4,
+   "scannedAt": "2026-11-17T01:45:37.897Z"
+  },
+  "@vercel/sandbox": {
+   "name": "@vercel/sandbox",
+   "version": "4.0.0",
+   "description": "Software Development Kit for Vercel Sandbox",
+   "weeklyDownloads": 7628356,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 229,
+   "totalBytes": 1721511,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (78 files)",
+     "severity": "critical",
+     "file": "dist/api-client/api-client.cjs.map",
+     "occurrences": 78,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:31.708Z"
+  },
+  "@zapier/kitcore": {
+   "name": "@zapier/kitcore",
+   "version": "0.23.0",
+   "description": "Plugin framework for building SDKs.",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 10,
+   "totalBytes": 2165827,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:58.653Z"
+  },
+  "@zapier/zapier-sdk": {
+   "name": "@zapier/zapier-sdk",
+   "version": "0.126.1",
+   "description": "Complete Zapier SDK - combines all Zapier SDK packages",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 34,
+   "totalBytes": 7551252,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:41.963Z"
+  },
+  "@zapier/zapier-sdk-core": {
+   "name": "@zapier/zapier-sdk-core",
+   "version": "0.21.0",
+   "description": "Core schemas and TypeScript types for the Zapier SDK API",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 79,
+   "totalBytes": 584323,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (24 files)",
+     "severity": "critical",
+     "file": "dist/v0/schemas/actions.cjs.map",
+     "occurrences": 24,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:56.714Z"
+  },
+  "ai": {
+   "name": "ai",
+   "version": "7.0.173",
+   "description": "AI SDK by Vercel - build apps like ChatGPT, Claude, Gemini, and more with a single interface for any model using the Vercel AI Gateway or go direct to OpenAI, Anthropic, Google, or any other model pro",
+   "weeklyDownloads": 45776702,
+   "grade": "F",
+   "score": 0,
+   "fileCount": 727,
+   "totalBytes": 8898773,
+   "counts": {
+    "critical": 3,
+    "high": 0,
+    "medium": 3,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/internal/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/test/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/index.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/internal/index.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/test/index.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-17T01:45:26.920Z"
+  },
+  "ansi-colors": {
+   "name": "ansi-colors",
+   "version": "4.1.3",
+   "description": "Easily add ANSI colors to your text and symbols in the terminal. A faster drop-in replacement for chalk, kleur and turbocolor (without the dependencies and rendering bugs).",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 26143,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.510Z"
+  },
+  "ansi-escapes": {
+   "name": "ansi-escapes",
+   "version": "7.3.0",
+   "description": "ANSI escape codes for manipulating the terminal",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 22023,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.715Z"
+  },
+  "ansi-regex": {
+   "name": "ansi-regex",
+   "version": "6.6.0",
+   "description": "Regular expression for matching ANSI escape codes",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 9373,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.419Z"
+  },
+  "ansi-styles": {
+   "name": "ansi-styles",
+   "version": "7.0.0",
+   "description": "ANSI escape codes for styling strings in the terminal",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 22120,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.193Z"
+  },
+  "argparse": {
+   "name": "argparse",
+   "version": "3.0.4",
+   "description": "CLI arguments parser. Native port of python's argparse.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 177843,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.882Z"
+  },
+  "boxen": {
+   "name": "boxen",
+   "version": "9.0.0",
+   "description": "Create boxes in the terminal",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 40094,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.762Z"
+  },
+  "chalk": {
+   "name": "chalk",
+   "version": "6.0.1",
+   "description": "Terminal string styling done right",
+   "weeklyDownloads": 629363866,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 12,
+   "totalBytes": 56180,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.019Z"
+  },
+  "cli-cursor": {
+   "name": "cli-cursor",
+   "version": "5.0.0",
+   "description": "Toggle the CLI cursor",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 4109,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.340Z"
+  },
+  "cli-spinners": {
+   "name": "cli-spinners",
+   "version": "3.4.0",
+   "description": "Spinners for use in the terminal",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 33914,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.242Z"
+  },
+  "cli-table3": {
+   "name": "cli-table3",
+   "version": "0.6.5",
+   "description": "Pretty unicode tables for the command line. Based on the original cli-table.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 10,
+   "totalBytes": 46198,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.669Z"
+  },
+  "cliui": {
+   "name": "cliui",
+   "version": "9.0.1",
+   "description": "easily create complex multi-column command-line-interfaces",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 57360,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.377Z"
+  },
+  "cloudevents": {
+   "name": "cloudevents",
+   "version": "10.0.0",
+   "description": "CloudEvents SDK for JavaScript",
+   "weeklyDownloads": 4013044,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 39,
+   "totalBytes": 753499,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "bundles/cloudevents.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:28.578Z"
+  },
+  "commander": {
+   "name": "commander",
+   "version": "15.1.0",
+   "description": "the complete solution for node.js command-line programs",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 12,
+   "totalBytes": 207052,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.076Z"
+  },
+  "consola": {
+   "name": "consola",
+   "version": "3.4.2",
+   "description": "Elegant Console Wrapper",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 39,
+   "totalBytes": 321586,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.566Z"
+  },
+  "dropbox": {
+   "name": "dropbox",
+   "version": "10.66.0",
+   "description": "The Dropbox JavaScript SDK is a lightweight, promise based interface to the Dropbox v2 API that works in both nodejs and browser environments.",
+   "weeklyDownloads": 317256,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 52,
+   "totalBytes": 6521706,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/Dropbox-sdk.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:02.513Z"
+  },
+  "enquirer": {
+   "name": "enquirer",
+   "version": "2.4.1",
+   "description": "Stylish, intuitive and user-friendly prompt system. Fast and lightweight enough for small projects, powerful and extensible enough for the most advanced use cases.",
+   "weeklyDownloads": 48689400,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 47,
+   "totalBytes": 188681,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:08.530Z"
+  },
+  "facebook-nodejs-business-sdk": {
+   "name": "facebook-nodejs-business-sdk",
+   "version": "26.0.3",
+   "description": "SDK for the Facebook Marketing API in Javascript and Node.js",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 83,
+   "fileCount": 1389,
+   "totalBytes": 37402015,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 3
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (6 files)",
+     "severity": "medium",
+     "file": "dist/amd.js.map",
+     "occurrences": 6,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "ci-config",
+     "title": "CI / infra configuration",
+     "severity": "low",
+     "file": ".github/workflows/ci-publish.yml",
+     "occurrences": 1,
+     "advice": "Infra config can reveal internal hostnames, account IDs and deployment topology."
+    },
+    {
+     "ruleId": "ci-config",
+     "title": "CI / infra configuration",
+     "severity": "low",
+     "file": ".github/workflows/ci.yml",
+     "occurrences": 1,
+     "advice": "Infra config can reveal internal hostnames, account IDs and deployment topology."
+    },
+    {
+     "ruleId": "ide-config",
+     "title": "IDE / OS metadata",
+     "severity": "low",
+     "file": ".vscode/settings.json",
+     "occurrences": 1,
+     "advice": "Editor and OS files leak local paths and usernames."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:59.605Z"
+  },
+  "fast-string-truncated-width": {
+   "name": "fast-string-truncated-width",
+   "version": "3.0.3",
+   "description": "A fast function for calculating where a string should be truncated, given an optional width limit and an ellipsis string.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 12139,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.595Z"
+  },
+  "figures": {
+   "name": "figures",
+   "version": "6.1.0",
+   "description": "Unicode symbols with fallbacks for older terminals",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 36841,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.876Z"
+  },
+  "firecrawl": {
+   "name": "firecrawl",
+   "version": "4.54.0",
+   "description": "JavaScript SDK for Firecrawl, the context API for AI agents: search, scrape, parse, crawl, map, and interact with the web, run Agent and Monitor jobs, and search scientific papers (PubMed, bioRxiv, me",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 103,
+   "totalBytes": 1174863,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:45.098Z"
+  },
+  "has-flag": {
+   "name": "has-flag",
+   "version": "5.0.1",
+   "description": "Check if argv has a specific flag",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 4292,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.607Z"
+  },
+  "hud-sdk": {
+   "name": "hud-sdk",
+   "version": "1.12.4",
+   "description": "Hud's Node SDK",
+   "weeklyDownloads": 392656,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 63,
+   "totalBytes": 30146252,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:01.605Z"
+  },
+  "ibm-cloud-sdk-core": {
+   "name": "ibm-cloud-sdk-core",
+   "version": "5.9.4",
+   "description": "Core functionality to support SDKs generated with IBM's OpenAPI SDK Generator.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 199,
+   "totalBytes": 1161564,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:44.372Z"
+  },
+  "inquirer": {
+   "name": "inquirer",
+   "version": "14.3.0",
+   "description": "A collection of common interactive command line user interfaces.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 11,
+   "totalBytes": 61284,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.650Z"
+  },
+  "jackspeak": {
+   "name": "jackspeak",
+   "version": "4.2.3",
+   "description": "A very strict and proper argument parser.",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 24,
+   "fileCount": 17,
+   "totalBytes": 650026,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "critical",
+     "file": "dist/commonjs/index.js.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/commonjs/index.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/esm/index.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.100Z"
+  },
+  "kleur": {
+   "name": "kleur",
+   "version": "4.1.5",
+   "description": "The fastest Node.js library for formatting terminal text with ANSI colors~!",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 20250,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.453Z"
+  },
+  "launchdarkly-react-client-sdk": {
+   "name": "launchdarkly-react-client-sdk",
+   "version": "3.9.4",
+   "description": "LaunchDarkly SDK for React",
+   "weeklyDownloads": 1926332,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 35,
+   "totalBytes": 156078,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "lib/cjs/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "lib/esm/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:38.875Z"
+  },
+  "log-symbols": {
+   "name": "log-symbols",
+   "version": "7.0.1",
+   "description": "Colored symbols for various log levels. Example: `✔︎ Success`",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 8,
+   "totalBytes": 4396,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.499Z"
+  },
+  "mercadopago": {
+   "name": "mercadopago",
+   "version": "3.6.2",
+   "description": "Mercadopago SDK for Node.js",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 395,
+   "totalBytes": 547679,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:00.818Z"
+  },
+  "microsoft-cognitiveservices-speech-sdk": {
+   "name": "microsoft-cognitiveservices-speech-sdk",
+   "version": "1.53.0",
+   "description": "Microsoft Cognitive Services Speech SDK for JavaScript",
+   "weeklyDownloads": 0,
+   "grade": "D",
+   "score": 48,
+   "fileCount": 818,
+   "totalBytes": 5607496,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (270 files)",
+     "severity": "medium",
+     "file": "distrib/lib/src/sdk/ActivityReceivedEventArgs.js.map",
+     "occurrences": 270,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:55.227Z"
+  },
+  "mixpanel-react-native": {
+   "name": "mixpanel-react-native",
+   "version": "4.1.0",
+   "description": "Official React Native Tracking Library for Mixpanel Analytics",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 41,
+   "totalBytes": 347901,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:03.580Z"
+  },
+  "mock-aws-s3": {
+   "name": "mock-aws-s3",
+   "version": "4.0.2",
+   "description": "Mock AWS S3 SDK for Node.js",
+   "weeklyDownloads": 0,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 2959,
+   "totalBytes": 106339,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 1,
+   "scannedAt": "2026-11-17T01:45:56.856Z"
+  },
+  "npm-run-path": {
+   "name": "npm-run-path",
+   "version": "6.0.0",
+   "description": "Get your PATH prepended with locally installed binaries",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 8644,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.922Z"
+  },
+  "octokit": {
+   "name": "octokit",
+   "version": "5.0.5",
+   "description": "The all-batteries-included GitHub SDK for Browsers, Node.js, and Deno",
+   "weeklyDownloads": 4016073,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 13,
+   "totalBytes": 52027,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-bundle/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-17T01:45:36.844Z"
+  },
+  "optionator": {
+   "name": "optionator",
+   "version": "0.9.4",
+   "description": "option parsing and help generation",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 50157,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.150Z"
+  },
+  "ora": {
+   "name": "ora",
+   "version": "10.0.0",
+   "description": "Elegant terminal spinner",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 49960,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.145Z"
+  },
+  "picocolors": {
+   "name": "picocolors",
+   "version": "1.1.1",
+   "description": "The tiniest and the fastest library for terminal output formatting with ANSI colors",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 6373,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.924Z"
+  },
+  "postman-collection": {
+   "name": "postman-collection",
+   "version": "5.3.1",
+   "description": "Enables developers to use a unified Postman Collection format Object across projects",
+   "weeklyDownloads": 2276045,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 43,
+   "totalBytes": 521945,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:36.677Z"
+  },
+  "powershell-utils": {
+   "name": "powershell-utils",
+   "version": "0.2.1",
+   "description": "Utilities for executing PowerShell commands",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 14435,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.416Z"
+  },
+  "prompts": {
+   "name": "prompts",
+   "version": "2.4.2",
+   "description": "Lightweight, beautiful and user-friendly prompts",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 68,
+   "totalBytes": 186815,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.333Z"
+  },
+  "railway": {
+   "name": "railway",
+   "version": "3.17.0",
+   "description": "TypeScript SDK for Railway.",
+   "weeklyDownloads": 1209256,
+   "grade": "F",
+   "score": 29,
+   "fileCount": 23,
+   "totalBytes": 2239195,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (6 files)",
+     "severity": "critical",
+     "file": "dist/iac/bin.cjs.map",
+     "occurrences": 6,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:46.157Z"
+  },
+  "restore-cursor": {
+   "name": "restore-cursor",
+   "version": "5.1.0",
+   "description": "Gracefully restore the CLI cursor on exit",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 3129,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.818Z"
+  },
+  "rimraf": {
+   "name": "rimraf",
+   "version": "6.1.4",
+   "description": "A deep deletion module for node (like `rm -rf`)",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 8,
+   "fileCount": 137,
+   "totalBytes": 262867,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (33 files)",
+     "severity": "critical",
+     "file": "dist/esm/bin.mjs.map",
+     "occurrences": 33,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (32 files)",
+     "severity": "medium",
+     "file": "dist/commonjs/default-tmp.d.ts.map",
+     "occurrences": 32,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.988Z"
+  },
+  "sa-sdk-javascript": {
+   "name": "sa-sdk-javascript",
+   "version": "1.28.2",
+   "description": "official sensorsdata javascript sdk",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 188,
+   "totalBytes": 5619438,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:03.055Z"
+  },
+  "sdk-base": {
+   "name": "sdk-base",
+   "version": "5.0.1",
+   "description": "a base class for sdk with default error handler",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 11,
+   "totalBytes": 28894,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:59.720Z"
+  },
+  "slice-ansi": {
+   "name": "slice-ansi",
+   "version": "10.0.1",
+   "description": "Slice a string with ANSI escape codes",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 22490,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.040Z"
+  },
+  "string-width": {
+   "name": "string-width",
+   "version": "9.0.0",
+   "description": "Get the visual width of a string - the number of columns required to display it",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 17209,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.286Z"
+  },
+  "supports-color": {
+   "name": "supports-color",
+   "version": "11.0.0",
+   "description": "Detect whether a terminal supports color",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 11618,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.465Z"
+  },
+  "tencentcloud-sdk-nodejs-common": {
+   "name": "tencentcloud-sdk-nodejs-common",
+   "version": "4.1.220",
+   "description": "腾讯云 API NODEJS SDK",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 42,
+   "totalBytes": 114057,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:47.402Z"
+  },
+  "tencentcloud-sdk-nodejs-kms": {
+   "name": "tencentcloud-sdk-nodejs-kms",
+   "version": "4.1.342",
+   "description": "腾讯云 API NODEJS SDK",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 21,
+   "totalBytes": 149755,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:00.730Z"
+  },
+  "tldraw": {
+   "name": "tldraw",
+   "version": "5.6.1",
+   "description": "A tiny little drawing editor.",
+   "weeklyDownloads": 681682,
+   "grade": "F",
+   "score": 0,
+   "fileCount": 1961,
+   "totalBytes": 15666462,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 3,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (673 files)",
+     "severity": "critical",
+     "file": "dist-cjs/index.js.map",
+     "occurrences": 673,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist-esm/lib/shapes/arrow/arrow-types.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist-esm/lib/shapes/shared/freehand/types.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist-esm/lib/ui/hooks/useTranslation/TLUiTranslationKey.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "test-coverage",
+     "title": "Coverage / test output (9 files)",
+     "severity": "low",
+     "file": "src/lib/shapes/line/__snapshots__/LineShapeUtil.test.tsx.snap",
+     "occurrences": 9,
+     "advice": "Coverage output bloats the package and can embed full source."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:51.616Z"
+  },
+  "tsx": {
+   "name": "tsx",
+   "version": "4.23.15",
+   "description": "TypeScript Execute (tsx): Node.js enhanced with esbuild to run TypeScript & ESM files",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 30,
+   "totalBytes": 396881,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.399Z"
+  },
+  "typesense": {
+   "name": "typesense",
+   "version": "3.2.0",
+   "description": "Javascript Library for Typesense",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 8,
+   "fileCount": 280,
+   "totalBytes": 2325383,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/typesense.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/typesense.min.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (68 files)",
+     "severity": "medium",
+     "file": "lib/Typesense/Alias.js.map",
+     "occurrences": 68,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:45:44.883Z"
+  },
+  "uglify-js": {
+   "name": "uglify-js",
+   "version": "3.19.3",
+   "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+   "weeklyDownloads": 59172793,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 20,
+   "totalBytes": 1304556,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.374Z"
+  },
+  "wrap-ansi": {
+   "name": "wrap-ansi",
+   "version": "10.0.2",
+   "description": "Wordwrap a string with ANSI escape codes",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 25896,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:03.947Z"
+  },
+  "yargs": {
+   "name": "yargs",
+   "version": "18.2.0",
+   "description": "yargs the modern, pirate-themed, successor to optimist.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 59,
+   "totalBytes": 236734,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:04.805Z"
+  },
+  "yargs-parser": {
+   "name": "yargs-parser",
+   "version": "22.0.0",
+   "description": "the mighty option parser used by yargs",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 10,
+   "totalBytes": 85628,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:05.620Z"
+  },
+  "yn": {
+   "name": "yn",
+   "version": "5.1.0",
+   "description": "Parse yes/no like values",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 6134,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.713Z"
+  },
+  "yocto-spinner": {
+   "name": "yocto-spinner",
+   "version": "1.2.2",
+   "description": "Tiny terminal spinner",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 20327,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:06.547Z"
+  },
+  "yoctocolors": {
+   "name": "yoctocolors",
+   "version": "2.2.0",
+   "description": "The smallest and fastest command-line coloring package on the internet",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 13519,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T01:46:08.572Z"
+  }
+ }
+}

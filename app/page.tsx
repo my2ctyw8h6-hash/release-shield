@@ -48,6 +48,7 @@ export default function Home() {
             <a href="#how">How it works</a>
             <a href="#catches">What we catch</a>
             <a href="#pricing">Pricing</a>
+            <a href="/npm">Package reports</a>
             <a href="/docs">Docs</a>
             <a href="#check" className="btn btn-sm btn-primary">Free scan</a>
           </nav>
@@ -134,7 +135,7 @@ export default function Home() {
       <footer className="footer">
         <div className="container footer-inner">
           <Logo />
-          <span className="muted small">© {new Date().getFullYear()} ReleaseShield. Ship code, not secrets.</span>
+          <span className="muted small"><a href="/npm">npm package reports</a> · <a href="/docs">Docs</a> · © {new Date().getFullYear()} ReleaseShield. Ship code, not secrets.</span>
         </div>
       </footer>
     </>

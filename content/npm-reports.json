@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-17T01:48:17.472Z",
+ "generatedAt": "2026-11-17T03:17:27.552Z",
  "reports": {
   "@agentclientprotocol/claude-agent-acp": {
    "name": "@agentclientprotocol/claude-agent-acp",
@@ -244,6 +244,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:28.179Z"
   },
+  "@argos-ci/api-client": {
+   "name": "@argos-ci/api-client",
+   "version": "0.32.0",
+   "description": "Argos API Client library.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 325347,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:22.521Z"
+  },
   "@argos-ci/core": {
    "name": "@argos-ci/core",
    "version": "6.9.0",
@@ -345,6 +364,72 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:31.271Z"
+  },
+  "@cargo-ai/api": {
+   "name": "@cargo-ai/api",
+   "version": "1.0.125",
+   "description": "Typed TypeScript client for the Cargo API — models and records, orchestration runs and batches, connectors and integrations, agents, segments, and billing. The programmatic surface behind the cargo-ai",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 147,
+   "totalBytes": 1056119,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (48 files)",
+     "severity": "medium",
+     "file": "build/src/domains/ai.d.ts.map",
+     "occurrences": 48,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:25.721Z"
+  },
+  "@clack/core": {
+   "name": "@clack/core",
+   "version": "1.6.0",
+   "description": "Clack contains low-level primitives for implementing your own command-line applications.",
+   "weeklyDownloads": 44780947,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 56045,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:13.344Z"
+  },
+  "@clack/prompts": {
+   "name": "@clack/prompts",
+   "version": "1.9.0",
+   "description": "Effortlessly build beautiful command-line apps 🪄 [Try the demo](https://stackblitz.com/edit/clack-prompts?file=index.js)",
+   "weeklyDownloads": 44767477,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 94642,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:13.801Z"
   },
   "@clerk/express": {
    "name": "@clerk/express",
@@ -549,6 +634,70 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:00.149Z"
+  },
+  "@earendil-works/pi-tui": {
+   "name": "@earendil-works/pi-tui",
+   "version": "1.5.2",
+   "description": "Terminal User Interface library with differential rendering for efficient text-based applications",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 8,
+   "fileCount": 204,
+   "totalBytes": 2458876,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (46 files)",
+     "severity": "critical",
+     "file": "dist/components/alt-screen-flash.js.map",
+     "occurrences": 46,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (46 files)",
+     "severity": "medium",
+     "file": "dist/components/alt-screen-flash.d.ts.map",
+     "occurrences": 46,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:22.037Z"
+  },
+  "@expo/cli": {
+   "name": "@expo/cli",
+   "version": "58.1.20",
+   "description": "The Expo CLI",
+   "weeklyDownloads": 16801783,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 1310,
+   "totalBytes": 3763252,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (428 files)",
+     "severity": "medium",
+     "file": "build/metro-require/require.js.map",
+     "occurrences": 428,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:19.514Z"
   },
   "@fullstory/browser": {
    "name": "@fullstory/browser",
@@ -803,6 +952,44 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.219Z"
   },
+  "@inquirer/editor": {
+   "name": "@inquirer/editor",
+   "version": "5.4.0",
+   "description": "Inquirer multiline editor prompt",
+   "weeklyDownloads": 54276523,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 12205,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:10.906Z"
+  },
+  "@inquirer/expand": {
+   "name": "@inquirer/expand",
+   "version": "5.2.0",
+   "description": "Inquirer checkbox prompt",
+   "weeklyDownloads": 53473411,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 12601,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:10.533Z"
+  },
   "@inquirer/external-editor": {
    "name": "@inquirer/external-editor",
    "version": "3.1.0",
@@ -860,6 +1047,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:48:16.567Z"
   },
+  "@inquirer/number": {
+   "name": "@inquirer/number",
+   "version": "4.3.0",
+   "description": "Inquirer number prompt",
+   "weeklyDownloads": 52769006,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 14414,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:15.501Z"
+  },
   "@inquirer/password": {
    "name": "@inquirer/password",
    "version": "5.3.0",
@@ -878,6 +1084,63 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.562Z"
+  },
+  "@inquirer/prompts": {
+   "name": "@inquirer/prompts",
+   "version": "8.8.0",
+   "description": "Inquirer prompts, combined in a single package",
+   "weeklyDownloads": 62479715,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 25462,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:11.356Z"
+  },
+  "@inquirer/rawlist": {
+   "name": "@inquirer/rawlist",
+   "version": "5.4.0",
+   "description": "Inquirer rawlist prompt",
+   "weeklyDownloads": 53363037,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 14426,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:15.216Z"
+  },
+  "@inquirer/search": {
+   "name": "@inquirer/search",
+   "version": "4.4.0",
+   "description": "Inquirer search prompt",
+   "weeklyDownloads": 53877366,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 20896,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:13.698Z"
   },
   "@inquirer/select": {
    "name": "@inquirer/select",
@@ -953,6 +1216,106 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.289Z"
   },
+  "@kintone/rest-api-client": {
+   "name": "@kintone/rest-api-client",
+   "version": "7.0.0",
+   "description": "Kintone REST API client for JavaScript",
+   "weeklyDownloads": 0,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 366,
+   "totalBytes": 6205879,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (118 files)",
+     "severity": "medium",
+     "file": "esm/src/client/types/app/action.js.map",
+     "occurrences": 118,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:24.229Z"
+  },
+  "@kubb/plugin-client": {
+   "name": "@kubb/plugin-client",
+   "version": "6.1.0",
+   "description": "Generate typed API operations against your own client module.",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 70,
+   "totalBytes": 797537,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:23.369Z"
+  },
+  "@kubb/plugin-fetch": {
+   "name": "@kubb/plugin-fetch",
+   "version": "6.1.0",
+   "description": "Generate a slim, type-safe HTTP client with Kubb based on the native Fetch api.",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 24,
+   "totalBytes": 118720,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:27.552Z"
+  },
   "@larksuiteoapi/node-sdk": {
    "name": "@larksuiteoapi/node-sdk",
    "version": "1.76.0",
@@ -999,6 +1362,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:53.817Z"
+  },
+  "@lcdp/api": {
+   "name": "@lcdp/api",
+   "version": "1.21.0",
+   "description": "LCDP APIs",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 73,
+   "totalBytes": 693591,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:27.119Z"
   },
   "@lemonsqueezy/lemonsqueezy.js": {
    "name": "@lemonsqueezy/lemonsqueezy.js",
@@ -1231,6 +1613,110 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:48:15.750Z"
+  },
+  "@nestjs/schematics": {
+   "name": "@nestjs/schematics",
+   "version": "12.0.13",
+   "description": "The generators behind the Nest CLI: scaffold NestJS applications, libraries, modules, controllers, services and CRUD resources.",
+   "weeklyDownloads": 13716674,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 283,
+   "totalBytes": 299230,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:21.540Z"
+  },
+  "@npmcli/map-workspaces": {
+   "name": "@npmcli/map-workspaces",
+   "version": "6.0.0",
+   "description": "Retrieves a name:pathname Map for a given workspaces config",
+   "weeklyDownloads": 10370992,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 10977,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:10.249Z"
+  },
+  "@npmcli/node-gyp": {
+   "name": "@npmcli/node-gyp",
+   "version": "6.0.0",
+   "description": "Tools for dealing with node-gyp packages",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 2692,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:21.733Z"
+  },
+  "@oclif/core": {
+   "name": "@oclif/core",
+   "version": "5.1.12",
+   "description": "base library for oclif CLIs",
+   "weeklyDownloads": 16452297,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 163,
+   "totalBytes": 458733,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:20.560Z"
+  },
+  "@octokit/action": {
+   "name": "@octokit/action",
+   "version": "8.0.4",
+   "description": "GitHub API client for GitHub Actions",
+   "weeklyDownloads": 109746,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 9,
+   "totalBytes": 13819,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-bundle/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:08.077Z"
   },
   "@octokit/auth-oauth-device": {
    "name": "@octokit/auth-oauth-device",
@@ -1466,6 +1952,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:27.107Z"
   },
+  "@octokit/rest": {
+   "name": "@octokit/rest",
+   "version": "22.0.1",
+   "description": "GitHub REST API client for Node.js",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 9,
+   "totalBytes": 8276,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-src/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist-src/version.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:22.186Z"
+  },
   "@octokit/types": {
    "name": "@octokit/types",
    "version": "18.0.0",
@@ -1697,6 +2219,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:03.904Z"
+  },
+  "@rootly/ts": {
+   "name": "@rootly/ts",
+   "version": "0.4.0",
+   "description": "Type-safe TypeScript SDK for the Rootly API",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 9,
+   "totalBytes": 4175013,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:26.249Z"
   },
   "@safe-global/safe-apps-sdk": {
    "name": "@safe-global/safe-apps-sdk",
@@ -2259,6 +2817,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:52.882Z"
   },
+  "@tursodatabase/api": {
+   "name": "@tursodatabase/api",
+   "version": "2.0.6",
+   "description": "The Turso API gives you everything needed to manage your organization and it's members, groups, databases, and API tokens.",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 9,
+   "totalBytes": 136050,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:23.699Z"
+  },
   "@twilio/voice-sdk": {
    "name": "@twilio/voice-sdk",
    "version": "2.19.0",
@@ -2277,6 +2871,25 @@
    "findings": [],
    "withheld": 4,
    "scannedAt": "2026-11-17T01:45:37.897Z"
+  },
+  "@usebruno/cli": {
+   "name": "@usebruno/cli",
+   "version": "4.3.0",
+   "description": "With Bruno CLI, you can now run your API collections with ease using simple command line commands.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 36,
+   "totalBytes": 297427,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:22.939Z"
   },
   "@vercel/sandbox": {
    "name": "@vercel/sandbox",
@@ -2305,6 +2918,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:31.708Z"
+  },
+  "@xdevplatform/xdk": {
+   "name": "@xdevplatform/xdk",
+   "version": "0.6.6",
+   "description": "A modern TypeScript/JavaScript SDK for the X API",
+   "weeklyDownloads": 0,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 9,
+   "totalBytes": 4690800,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:25.229Z"
   },
   "@zapier/kitcore": {
    "name": "@zapier/kitcore",
@@ -2457,6 +3106,25 @@
    "withheld": 1,
    "scannedAt": "2026-11-17T01:45:26.920Z"
   },
+  "ansi-align": {
+   "name": "ansi-align",
+   "version": "3.0.1",
+   "description": "align-text with ANSI support for CLIs",
+   "weeklyDownloads": 32620172,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 7684,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:16.992Z"
+  },
   "ansi-colors": {
    "name": "ansi-colors",
    "version": "4.1.3",
@@ -2571,6 +3239,70 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.882Z"
   },
+  "argue-cli": {
+   "name": "argue-cli",
+   "version": "3.2.1",
+   "description": "A thin and strongly typed CLI arguments parser for Node.js.",
+   "weeklyDownloads": 7362054,
+   "grade": "D",
+   "score": 49,
+   "fileCount": 19,
+   "totalBytes": 38891,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (7 files)",
+     "severity": "medium",
+     "file": "dist/args.d.ts.map",
+     "occurrences": 7,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:17.314Z"
+  },
+  "bitbucket": {
+   "name": "bitbucket",
+   "version": "2.12.0",
+   "description": "Bitbucket API client for Browser and Node.js",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 90,
+   "fileCount": 28,
+   "totalBytes": 507981,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (5 files)",
+     "severity": "medium",
+     "file": "lib/plugins/authenticate.js.map",
+     "occurrences": 5,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:22.593Z"
+  },
   "boxen": {
    "name": "boxen",
    "version": "9.0.0",
@@ -2609,6 +3341,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.019Z"
   },
+  "cli-boxes": {
+   "name": "cli-boxes",
+   "version": "4.0.1",
+   "description": "Boxes for use in the terminal",
+   "weeklyDownloads": 45713894,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 6092,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:12.629Z"
+  },
   "cli-cursor": {
    "name": "cli-cursor",
    "version": "5.0.0",
@@ -2627,6 +3378,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.340Z"
+  },
+  "cli-progress": {
+   "name": "cli-progress",
+   "version": "3.12.0",
+   "description": "easy to use progress-bar for command-line/terminal applications",
+   "weeklyDownloads": 15453763,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 20,
+   "totalBytes": 62174,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:19.706Z"
   },
   "cli-spinners": {
    "name": "cli-spinners",
@@ -2751,6 +3521,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.076Z"
   },
+  "confluence.js": {
+   "name": "confluence.js",
+   "version": "3.3.1",
+   "description": "Type-safe Confluence REST API client for TypeScript and JavaScript. Covers both Confluence Cloud API v2 and v1 from one package. ESM-only, tree-shakable, runtime-validated by Zod 4. Atlassian Confluen",
+   "weeklyDownloads": 0,
+   "grade": "D",
+   "score": 46,
+   "fileCount": 3404,
+   "totalBytes": 5836195,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 1,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "dist/browser.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (1698 files)",
+     "severity": "medium",
+     "file": "dist/v2/models/abstractPageLinks.d.ts.map",
+     "occurrences": 1698,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-17T03:17:24.939Z"
+  },
   "consola": {
    "name": "consola",
    "version": "3.4.2",
@@ -2769,6 +3575,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.566Z"
+  },
+  "dashdash": {
+   "name": "dashdash",
+   "version": "2.0.0",
+   "description": "A light, featureful and explicit option parsing library.",
+   "weeklyDownloads": 20890659,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 83496,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:18.200Z"
   },
   "dropbox": {
    "name": "dropbox",
@@ -2888,6 +3713,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.595Z"
   },
+  "fast-string-width": {
+   "name": "fast-string-width",
+   "version": "3.0.2",
+   "description": "A fast function for calculating the visual width of a string once printed to the terminal.",
+   "weeklyDownloads": 64317808,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 3515,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:11.595Z"
+  },
   "figures": {
    "name": "figures",
    "version": "6.1.0",
@@ -2906,6 +3750,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.876Z"
+  },
+  "firebase-tools": {
+   "name": "firebase-tools",
+   "version": "15.36.0",
+   "description": "Command-Line Interface for Firebase",
+   "weeklyDownloads": 5122929,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 1009,
+   "totalBytes": 6165487,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:18.619Z"
   },
   "firecrawl": {
    "name": "firecrawl",
@@ -2945,6 +3808,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.607Z"
   },
+  "html-minifier-terser": {
+   "name": "html-minifier-terser",
+   "version": "7.2.0",
+   "description": "Highly configurable, well-tested, JavaScript-based HTML minifier.",
+   "weeklyDownloads": 22652774,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 12,
+   "totalBytes": 4597603,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:20.109Z"
+  },
   "hud-sdk": {
    "name": "hud-sdk",
    "version": "1.12.4",
@@ -2983,6 +3865,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:44.372Z"
   },
+  "import-local": {
+   "name": "import-local",
+   "version": "3.2.0",
+   "description": "Let a globally installed package use a locally installed version of itself if available",
+   "weeklyDownloads": 61687532,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 4730,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:10.977Z"
+  },
   "inquirer": {
    "name": "inquirer",
    "version": "14.3.0",
@@ -3020,6 +3921,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:48:16.620Z"
+  },
+  "is-installed-globally": {
+   "name": "is-installed-globally",
+   "version": "1.0.1",
+   "description": "Check if your package was installed globally",
+   "weeklyDownloads": 35486302,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 4853,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:17.706Z"
   },
   "jackspeak": {
    "name": "jackspeak",
@@ -3065,6 +3985,44 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.100Z"
   },
+  "jake": {
+   "name": "jake",
+   "version": "13.0.3",
+   "description": "JavaScript build tool, similar to Make or Rake",
+   "weeklyDownloads": 41136229,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 43,
+   "totalBytes": 190822,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:12.140Z"
+  },
+  "json-schema-to-zod": {
+   "name": "json-schema-to-zod",
+   "version": "2.8.1",
+   "description": "Converts JSON schema objects or files into Zod schemas",
+   "weeklyDownloads": 3933892,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 92,
+   "totalBytes": 119667,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:20.314Z"
+  },
   "kleur": {
    "name": "kleur",
    "version": "4.1.5",
@@ -3083,6 +4041,53 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.453Z"
+  },
+  "knip": {
+   "name": "knip",
+   "version": "6.45.1",
+   "description": "Find and fix unused dependencies, exports and files in your TypeScript and JavaScript projects",
+   "weeklyDownloads": 31266040,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 1131,
+   "totalBytes": 1578768,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:15.713Z"
+  },
+  "kubb": {
+   "name": "kubb",
+   "version": "5.21.0",
+   "description": "Turn your API spec into type-safe code. Generate TypeScript types, API clients, hooks, validators and mocks from a spec such as OpenAPI.",
+   "weeklyDownloads": 0,
+   "grade": "D",
+   "score": 36,
+   "fileCount": 54,
+   "totalBytes": 57895,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "critical",
+     "file": "dist/defineConfig-BgZt8DZW.cjs.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:24.446Z"
   },
   "launchdarkly-react-client-sdk": {
    "name": "launchdarkly-react-client-sdk",
@@ -3120,6 +4125,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:38.875Z"
   },
+  "listr2": {
+   "name": "listr2",
+   "version": "11.4.1",
+   "description": "Terminal task list reborn! Create beautiful CLI interfaces via easy and logical to implement task lists that feel alive and interactive.",
+   "weeklyDownloads": 54227995,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 133704,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:09.828Z"
+  },
   "log-symbols": {
    "name": "log-symbols",
    "version": "7.0.1",
@@ -3138,6 +4162,44 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.499Z"
+  },
+  "log-update": {
+   "name": "log-update",
+   "version": "8.0.0",
+   "description": "Log by overwriting the previous output in the terminal. Useful for rendering progress bars, animations, etc.",
+   "weeklyDownloads": 56918677,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 18027,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:11.739Z"
+  },
+  "meow": {
+   "name": "meow",
+   "version": "14.1.0",
+   "description": "CLI app helper",
+   "weeklyDownloads": 47652173,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 11,
+   "totalBytes": 410886,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:11.434Z"
   },
   "mercadopago": {
    "name": "mercadopago",
@@ -3232,6 +4294,63 @@
    "withheld": 1,
    "scannedAt": "2026-11-17T01:45:56.856Z"
   },
+  "mri": {
+   "name": "mri",
+   "version": "1.2.0",
+   "description": "Quickly scan for CLI flags and arguments",
+   "weeklyDownloads": 34306204,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 13261,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:15.867Z"
+  },
+  "node-zendesk": {
+   "name": "node-zendesk",
+   "version": "6.0.1",
+   "description": "A trusted Zendesk API client library for Node.js and the browser, lovingly maintained for over 10 years.",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 84,
+   "totalBytes": 416845,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:22.733Z"
+  },
+  "nodemon": {
+   "name": "nodemon",
+   "version": "3.1.14",
+   "description": "Simple monitor script for use during development of a Node.js app.",
+   "weeklyDownloads": 16318390,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 42,
+   "totalBytes": 219252,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:20.937Z"
+  },
   "npm-run-path": {
    "name": "npm-run-path",
    "version": "6.0.0",
@@ -3279,6 +4398,25 @@
    "withheld": 1,
    "scannedAt": "2026-11-17T01:45:36.844Z"
   },
+  "optimist": {
+   "name": "optimist",
+   "version": "0.6.1",
+   "description": "Light-weight option parsing with an argv hash. No optstrings attached.",
+   "weeklyDownloads": 3731190,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 29,
+   "totalBytes": 46895,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:19.879Z"
+  },
   "optionator": {
    "name": "optionator",
    "version": "0.9.4",
@@ -3316,6 +4454,44 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.145Z"
+  },
+  "password-prompt": {
+   "name": "password-prompt",
+   "version": "1.1.3",
+   "description": "cross-platform masked or hidden prompt",
+   "weeklyDownloads": 4765023,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 4902,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:19.083Z"
+  },
+  "piccolore": {
+   "name": "piccolore",
+   "version": "0.1.3",
+   "description": "A tiny, zero-dependency library for styling terminal text",
+   "weeklyDownloads": 0,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 3750,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:21.591Z"
   },
   "picocolors": {
    "name": "picocolors",
@@ -3373,6 +4549,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.416Z"
+  },
+  "prisma": {
+   "name": "prisma",
+   "version": "8.0.0-rc.34",
+   "description": "The Prisma CLI: one binary for the ORM, Composer, and the Prisma Developer Platform.",
+   "weeklyDownloads": 26315058,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 627910,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:16.856Z"
   },
   "progress": {
    "name": "progress",
@@ -3514,6 +4709,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:03.055Z"
   },
+  "sade": {
+   "name": "sade",
+   "version": "1.8.1",
+   "description": "Smooth (CLI) operator 🎶",
+   "weeklyDownloads": 15076542,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 31545,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:21.323Z"
+  },
   "sdk-base": {
    "name": "sdk-base",
    "version": "5.0.1",
@@ -3589,6 +4803,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.465Z"
+  },
+  "supports-hyperlinks": {
+   "name": "supports-hyperlinks",
+   "version": "5.0.0",
+   "description": "Detect whether a terminal supports hyperlinks",
+   "weeklyDownloads": 58552061,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 9352,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:12.484Z"
   },
   "tencentcloud-sdk-nodejs-common": {
    "name": "tencentcloud-sdk-nodejs-common",
@@ -3770,6 +5003,80 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.374Z"
   },
+  "webpack-cli": {
+   "name": "webpack-cli",
+   "version": "7.3.1",
+   "description": "CLI for webpack & friends",
+   "weeklyDownloads": 12873517,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 162071,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:20.223Z"
+  },
+  "widest-line": {
+   "name": "widest-line",
+   "version": "6.0.0",
+   "description": "Get the visual width of the widest line in a string - the number of columns required to display it",
+   "weeklyDownloads": 55007685,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 3373,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:12.856Z"
+  },
+  "wrangler": {
+   "name": "wrangler",
+   "version": "4.163.0",
+   "description": "Command-line interface for all things Cloudflare Workers",
+   "weeklyDownloads": 47071832,
+   "grade": "F",
+   "score": 20,
+   "fileCount": 30,
+   "totalBytes": 15822177,
+   "counts": {
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "wrangler-dist/experimental-config.d.mts.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "critical",
+     "file": "wrangler-dist/experimental-config.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:14.784Z"
+  },
   "wrap-ansi": {
    "name": "wrap-ansi",
    "version": "10.0.2",
@@ -3883,6 +5190,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:08.572Z"
+  },
+  "yoctocolors-cjs": {
+   "name": "yoctocolors-cjs",
+   "version": "2.1.3",
+   "description": "CommonJS version - The smallest and fastest command-line coloring package on the internet",
+   "weeklyDownloads": 40525537,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 11049,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-17T03:17:17.649Z"
   }
  }
 }

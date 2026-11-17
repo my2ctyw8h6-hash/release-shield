@@ -62,6 +62,7 @@ export default async function PackageReport({ params }: Props) {
   const groups = group(r.findings);
   const hasMaps = r.findings.some((f) => f.ruleId.startsWith("source-map"));
   const scanned = new Date(r.scannedAt).toISOString().slice(0, 10);
+  const badgeUrl = `${SITE_URL}/api/badge/npm/${r.name}.svg`;
 
   return (
     <>
@@ -153,6 +154,15 @@ export default async function PackageReport({ params }: Props) {
           <a className="btn btn-primary" href="/#pricing">See plans: from $19/mo</a>{" "}
           <a className="btn btn-outline" href={`/?scan=${encodeURIComponent(r.name)}#check`}>Re-scan {r.name} live</a>
         </p>
+
+        <h2>Maintainer? Show it in your README</h2>
+        <p className="muted">
+          The badge reflects the latest automated scan of the published tarball and refreshes on its own.{" "}
+          <img src={badgeUrl} alt={`ReleaseShield report for ${r.name}`} height={20} style={{ verticalAlign: "middle" }} />
+        </p>
+        <pre className="code" style={{ margin: "1rem 0", whiteSpace: "pre-wrap", wordBreak: "break-all" }}>
+          <code>{`[![ReleaseShield](${badgeUrl})](${SITE_URL}${reportPath(r.name)}?ref=badge)`}</code>
+        </pre>
 
         <h2>Other package reports</h2>
         <p className="small">

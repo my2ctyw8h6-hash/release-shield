@@ -21,5 +21,9 @@ export function configuredSiteUrl(): string | null {
 /** Canonical base URL; falls back to the production domain so OG/canonical URLs are never localhost or a foreign host. */
 export const SITE_URL = configuredSiteUrl() ?? PRODUCTION_URL;
 
-/** GitHub Action reference shown in docs/snippets (the repo that hosts action.yml). */
-export const ACTION_REF = process.env.NEXT_PUBLIC_GITHUB_ACTION_REF ?? "releaseshield/release-shield@v1";
+/** GitHub Action reference shown in docs/snippets (the repo that hosts action.yml, tag v1). */
+export const ACTION_REF = process.env.NEXT_PUBLIC_GITHUB_ACTION_REF || "my2ctyw8h6-hash/release-shield@v1";
+
+/** The CLI isn't on npm; the build copies the single-file bundle to public/releaseshield.mjs. */
+export const CLI_URL = `${PRODUCTION_URL}/releaseshield.mjs`;
+export const CLI_GET = `curl -fsSLo releaseshield.mjs ${CLI_URL}`;

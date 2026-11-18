@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Logo } from "@/components/Logo";
-import { ACTION_REF } from "@/lib/site";
+import { ACTION_REF, CLI_GET } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Docs: ReleaseShield CLI & GitHub Action",
@@ -80,14 +80,17 @@ jobs:
 
         <h2>3. CLI (any CI or your laptop)</h2>
         <pre className="code">
-          <code>{`npx releaseshield scan                      # npm pack the current package and scan it
-npx releaseshield scan dist/*.whl           # Python wheels / sdists
-npx releaseshield scan docker:my-app:1.4.0  # Docker image (via docker save)
-npx releaseshield scan npm:some-pkg@2.0.0   # an already-published npm version
-npx releaseshield license                   # check your plan
+          <code>{`${CLI_GET}   # single file, no dependencies, Node 20+
+
+node releaseshield.mjs scan                      # npm pack the current package and scan it
+node releaseshield.mjs scan dist/*.whl           # Python wheels / sdists
+node releaseshield.mjs scan docker:my-app:1.4.0  # Docker image (via docker save)
+node releaseshield.mjs scan npm:some-pkg@2.0.0   # an already-published npm version
+node releaseshield.mjs license                   # check your plan
 
 # GitLab CI / CircleCI / Jenkins
-RELEASESHIELD_TOKEN=$TOKEN npx releaseshield scan --fail-on high --format sarif -o gl-sast.sarif`}</code>
+${CLI_GET}
+RELEASESHIELD_TOKEN=$TOKEN node releaseshield.mjs scan --fail-on high --format sarif -o gl-sast.sarif`}</code>
         </pre>
         <table>
           <thead>

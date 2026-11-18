@@ -4,7 +4,7 @@ import { Logo } from "@/components/Logo";
 import { CopyBox } from "@/components/CopyBox";
 import { PLANS, isPlanId } from "@/lib/plans";
 import { issueLicenseForSession } from "@/lib/stripe";
-import { ACTION_REF, configuredSiteUrl } from "@/lib/site";
+import { ACTION_REF, CLI_GET, configuredSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Welcome to ReleaseShield", robots: { index: false, follow: false } };
 export const dynamic = "force-dynamic";
@@ -66,7 +66,7 @@ export default async function Success({ searchParams }: { searchParams: Promise<
           <code>{workflow}</code>
         </pre>
         <p className="muted small">
-          Or run it anywhere: <code>RELEASESHIELD_TOKEN=… npx releaseshield scan --fail-on critical</code>
+          Or run it anywhere: <code>{CLI_GET} && RELEASESHIELD_TOKEN=… node releaseshield.mjs scan --fail-on critical</code>
         </p>
         <div className="row-gap">
           <a className="btn btn-primary" href="/docs">Read the setup guide</a>

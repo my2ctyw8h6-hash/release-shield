@@ -2,7 +2,7 @@ import { Logo } from "@/components/Logo";
 import { LeakChecker } from "@/components/LeakChecker";
 import { PricingCards } from "@/components/PricingCards";
 import { PLANS, toPublicPlan } from "@/lib/plans";
-import { ACTION_REF } from "@/lib/site";
+import { ACTION_REF, CLI_GET } from "@/lib/site";
 
 const CATCHES = [
   { t: "Source maps", d: "*.map files, especially ones with sourcesContent that rebuild your full original code." },
@@ -92,7 +92,9 @@ export default function Home() {
     token: \${{ secrets.RELEASESHIELD_TOKEN }}
 - run: npm publish
 
-# …or anywhere:  npx releaseshield scan --fail-on critical`}</code>
+# …or anywhere:
+${CLI_GET}
+node releaseshield.mjs scan --fail-on critical`}</code>
             </pre>
           </div>
         </section>

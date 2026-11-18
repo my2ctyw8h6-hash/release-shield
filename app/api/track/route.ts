@@ -23,6 +23,13 @@ export async function POST(req: Request) {
   const ref = cleanRef(body?.ref ?? new URL(req.url).searchParams.get("ref"));
   const plan = typeof body?.plan === "string" && body.plan in PLANS ? body.plan : undefined;
 
+  const rawPath = typeof body?.path === "string" ? body.path : "";
+  const path = rawPath.startsWith("/") ? rawPath.replace(/[^\w@./\-]/g, "").slice(0, 120) : undefined;
+
+  // One JSON line per event: the per-instance counters below lose most events on Vercel,
+  // so /root/track-cumulative.js counts from these function logs instead (deduped by requestId).
+  console.log(JSON.stringify({ rs_track: 1, type, ref, plan, path }));
+
   await recordEvent(type, ref, plan);
   return new NextResponse(null, { status: 204 });
 }

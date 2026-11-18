@@ -514,7 +514,7 @@ async function fetchNpmTarball(spec, opts = {}) {
   const res = await fetch(`${registry}/${encoded}`, {
     headers: { accept: "application/vnd.npm.install-v1+json", ...auth },
     signal: AbortSignal.timeout(1e4),
-    cache: "no-store"
+    ...opts.noStore === false ? {} : { cache: "no-store" }
   });
   if (res.status === 404) throw new Error(`Package "${name}" was not found on npm.`);
   if (!res.ok) throw new Error(`npm registry returned ${res.status}.`);
@@ -524,7 +524,7 @@ async function fetchNpmTarball(spec, opts = {}) {
   if (!dist?.tarball) throw new Error(`Version "${requested}" of ${name} was not found.`);
   const url = new URL(dist.tarball);
   if (url.hostname !== registryUrl.hostname || url.protocol !== "https:" && !isLocal) throw new Error("Unexpected tarball location.");
-  const tar = await fetch(url, { headers: auth, signal: AbortSignal.timeout(6e4), cache: "no-store" });
+  const tar = await fetch(url, { headers: auth, signal: AbortSignal.timeout(6e4), ...opts.noStore === false ? {} : { cache: "no-store" } });
   if (!tar.ok || !tar.body) throw new Error(`Could not download tarball (${tar.status}).`);
   const declared = Number(tar.headers.get("content-length") ?? 0);
   if (declared > maxBytes) throw new Error(limitMsg);

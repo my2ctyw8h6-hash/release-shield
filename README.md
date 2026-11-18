@@ -1,6 +1,46 @@
 # ReleaseShield
 
-A pre-publish leak scanner for npm, PyPI and Docker artifacts. Built with Next.js 16 (App Router) and Stripe.
+Scans the npm tarball (or PyPI wheel / Docker image) you're about to publish for `.env` files, private keys, source maps with embedded source, and hard-coded secrets.
+
+`npm publish` packs whatever is on disk, not what's in git. A `.npmignore` replaces `.gitignore` rather than adding to it, so as soon as one exists, files that git ignores (`.env`, `*.pem`, `dist/*.map`) get shipped. Git-side secret scanning never sees them because they were never committed. ReleaseShield runs `npm pack` and checks the actual artifact.
+
+Check a published package or upload a tarball, free and with no signup: https://release-shield-app.vercel.app/?ref=github-readme
+
+## GitHub Action
+
+```yaml
+# .github/workflows/release.yml
+- uses: actions/checkout@v4
+- run: npm ci
+- uses: my2ctyw8h6-hash/release-shield@v1
+  with:
+    fail-on: critical
+    token: ${{ secrets.RELEASESHIELD_TOKEN }}   # optional
+- run: npm publish
+```
+
+Without a `token`, it runs in free, report-only mode: findings show up as annotations and in the job summary, but the job doesn't fail. A token ($19/mo Standard) turns on `fail-on` blocking, SARIF/JSON output and Slack alerts. See [action.yml](action.yml) for all inputs.
+
+## CLI
+
+One dependency-free file, Node 20+:
+
+```bash
+curl -fsSLo releaseshield.mjs https://release-shield-app.vercel.app/releaseshield.mjs
+node releaseshield.mjs scan                  # npm packs the cwd and scans the tarball
+node releaseshield.mjs scan npm:some-package # scan a published package
+node releaseshield.mjs scan dist/*.whl       # PyPI wheels/sdists; docker:<image> for images
+```
+
+Free mode prints the report. Licensed mode adds `--fail-on` exit codes, JSON/SARIF/Markdown output and policies.
+
+Guides: [the .npmignore trap](https://release-shield-app.vercel.app/guides/npmignore-trap?ref=github-readme) · [source maps in npm packages](https://release-shield-app.vercel.app/guides/source-maps-npm?ref=github-readme)
+
+---
+
+## Maintainers: how the site works
+
+Built with Next.js 16 (App Router) and Stripe.
 
 ## Features
 - **Free public leak checker** on the homepage. Scan any npm package (by name) or upload an `npm pack` tarball (≤4 MB). Files are scanned in memory and never stored.
@@ -33,7 +73,7 @@ npm run license:keygen          # one-time: creates LICENSE_PRIVATE_KEY + lib/li
 
 Publishing:
 - **CLI**: `cd cli && npm publish`. It's already bundled by `npm run build`.
-- **Action**: push this repo to GitHub, tag `v1`, and set `NEXT_PUBLIC_GITHUB_ACTION_REF` (default `releaseshield/release-shield@v1`) to `<owner>/<repo>@v1` so the site's snippets match. Optionally list it on the Marketplace.
+- **Action**: push this repo to GitHub, tag `v1`, and set `NEXT_PUBLIC_GITHUB_ACTION_REF` (default `my2ctyw8h6-hash/release-shield@v1`) to `<owner>/<repo>@v1` so the site's snippets match. Optionally list it on the Marketplace.
 
 ### Environment variables
 | Var | Required | Notes |

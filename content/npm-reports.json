@@ -343,13 +343,13 @@
    "version": "0.15.36",
    "description": "Open-source TypeScript/React library for building production-grade AI chat experiences",
    "weeklyDownloads": 3204725,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 1152,
    "totalBytes": 3045329,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -357,7 +357,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (192 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/primitives/actionBar.js.map",
      "occurrences": 192,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -520,13 +520,13 @@
    "version": "2.1.91",
    "description": "Clerk server SDK for usage with Express",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 29,
+   "grade": "C",
+   "score": 73,
    "fileCount": 27,
    "totalBytes": 125657,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -534,7 +534,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (6 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 6,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -548,13 +548,13 @@
    "version": "0.12.2",
    "description": "Cloudflare Agents (x) AI SDK Chat",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 13,
    "totalBytes": 698658,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -562,7 +562,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/ai-chat-v5-migration.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -570,7 +570,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -696,13 +696,13 @@
    "version": "1.56.1",
    "description": "The DevCycle NodeJS Server SDK used for feature management.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 122,
    "totalBytes": 383854,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -710,7 +710,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (36 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "src/bucketing.js.map",
      "occurrences": 36,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -724,13 +724,13 @@
    "version": "1.5.2",
    "description": "Coding agent CLI with read, bash, edit, write tools and session management",
    "weeklyDownloads": 6373714,
-   "grade": "F",
-   "score": 0,
+   "grade": "C",
+   "score": 58,
    "fileCount": 1324,
    "totalBytes": 24401012,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 4
    },
@@ -738,7 +738,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (262 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/utils/abort.js.map",
      "occurrences": 262,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -760,13 +760,13 @@
    "version": "1.5.2",
    "description": "Terminal User Interface library with differential rendering for efficient text-based applications",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 204,
    "totalBytes": 2458876,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -774,7 +774,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (46 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/components/alt-screen-flash.js.map",
      "occurrences": 46,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -843,13 +843,13 @@
    "version": "0.98.0",
    "description": "Fayz SDK — API client, app params, runtime broker helpers, and shared types for generated Fayz projects",
    "weeklyDownloads": 2753,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 96,
    "totalBytes": 708968,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -857,7 +857,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (13 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/automations.js.map",
      "occurrences": 13,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -898,13 +898,13 @@
    "version": "0.3.2",
    "description": "Core SDK for Gemini Wallet integration with popup communication",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 39,
    "totalBytes": 446620,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -912,7 +912,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -920,7 +920,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -953,13 +953,13 @@
    "version": "1.0.2",
    "description": "[Changelog](https://github.com/graphql/graphiql/blob/main/packages/graphiql-react/CHANGELOG.md) | [API Docs](https://graphiql-test.netlify.app/typedoc/modules/graphiql_react.html) | [NPM](https://www.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 256,
    "totalBytes": 1166100,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -967,7 +967,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (89 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/utility/active-operation.js.map",
      "occurrences": 89,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -981,13 +981,13 @@
    "version": "0.99.0",
    "description": "🌀 OpenAPI to TypeScript code generator. Production-grade SDKs, Zod schemas, TanStack Query hooks, and 20+ plugins. Used by Vercel, OpenCode, and PayPal.",
    "weeklyDownloads": 7578826,
-   "grade": "D",
-   "score": 36,
+   "grade": "B",
+   "score": 76,
    "fileCount": 61,
    "totalBytes": 2926092,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -995,7 +995,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (4 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/init-D6Y8JFUS.mjs.map",
      "occurrences": 4,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1360,13 +1360,13 @@
    "version": "9.0.0",
    "description": "easily create complex multi-column command-line-interfaces",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 73,
    "totalBytes": 522445,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -1374,7 +1374,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (18 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/commonjs/ansi-regex/index.js.map",
      "occurrences": 18,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1471,13 +1471,13 @@
    "version": "6.1.1",
    "description": "Generate a slim, type-safe HTTP client with Kubb based on axios.",
    "weeklyDownloads": 15922,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 24,
    "totalBytes": 128015,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -1485,7 +1485,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1493,7 +1493,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1507,13 +1507,13 @@
    "version": "6.1.0",
    "description": "Generate typed API operations against your own client module.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 70,
    "totalBytes": 797537,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -1521,7 +1521,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1529,7 +1529,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1543,13 +1543,13 @@
    "version": "6.1.0",
    "description": "Generate a slim, type-safe HTTP client with Kubb based on the native Fetch api.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 24,
    "totalBytes": 118720,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -1557,7 +1557,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1565,7 +1565,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1579,13 +1579,13 @@
    "version": "4.39.3",
    "description": "Solid Query hooks generator plugin for Kubb, creating type-safe API client hooks from OpenAPI specifications for Solid.js applications.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 29,
+   "grade": "C",
+   "score": 73,
    "fileCount": 36,
    "totalBytes": 331228,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -1593,7 +1593,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (6 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/components-BYDITbNd.js.map",
      "occurrences": 6,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1607,13 +1607,13 @@
    "version": "4.39.3",
    "description": "Svelte Query hooks generator plugin for Kubb, creating type-safe API client hooks from OpenAPI specifications for Svelte applications.",
    "weeklyDownloads": 6852,
-   "grade": "F",
-   "score": 29,
+   "grade": "C",
+   "score": 73,
    "fileCount": 36,
    "totalBytes": 331061,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -1621,7 +1621,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (6 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/components-BPCfCJ4L.cjs.map",
      "occurrences": 6,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1654,13 +1654,13 @@
    "version": "4.14.2",
    "description": "LaunchDarkly SDK for JavaScript in Browsers",
    "weeklyDownloads": 0,
-   "grade": "D",
-   "score": 36,
+   "grade": "B",
+   "score": 76,
    "fileCount": 18,
    "totalBytes": 1886668,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -1668,7 +1668,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (4 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/fetch-eventsource.cjs.map",
      "occurrences": 4,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1767,13 +1767,13 @@
    "version": "17.0.1",
    "description": "Official Node.js SDK for Lokalise Expert and Vantage APIs",
    "weeklyDownloads": 0,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 7,
    "totalBytes": 459239,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -1781,7 +1781,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/main.mjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1880,13 +1880,13 @@
    "version": "2.9.3",
    "description": "A sdk for support module federation",
    "weeklyDownloads": 3935888,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 11,
    "totalBytes": 13314,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -1894,7 +1894,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1902,7 +1902,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1916,13 +1916,13 @@
    "version": "2.9.3",
    "description": "A sdk for support module federation",
    "weeklyDownloads": 14866334,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 120,
    "totalBytes": 377950,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -1930,7 +1930,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (32 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/constant.cjs.map",
      "occurrences": 32,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -1982,13 +1982,13 @@
    "version": "7.13.1",
    "description": "The official TypeScript SDK for the Neon API, generated from Neon's OpenAPI specification. A modern, fetch-based replacement for @neondatabase/api-client.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 238,
    "totalBytes": 2842189,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -1996,7 +1996,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (54 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/neon/resources/account.js.map",
      "occurrences": 54,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2122,13 +2122,13 @@
    "version": "0.33.3",
    "description": "Hyperliquid API SDK for all major JS runtimes, written in TypeScript.",
    "weeklyDownloads": 259842,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 671,
    "totalBytes": 3461747,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2136,7 +2136,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (222 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "esm/transport/_abort.js.map",
      "occurrences": 222,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2207,13 +2207,13 @@
    "version": "8.0.4",
    "description": "GitHub API client for GitHub Actions",
    "weeklyDownloads": 109746,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 9,
    "totalBytes": 13819,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2221,7 +2221,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-bundle/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2235,13 +2235,13 @@
    "version": "8.0.5",
    "description": "GitHub OAuth Device authentication strategy for JavaScript",
    "weeklyDownloads": 10090541,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 16,
    "totalBytes": 38737,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2249,7 +2249,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-bundle/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2263,13 +2263,13 @@
    "version": "6.0.4",
    "description": "Octokit authentication strategy for OAuth clients",
    "weeklyDownloads": 10063980,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 18,
    "totalBytes": 61359,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2277,7 +2277,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-bundle/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2310,13 +2310,13 @@
    "version": "8.0.4",
    "description": "GitHub OAuth toolset for Node.js",
    "weeklyDownloads": 4798740,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 59,
    "totalBytes": 147563,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2324,7 +2324,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-node/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2338,13 +2338,13 @@
    "version": "6.0.5",
    "description": "Set of stateless request methods to create, check, reset, refresh, and delete user access tokens for OAuth and GitHub Apps",
    "weeklyDownloads": 10180635,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 32,
    "totalBytes": 96575,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2352,7 +2352,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-bundle/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2366,13 +2366,13 @@
    "version": "6.0.0",
    "description": "Octokit plugin to paginate GraphQL API endpoint responses",
    "weeklyDownloads": 4194763,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 23,
    "totalBytes": 35277,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2380,7 +2380,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-bundle/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2394,13 +2394,13 @@
    "version": "16.0.0",
    "description": "Octokit plugin to paginate REST API endpoint responses",
    "weeklyDownloads": 47441877,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 22,
    "totalBytes": 199130,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2408,7 +2408,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-bundle/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2441,13 +2441,13 @@
    "version": "18.0.0",
    "description": "Octokit plugin adding one method for all of api.github.com REST API endpoints",
    "weeklyDownloads": 41415024,
-   "grade": "D",
-   "score": 36,
+   "grade": "B",
+   "score": 76,
    "fileCount": 18,
    "totalBytes": 1421662,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2455,7 +2455,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (4 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-src/endpoints-to-methods.js.map",
      "occurrences": 4,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2469,13 +2469,13 @@
    "version": "22.0.1",
    "description": "GitHub REST API client for Node.js",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 9,
    "totalBytes": 8276,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -2483,7 +2483,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-src/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2491,7 +2491,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-src/version.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2524,13 +2524,13 @@
    "version": "6.0.0",
    "description": "Methods to handle GitHub Webhook requests",
    "weeklyDownloads": 6555648,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 17,
    "totalBytes": 23731,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -2538,7 +2538,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-node/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2546,7 +2546,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-web/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2560,13 +2560,13 @@
    "version": "0.6.2",
    "description": "A typed API client builder for okfetch based on endpoint schemas.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 8,
    "totalBytes": 52035,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -2574,7 +2574,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2582,7 +2582,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.mjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2596,13 +2596,13 @@
    "version": "0.1.50",
    "description": "TypeScript SDK for the Omnara API, with browser, TanStack Query, and Zod entry points",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 23,
+   "grade": "C",
+   "score": 67,
    "fileCount": 23,
    "totalBytes": 3905883,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -2610,7 +2610,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (6 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/browser.js.map",
      "occurrences": 6,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2632,13 +2632,13 @@
    "version": "0.169.0",
    "description": "TypeScript SDK for Codex APIs.",
    "weeklyDownloads": 2411392,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 6,
    "totalBytes": 80303,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2646,7 +2646,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2783,13 +2783,13 @@
    "version": "1.3.0",
    "description": "Polar SDK — A billing platform for the intelligence era",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 1082,
    "totalBytes": 13992260,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -2797,7 +2797,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (264 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/base-CR_XRB8d.mjs.map",
      "occurrences": 264,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2811,13 +2811,13 @@
    "version": "1.96.0",
    "description": "TypeScript SDK for the Prisma Developer Platform Management API",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 8,
    "totalBytes": 1607674,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -2825,7 +2825,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2833,7 +2833,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2875,13 +2875,13 @@
    "version": "0.4.0",
    "description": "Type-safe TypeScript SDK for the Rootly API",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 9,
    "totalBytes": 4175013,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -2889,7 +2889,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2897,7 +2897,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2958,13 +2958,13 @@
    "version": "3.13.0",
    "description": "Sanity SDK",
    "weeklyDownloads": 1454493,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 399,
    "totalBytes": 4703702,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -2972,7 +2972,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (14 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/_exports/_internal.js.map",
      "occurrences": 14,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -2994,13 +2994,13 @@
    "version": "3.13.0",
    "description": "Sanity SDK React toolkit for Content OS",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 16,
+   "grade": "C",
+   "score": 62,
    "fileCount": 305,
    "totalBytes": 2167031,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -3008,7 +3008,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (7 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/_exports/collaboration.js.map",
      "occurrences": 7,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3077,13 +3077,13 @@
    "version": "8.2.1",
    "description": "TanStack Query (React Query) integration for MobX stores with react-ioc dependency injection. Provides declarative data fetching, caching, synchronization, and state management with automatic query de",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 217,
    "totalBytes": 838605,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -3091,7 +3091,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (32 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/demo/app-example.js.map",
      "occurrences": 32,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3236,13 +3236,13 @@
    "version": "0.4.0",
    "description": "SDK for embedding resources from Superset into your own application",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 26,
+   "grade": "C",
+   "score": 72,
    "fileCount": 22,
    "totalBytes": 125438,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3250,7 +3250,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (7 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "lib/const.js.map",
      "occurrences": 7,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3292,13 +3292,13 @@
    "version": "3.3.1",
    "description": "Typed TypeScript SDK for Plain's GraphQL API with auto-generated model classes",
    "weeklyDownloads": 208430,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 65,
    "totalBytes": 15677970,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3306,7 +3306,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (16 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/cjs/client.js.map",
      "occurrences": 16,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3339,13 +3339,13 @@
    "version": "5.6.1",
    "description": "Imperative API for driving the tldraw editor programmatically.",
    "weeklyDownloads": 0,
-   "grade": "D",
-   "score": 36,
+   "grade": "B",
+   "score": 76,
    "fileCount": 15,
    "totalBytes": 172646,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3353,7 +3353,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (4 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 4,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3367,13 +3367,13 @@
    "version": "5.6.1",
    "description": "tldraw infinite canvas SDK (editor).",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 9,
+   "grade": "C",
+   "score": 59,
    "fileCount": 994,
    "totalBytes": 8631461,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -3381,7 +3381,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (362 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 362,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3403,13 +3403,13 @@
    "version": "5.6.1",
    "description": "tldraw infinite canvas SDK (state).",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 97,
    "totalBytes": 632954,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3417,7 +3417,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (30 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 30,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3431,13 +3431,13 @@
    "version": "5.6.1",
    "description": "tldraw infinite canvas SDK (react bindings for state).",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 53,
    "totalBytes": 175266,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3445,7 +3445,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (16 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 16,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3459,13 +3459,13 @@
    "version": "5.6.1",
    "description": "tldraw infinite canvas SDK (store).",
    "weeklyDownloads": 759331,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 110,
    "totalBytes": 1666128,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3473,7 +3473,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (34 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 34,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3487,13 +3487,13 @@
    "version": "5.6.1",
    "description": "tldraw infinite canvas SDK (multiplayer sync react bindings).",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 29,
+   "grade": "C",
+   "score": 73,
    "fileCount": 24,
    "totalBytes": 196485,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3501,7 +3501,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (6 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 6,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3515,13 +3515,13 @@
    "version": "5.6.1",
    "description": "tldraw infinite canvas SDK (multiplayer sync).",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 14,
+   "grade": "C",
+   "score": 64,
    "fileCount": 131,
    "totalBytes": 1967601,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -3529,7 +3529,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (39 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 39,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3551,13 +3551,13 @@
    "version": "5.6.1",
    "description": "tldraw infinite canvas SDK (schema).",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 10,
+   "grade": "C",
+   "score": 60,
    "fileCount": 342,
    "totalBytes": 2391598,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -3565,7 +3565,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (125 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/TLStore.js.map",
      "occurrences": 125,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3587,13 +3587,13 @@
    "version": "5.6.1",
    "description": "tldraw infinite canvas SDK (private utilities).",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 239,
    "totalBytes": 1195393,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 2,
     "low": 0
    },
@@ -3601,7 +3601,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (78 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 78,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3631,13 +3631,13 @@
    "version": "5.6.1",
    "description": "A runtime validation library by tldraw.",
    "weeklyDownloads": 0,
-   "grade": "D",
-   "score": 36,
+   "grade": "B",
+   "score": 76,
    "fileCount": 33,
    "totalBytes": 495983,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3645,7 +3645,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (4 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 4,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3659,13 +3659,13 @@
    "version": "2.0.6",
    "description": "The Turso API gives you everything needed to manage your organization and it's members, groups, databases, and API tokens.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 9,
    "totalBytes": 136050,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -3673,7 +3673,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3681,7 +3681,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3752,13 +3752,13 @@
    "version": "4.0.0",
    "description": "Software Development Kit for Vercel Sandbox",
    "weeklyDownloads": 7628356,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 229,
    "totalBytes": 1721511,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3766,7 +3766,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (78 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/api-client/api-client.cjs.map",
      "occurrences": 78,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3780,13 +3780,13 @@
    "version": "0.0.7",
    "description": "A TypeScript abstraction over Axios for typed requests generated from OpenAPI (Swagger) schemas using openapi-typescript.",
    "weeklyDownloads": 5893,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 94,
    "totalBytes": 202172,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3794,7 +3794,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (30 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "cjs/src/utils/response-converters/convertToAll.js.map",
      "occurrences": 30,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3808,13 +3808,13 @@
    "version": "0.15.2",
    "description": "TypeScript client for the Wraps Platform. Manage email templates, workflows, contacts, segments, broadcasts, and event tracking across email and SMS channels.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 18,
+   "grade": "C",
+   "score": 68,
    "fileCount": 8,
    "totalBytes": 1456303,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 1
    },
@@ -3822,7 +3822,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3830,7 +3830,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.mjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3844,13 +3844,13 @@
    "version": "0.6.6",
    "description": "A modern TypeScript/JavaScript SDK for the X API",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 9,
    "totalBytes": 4690800,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -3858,7 +3858,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3866,7 +3866,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3880,13 +3880,13 @@
    "version": "0.23.0",
    "description": "Plugin framework for building SDKs.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 10,
    "totalBytes": 2165827,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -3894,7 +3894,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3902,7 +3902,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.mjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3935,13 +3935,13 @@
    "version": "0.21.0",
    "description": "Core schemas and TypeScript types for the Zapier SDK API",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 79,
    "totalBytes": 584323,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -3949,7 +3949,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (24 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/v0/schemas/actions.cjs.map",
      "occurrences": 24,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3963,13 +3963,13 @@
    "version": "7.0.173",
    "description": "AI SDK by Vercel - build apps like ChatGPT, Claude, Gemini, and more with a single interface for any model using the Vercel AI Gateway or go direct to OpenAI, Anthropic, Google, or any other model pro",
    "weeklyDownloads": 45776702,
-   "grade": "F",
-   "score": 0,
+   "grade": "D",
+   "score": 37,
    "fileCount": 727,
    "totalBytes": 8898773,
    "counts": {
-    "critical": 3,
-    "high": 0,
+    "critical": 0,
+    "high": 3,
     "medium": 3,
     "low": 1
    },
@@ -3977,7 +3977,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3985,7 +3985,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/internal/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -3993,7 +3993,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/test/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -4183,13 +4183,13 @@
    "version": "3.2.1",
    "description": "A thin and strongly typed CLI arguments parser for Node.js.",
    "weeklyDownloads": 7362054,
-   "grade": "D",
-   "score": 49,
+   "grade": "C",
+   "score": 74,
    "fileCount": 19,
    "totalBytes": 38891,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -4197,7 +4197,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -4219,13 +4219,13 @@
    "version": "2.3.3",
    "description": "Type-safe TypeScript SDK for the Attio CRM API with Zod v4 runtime validation",
    "weeklyDownloads": 11209,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 9,
    "totalBytes": 3113073,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -4233,7 +4233,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -4241,7 +4241,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/index.mjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -4548,13 +4548,13 @@
    "version": "10.0.0",
    "description": "CloudEvents SDK for JavaScript",
    "weeklyDownloads": 4013044,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 39,
    "totalBytes": 753499,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -4562,7 +4562,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "bundles/cloudevents.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -4642,13 +4642,13 @@
    "version": "3.3.1",
    "description": "Type-safe Confluence REST API client for TypeScript and JavaScript. Covers both Confluence Cloud API v2 and v1 from one package. ESM-only, tree-shakable, runtime-validated by Zod 4. Atlassian Confluen",
    "weeklyDownloads": 0,
-   "grade": "D",
-   "score": 46,
+   "grade": "C",
+   "score": 71,
    "fileCount": 3404,
    "totalBytes": 5836195,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 1
    },
@@ -4656,7 +4656,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/browser.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -4754,13 +4754,13 @@
    "version": "10.66.0",
    "description": "The Dropbox JavaScript SDK is a lightweight, promise based interface to the Dropbox v2 API that works in both nodejs and browser environments.",
    "weeklyDownloads": 317256,
-   "grade": "C",
-   "score": 60,
+   "grade": "B",
+   "score": 85,
    "fileCount": 52,
    "totalBytes": 6521706,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -4768,7 +4768,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/Dropbox-sdk.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -4938,13 +4938,13 @@
    "version": "3.2.0",
    "description": "Unified storage SDK for object/blob backends.",
    "weeklyDownloads": 335743,
-   "grade": "F",
-   "score": 4,
+   "grade": "D",
+   "score": 54,
    "fileCount": 812,
    "totalBytes": 7117374,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 2
    },
@@ -4952,7 +4952,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (117 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/chunk-0b96zt6e.js.map",
      "occurrences": 117,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -5012,13 +5012,13 @@
    "version": "3.0.10",
    "description": "Generate Request to API from Browser — The FBEST Request Manager: Functionally Brilliant, Elegantly Simple Tool. One function, zero dependencies, minimalist syntax, with auto-JSON, dedupe, caching, re",
    "weeklyDownloads": 9447,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 80,
    "totalBytes": 2885057,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -5026,7 +5026,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (18 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/animations.cjs.map",
      "occurrences": 18,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -5211,13 +5211,13 @@
    "version": "4.2.3",
    "description": "A very strict and proper argument parser.",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 24,
+   "grade": "C",
+   "score": 64,
    "fileCount": 17,
    "totalBytes": 650026,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 2,
     "low": 0
    },
@@ -5225,7 +5225,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (4 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/commonjs/index.js.map",
      "occurrences": 4,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -5331,13 +5331,13 @@
    "version": "5.21.0",
    "description": "Turn your API spec into type-safe code. Generate TypeScript types, API clients, hooks, validators and mocks from a spec such as OpenAPI.",
    "weeklyDownloads": 0,
-   "grade": "D",
-   "score": 36,
+   "grade": "B",
+   "score": 76,
    "fileCount": 54,
    "totalBytes": 57895,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -5345,7 +5345,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (4 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/defineConfig-BgZt8DZW.cjs.map",
      "occurrences": 4,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -5359,13 +5359,13 @@
    "version": "3.9.4",
    "description": "LaunchDarkly SDK for React",
    "weeklyDownloads": 1926332,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 35,
    "totalBytes": 156078,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -5373,7 +5373,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "lib/cjs/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -5381,7 +5381,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "lib/esm/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -5490,13 +5490,13 @@
    "version": "1.53.0",
    "description": "Microsoft Cognitive Services Speech SDK for JavaScript",
    "weeklyDownloads": 0,
-   "grade": "D",
-   "score": 48,
+   "grade": "C",
+   "score": 73,
    "fileCount": 818,
    "totalBytes": 5607496,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -5504,7 +5504,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -5640,13 +5640,13 @@
    "version": "5.0.5",
    "description": "The all-batteries-included GitHub SDK for Browsers, Node.js, and Deno",
    "weeklyDownloads": 4016073,
-   "grade": "F",
-   "score": 20,
+   "grade": "D",
+   "score": 45,
    "fileCount": 13,
    "totalBytes": 52027,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 1,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -5654,7 +5654,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-bundle/index.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -5952,13 +5952,13 @@
    "version": "3.17.0",
    "description": "TypeScript SDK for Railway.",
    "weeklyDownloads": 1209256,
-   "grade": "F",
-   "score": 29,
+   "grade": "C",
+   "score": 73,
    "fileCount": 23,
    "totalBytes": 2239195,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 0,
     "low": 0
    },
@@ -5966,7 +5966,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (6 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/iac/bin.cjs.map",
      "occurrences": 6,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6018,13 +6018,13 @@
    "version": "6.1.4",
    "description": "A deep deletion module for node (like `rm -rf`)",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 137,
    "totalBytes": 262867,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -6032,7 +6032,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (33 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/esm/bin.mjs.map",
      "occurrences": 33,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6092,13 +6092,13 @@
    "version": "0.2.0",
    "description": "Detect whether a CLI is running inside a sandboxed environment",
    "weeklyDownloads": 11275867,
-   "grade": "F",
-   "score": 30,
+   "grade": "C",
+   "score": 70,
    "fileCount": 17,
    "totalBytes": 31999,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 1,
     "low": 0
    },
@@ -6106,7 +6106,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (4 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/chunk-HZH3SATY.js.map",
      "occurrences": 4,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6280,13 +6280,13 @@
    "version": "5.6.1",
    "description": "A tiny little drawing editor.",
    "weeklyDownloads": 681682,
-   "grade": "F",
-   "score": 0,
+   "grade": "D",
+   "score": 48,
    "fileCount": 1961,
    "totalBytes": 15666462,
    "counts": {
-    "critical": 1,
-    "high": 0,
+    "critical": 0,
+    "high": 1,
     "medium": 3,
     "low": 1
    },
@@ -6294,7 +6294,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source (673 files)",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist-cjs/index.js.map",
      "occurrences": 673,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6368,13 +6368,13 @@
    "version": "0.0.124",
    "description": "TypeScript SDK for Mintlify Search",
    "weeklyDownloads": 239467,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 68,
    "totalBytes": 917051,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 1,
     "low": 0
    },
@@ -6382,7 +6382,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/cjs/index.cjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6390,7 +6390,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/esm/index.mjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6431,13 +6431,13 @@
    "version": "3.2.0",
    "description": "Javascript Library for Typesense",
    "weeklyDownloads": 0,
-   "grade": "F",
-   "score": 8,
+   "grade": "C",
+   "score": 58,
    "fileCount": 280,
    "totalBytes": 2325383,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 1,
     "low": 0
    },
@@ -6445,7 +6445,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/typesense.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6453,7 +6453,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "dist/typesense.min.js.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6551,13 +6551,13 @@
    "version": "4.163.0",
    "description": "Command-line interface for all things Cloudflare Workers",
    "weeklyDownloads": 47071832,
-   "grade": "F",
-   "score": 20,
+   "grade": "C",
+   "score": 70,
    "fileCount": 30,
    "totalBytes": 15822177,
    "counts": {
-    "critical": 2,
-    "high": 0,
+    "critical": 0,
+    "high": 2,
     "medium": 0,
     "low": 0
    },
@@ -6565,7 +6565,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "wrangler-dist/experimental-config.d.mts.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
@@ -6573,7 +6573,7 @@
     {
      "ruleId": "source-map-embedded",
      "title": "Source map embeds full original source",
-     "severity": "critical",
+     "severity": "high",
      "file": "wrangler-dist/experimental-config.mjs.map",
      "occurrences": 1,
      "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."

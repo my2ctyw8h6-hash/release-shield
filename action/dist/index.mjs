@@ -339,7 +339,7 @@ function scanEntry(entry, findings, limits) {
     findings.push({
       ruleId: "source-map-embedded",
       title: "Source map embeds full original source",
-      severity: "critical",
+      severity: "high",
       file,
       evidence: n ? `${n} original source file${n === 1 ? "" : "s"} recoverable` : "sourcesContent present",
       advice: "Anyone can rebuild your original, unminified source from this file. Remove it from the release."

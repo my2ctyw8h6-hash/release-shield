@@ -121,7 +121,9 @@ function scanEntry(entry: TarEntry, findings: Finding[], limits: Limits) {
   if (entry.size === 0 || entry.size > limits.maxTextScanBytes || !isProbablyText(entry.data)) return;
   const text = entry.data.toString("utf8");
 
-  // Source maps that embed original source are worse than bare maps.
+  // Source maps that embed original source are worse than bare maps, but not a secret:
+  // for open-source packages the code is already public. High, not critical, so it
+  // never outranks a leaked key or trips the default fail-on.
   if (/\.map$/i.test(base) && /"sourcesContent"\s*:\s*\[\s*"/.test(text)) {
     const bare = findings.findIndex((f) => f.ruleId === "source-map" && f.file === file);
     if (bare !== -1) findings.splice(bare, 1);
@@ -130,7 +132,7 @@ function scanEntry(entry: TarEntry, findings: Finding[], limits: Limits) {
     findings.push({
       ruleId: "source-map-embedded",
       title: "Source map embeds full original source",
-      severity: "critical",
+      severity: "high",
       file,
       evidence: n ? `${n} original source file${n === 1 ? "" : "s"} recoverable` : "sourcesContent present",
       advice: "Anyone can rebuild your original, unminified source from this file. Remove it from the release.",

@@ -34,7 +34,9 @@ node releaseshield.mjs scan dist/*.whl       # PyPI wheels/sdists; docker:<image
 
 Free mode prints the report. Licensed mode adds `--fail-on` exit codes, JSON/SARIF/Markdown output and policies.
 
-Guides: [the .npmignore trap](https://release-shield-app.vercel.app/guides/npmignore-trap?ref=github-readme) · [source maps in npm packages](https://release-shield-app.vercel.app/guides/source-maps-npm?ref=github-readme)
+Guides: [the .npmignore trap](https://release-shield-app.vercel.app/guides/npmignore-trap?ref=github-readme) · [package.json "files"](https://release-shield-app.vercel.app/guides/package-json-files?ref=github-readme) · [source maps in npm packages](https://release-shield-app.vercel.app/guides/source-maps-npm?ref=github-readme)
+
+Data: [AUDIT.md](AUDIT.md) lists every package in our crawl of popular npm tarballs that ships source maps, tests or build leftovers. It's regenerated nightly.
 
 ---
 

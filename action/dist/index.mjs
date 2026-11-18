@@ -746,6 +746,7 @@ function resolveTargets(specs, cwd, ws, opts) {
 var VERSION = true ? "1.0.0" : "0.0.0-dev";
 
 // cli/src/format.ts
+var SITE = "https://release-shield-app.vercel.app";
 var FORMATS = ["text", "json", "sarif", "markdown"];
 var SEV_ICON = { critical: "\u{1F6D1}", high: "\u{1F536}", medium: "\u{1F7E1}", low: "\u26AA" };
 function where(f) {
@@ -785,7 +786,7 @@ function renderText(input2, color) {
       input2.failed ? c("1;31", `\u2716 ReleaseShield: findings at or above "${input2.failOn}". Release blocked.`) : c("1;32", `\u2713 ReleaseShield: no findings at or above "${input2.failOn}". Safe to publish.`)
     );
   } else if (input2.license.tier === "free") {
-    lines.push(c("33", "\u2139 Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $19/mo or Pro / Team $49/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts."));
+    lines.push(c("33", `\u2139 Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $19/mo or Pro / Team $49/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts: ${SITE}/?ref=cli#pricing`));
   }
   return lines.join("\n") + "\n";
 }
@@ -828,6 +829,12 @@ function renderMarkdown(input2) {
     }
   }
   for (const e of input2.errors) out.push("", `> \u274C **${e.target}**: ${e.message}`);
+  out.push("");
+  if (input2.license.tier === "free") {
+    out.push(`> Free mode: report only, this run can't fail the release. [Block publishes with findings in CI](${SITE}/?ref=action-summary#pricing) (Standard $19/mo, Pro / Team $49/mo).`);
+  } else {
+    out.push(`<sub>Scanned by [ReleaseShield](${SITE}/?ref=action-summary) v${VERSION}</sub>`);
+  }
   return out.join("\n") + "\n";
 }
 var SARIF_LEVEL = { critical: "error", high: "error", medium: "warning", low: "note" };
@@ -844,7 +851,7 @@ function renderSarif(input2) {
           driver: {
             name: "ReleaseShield",
             version: VERSION,
-            informationUri: "https://github.com/releaseshield",
+            informationUri: SITE,
             rules: [...rules.values()].map((f) => ({
               id: f.ruleId,
               name: f.ruleId,
@@ -1074,13 +1081,13 @@ async function main() {
   process.stdout.write(result.output);
   const licensed = result.license.tier !== "free";
   const all = result.reports.flatMap((r) => r.findings.map((f) => ({ r, f })));
+  if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, renderMarkdown(result));
   if (licensed) {
     for (const { r, f } of all.slice(0, 50)) {
       const title = escProp(`ReleaseShield: ${f.title}`);
       process.stdout.write(`::${ANNOTATION[f.severity]} title=${title}::${esc(`${r.target}: ${f.file}${f.line ? `:${f.line}` : ""}${f.evidence ? ` (${f.evidence})` : ""}. ${f.advice}`)}
 `);
     }
-    if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, renderMarkdown(result));
     const tmp = process.env.RUNNER_TEMP ?? cwd;
     const reportPath = path3.join(tmp, "releaseshield-report.json");
     writeFileSync(reportPath, renderJson(result));

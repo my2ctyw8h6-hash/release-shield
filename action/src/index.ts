@@ -57,6 +57,8 @@ async function main() {
   process.stdout.write(result.output);
   const licensed = result.license.tier !== "free";
   const all = result.reports.flatMap((r) => r.findings.map((f) => ({ r, f })));
+  // Summary on every tier: it is the only part of a run most people look at.
+  if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, renderMarkdown(result));
 
   if (licensed) {
     // Inline annotations on the workflow run
@@ -64,7 +66,6 @@ async function main() {
       const title = escProp(`ReleaseShield: ${f.title}`);
       process.stdout.write(`::${ANNOTATION[f.severity]} title=${title}::${esc(`${r.target}: ${f.file}${f.line ? `:${f.line}` : ""}${f.evidence ? ` (${f.evidence})` : ""}. ${f.advice}`)}\n`);
     }
-    if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, renderMarkdown(result));
 
     const tmp = process.env.RUNNER_TEMP ?? cwd;
     const reportPath = path.join(tmp, "releaseshield-report.json");

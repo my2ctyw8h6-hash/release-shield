@@ -3,6 +3,9 @@ import type { Severity } from "../../lib/rules";
 import type { LicenseState } from "./license-client";
 import { VERSION } from "./version";
 
+/** Public site; hardcoded because the CLI bundle runs outside the Next.js env. */
+export const SITE = "https://release-shield-app.vercel.app";
+
 export type Format = "text" | "json" | "sarif" | "markdown";
 export const FORMATS: Format[] = ["text", "json", "sarif", "markdown"];
 
@@ -59,7 +62,7 @@ export function renderText(input: RenderInput, color: boolean): string {
         : c("1;32", `✓ ReleaseShield: no findings at or above "${input.failOn}". Safe to publish.`),
     );
   } else if (input.license.tier === "free") {
-    lines.push(c("33", "ℹ Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $19/mo or Pro / Team $49/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts."));
+    lines.push(c("33", `ℹ Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $19/mo or Pro / Team $49/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts: ${SITE}/?ref=cli#pricing`));
   }
   return lines.join("\n") + "\n";
 }
@@ -106,6 +109,12 @@ export function renderMarkdown(input: RenderInput): string {
     }
   }
   for (const e of input.errors) out.push("", `> ❌ **${e.target}**: ${e.message}`);
+  out.push("");
+  if (input.license.tier === "free") {
+    out.push(`> Free mode: report only, this run can't fail the release. [Block publishes with findings in CI](${SITE}/?ref=action-summary#pricing) (Standard $19/mo, Pro / Team $49/mo).`);
+  } else {
+    out.push(`<sub>Scanned by [ReleaseShield](${SITE}/?ref=action-summary) v${VERSION}</sub>`);
+  }
   return out.join("\n") + "\n";
 }
 
@@ -124,7 +133,7 @@ export function renderSarif(input: RenderInput): string {
           driver: {
             name: "ReleaseShield",
             version: VERSION,
-            informationUri: "https://github.com/releaseshield",
+            informationUri: SITE,
             rules: [...rules.values()].map((f) => ({
               id: f.ruleId,
               name: f.ruleId,

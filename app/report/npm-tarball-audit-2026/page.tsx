@@ -108,7 +108,8 @@ export default function TarballAudit2026() {
         <h2>Check yours</h2>
         <p>
           Every one of these was a build-config default nobody looked at (see <a href="/guides/npmignore-trap">the .npmignore trap</a>
-          for how files git never saw end up in a tarball). <a href="/#check">Scan your package free</a> (no login, the
+          for how files git never saw end up in a tarball, and <a href="/guides/source-maps-npm">source maps in npm packages</a> for
+          the per-bundler fix). <a href="/#check">Scan your package free</a> (no login, the
           same scanner), or <a href="/docs">fail the publish in CI</a> when something new shows up.
         </p>
 

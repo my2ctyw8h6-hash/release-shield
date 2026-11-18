@@ -72,7 +72,7 @@ test/
           Most bundlers write <code>sourcesContent</code> into maps by default (esbuild does; TypeScript does with <code>inlineSources</code>).
           That field holds the full pre-build source of every input file. For an open-source package it&apos;s dead weight. For a closed-source
           SDK or CLI it&apos;s the codebase, comments included. In our <a href="/report/npm-tarball-audit-2026">audit of popular packages</a> a
-          large share ship maps and a meaningful fraction inline the source.
+          large share ship maps and a meaningful fraction inline the source. Per-bundler fix: <a href="/guides/source-maps-npm">source maps in npm packages</a>.
         </p>
 
         <h2>5. Check before you publish</h2>

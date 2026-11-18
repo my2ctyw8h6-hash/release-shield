@@ -6,6 +6,7 @@ import { allReports, formatBytes, formatNum, getReport, reportPath, slugFor, SIT
 import { ACTION_REF } from "@/lib/site";
 import { buildFix } from "@/lib/remediation";
 import { FixPanel } from "@/components/FixPanel";
+import { ScanOwnForm } from "@/components/ScanOwnForm";
 import { buildReport, isNpmName } from "@/lib/public-report";
 import type { NpmReport, PublicFinding } from "@/lib/reports-types";
 
@@ -121,6 +122,7 @@ export default async function PackageReport({ params }: Props) {
           </p>
         )}
         {r.description && <p className="small muted">“{r.description}”</p>}
+        <ScanOwnForm />
 
         <div className="counts">
           <div className="count"><strong>{r.version}</strong><span>version</span></div>

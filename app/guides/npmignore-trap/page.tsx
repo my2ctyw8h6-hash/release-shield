@@ -60,12 +60,15 @@ test/
 
         <h2>3. &quot;files&quot; wins over both ignore files</h2>
         <p>
-          A <code>&quot;files&quot;</code> array in <code>package.json</code> is an allowlist and is the safer default. But anything it
-          includes can&apos;t be excluded again by <code>.npmignore</code> or <code>.gitignore</code>. <code>&quot;files&quot;: [&quot;dist&quot;]</code>{" "}
-          ships every file in <code>dist/</code>, including <code>*.map</code> and anything a build step dropped there. Negate inside the array
-          if you need to:
+          A <code>&quot;files&quot;</code> array in <code>package.json</code> is an allowlist and is the safer default. But a root{" "}
+          <code>.npmignore</code> or <code>.gitignore</code> can&apos;t exclude anything it includes. <code>&quot;files&quot;: [&quot;dist&quot;]</code>{" "}
+          ships every file in <code>dist/</code>, including <code>*.map</code>, dotfiles like <code>dist/.env</code>, and anything else a build
+          step dropped there. Negate inside the array if you need to:
         </p>
         <pre style={pre}><code>{`"files": ["dist", "!dist/**/*.map"]`}</code></pre>
+        <p>
+          Precedence, nested ignore files, and what npm always adds or drops: <a href="/guides/package-json-files">package.json &quot;files&quot;, tested</a>.
+        </p>
 
         <h2>4. Source maps carry your source</h2>
         <p>

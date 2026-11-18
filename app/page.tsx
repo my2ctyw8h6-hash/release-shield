@@ -137,7 +137,7 @@ node releaseshield.mjs scan --fail-on critical`}</code>
       <footer className="footer">
         <div className="container footer-inner">
           <Logo />
-          <span className="muted small"><a href="/npm">npm package reports</a> · <a href="/docs">Docs</a> · © {new Date().getFullYear()} Line Answered LLC. ReleaseShield is a product of Line Answered LLC. Ship code, not secrets.</span>
+          <span className="muted small"><a href="/npm">npm package reports</a> · <a href="/guides/package-json-files">package.json &quot;files&quot;</a> · <a href="/guides/npmignore-trap">.npmignore trap</a> · <a href="/guides/source-maps-npm">Source maps</a> · <a href="/docs">Docs</a> ·© {new Date().getFullYear()} Line Answered LLC. ReleaseShield is a product of Line Answered LLC. Ship code, not secrets.</span>
         </div>
       </footer>
     </>

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/npm`, lastModified: updated, changeFrequency: "daily", priority: 0.8 },
     { url: `${SITE_URL}/guides/npmignore-trap`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/guides/source-maps-npm`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/guides/leaked-secret-npm-publish`, lastModified: new Date("2026-11-18T10:00:00Z"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/report/npm-tarball-audit-2026`, lastModified: updated, changeFrequency: "daily", priority: 0.8 },
     ...allReports().map((r) => ({
       url: `${SITE_URL}${reportPath(r.name)}`,

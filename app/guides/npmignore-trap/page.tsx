@@ -89,6 +89,10 @@ npm pack --dry-run --json | jq -r '.[0].files[].path' \\
         </p>
 
         <h2>Fix order if something leaked</h2>
+        <p>
+          Short version below. Full walkthrough, including how to find every affected version and npm&apos;s unpublish limits:{" "}
+          <a href="/guides/leaked-secret-npm-publish">published a secret to npm</a>.
+        </p>
         <ol>
           <li>Rotate the credential first. Unpublishing doesn&apos;t help: mirrors and caches already have the tarball.</li>
           <li>

@@ -9,6 +9,7 @@ export const dynamic = "force-dynamic";
 
 const STATUS_FIELDS = [
   "updatedAt",
+  "cumulativeTraffic",
   "revenue",
   "recentCodeCommits",
   "evolutionLog",

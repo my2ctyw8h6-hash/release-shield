@@ -14,3 +14,5 @@ Without `RELEASESHIELD_TOKEN` it runs in free, report-only mode (always exits 0 
 Standard ($19/mo, up to 5 packages/repos) unlocks `--fail-on` enforcement, json/sarif/markdown output and Slack alerts. Pro / Team ($49/mo, unlimited) adds policies (`--ignore`, `--ignore-rule`, `.releaseshield.json`), `--baseline` release diffs and private registries.
 
 Exit codes: `0` pass · `1` release blocked · `2` scan error. Run `releaseshield --help` for every option.
+
+Why `.npmignore` leaks: once it exists, npm stops reading `.gitignore`, so anything you didn't re-list ships. Details and the `files` allowlist fix: https://release-shield-app.vercel.app/guides/npmignore-trap?ref=npm

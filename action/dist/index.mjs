@@ -647,8 +647,10 @@ function npmPackTarget(dir, ws, opts) {
     load: async () => {
       const out = ws.tmp();
       opts.log(`Running npm pack in ${dir} \u2026`);
+      const env = { ...process.env };
+      for (const k of Object.keys(env)) if (k.toLowerCase() === "npm_config_dry_run" || k.toLowerCase() === "npm_config_dry-run") delete env[k];
       try {
-        execFileSync("npm", ["pack", "--pack-destination", out, "--silent"], { cwd: dir, stdio: ["ignore", "ignore", "inherit"], shell: isWin });
+        execFileSync("npm", ["pack", "--pack-destination", out, "--silent"], { cwd: dir, env, stdio: ["ignore", "ignore", "inherit"], shell: isWin });
       } catch {
         throw new Error("`npm pack` failed (see output above).");
       }

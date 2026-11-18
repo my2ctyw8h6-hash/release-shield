@@ -23,7 +23,14 @@ export async function POST(req: Request) {
   const ref = cleanRef(body?.ref ?? new URL(req.url).searchParams.get("ref"));
   const plan = typeof body?.plan === "string" && body.plan in PLANS ? body.plan : undefined;
 
-  const rawPath = typeof body?.path === "string" ? body.path : "";
+  // location.pathname keeps scoped names encoded (/npm/%40scope/pkg); decode first or the
+  // sanitizer drops the "%" and logs /npm/40scope/pkg, which matches no page.
+  let rawPath = typeof body?.path === "string" ? body.path : "";
+  try {
+    rawPath = decodeURIComponent(rawPath);
+  } catch {
+    /* malformed escape: sanitize as-is */
+  }
   const path = rawPath.startsWith("/") ? rawPath.replace(/[^\w@./\-]/g, "").slice(0, 120) : undefined;
 
   // One JSON line per event: the per-instance counters below lose most events on Vercel,

@@ -2,16 +2,36 @@ export type TrackEvent = "pageview" | "scan_run" | "checkout_click";
 
 const REF_KEY = "rs_ref";
 
-/** Read ?ref= from the URL, remembering it for the rest of the tab session so later events are attributed. */
+/** External referrer host ("google.com", "chatgpt.com"), or undefined for same-site/none. */
+function referrerHost(): string | undefined {
+  try {
+    if (!document.referrer) return undefined;
+    const host = new URL(document.referrer).hostname.replace(/^www\./, "");
+    return host && host !== window.location.hostname.replace(/^www\./, "") ? host : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Attribution for this tab session: ?ref=, else ?utm_source= (ChatGPT adds utm_source=chatgpt.com),
+ * else the external referrer host so organic search and link clicks don't all land in "(direct)".
+ * The first value seen is remembered so later events (scan, checkout) keep it.
+ */
 export function currentRef(): string | undefined {
   if (typeof window === "undefined") return undefined;
   try {
-    const fromUrl = new URLSearchParams(window.location.search).get("ref");
-    if (fromUrl) {
-      sessionStorage.setItem(REF_KEY, fromUrl);
-      return fromUrl;
+    const q = new URLSearchParams(window.location.search);
+    const explicit = q.get("ref") || q.get("utm_source");
+    if (explicit) {
+      sessionStorage.setItem(REF_KEY, explicit);
+      return explicit;
     }
-    return sessionStorage.getItem(REF_KEY) ?? undefined;
+    const stored = sessionStorage.getItem(REF_KEY);
+    if (stored) return stored;
+    const host = referrerHost();
+    if (host) sessionStorage.setItem(REF_KEY, host);
+    return host;
   } catch {
     return undefined;
   }

@@ -24,6 +24,8 @@ export interface NpmFetchOptions {
   /** Bearer token for private registries */
   token?: string;
   maxBytes?: number;
+  /** Default true. Pass false from ISR pages: a no-store fetch forces the route dynamic. */
+  noStore?: boolean;
 }
 
 export async function fetchNpmTarball(spec: string, opts: NpmFetchOptions = {}): Promise<{ name: string; version: string; data: Buffer }> {
@@ -40,7 +42,7 @@ export async function fetchNpmTarball(spec: string, opts: NpmFetchOptions = {}):
   const res = await fetch(`${registry}/${encoded}`, {
     headers: { accept: "application/vnd.npm.install-v1+json", ...auth },
     signal: AbortSignal.timeout(10_000),
-    cache: "no-store",
+    ...(opts.noStore === false ? {} : { cache: "no-store" as const }),
   });
   if (res.status === 404) throw new Error(`Package "${name}" was not found on npm.`);
   if (!res.ok) throw new Error(`npm registry returned ${res.status}.`);
@@ -54,7 +56,7 @@ export async function fetchNpmTarball(spec: string, opts: NpmFetchOptions = {}):
   // Only follow tarball URLs on the registry's own host, and only send credentials there.
   if (url.hostname !== registryUrl.hostname || (url.protocol !== "https:" && !isLocal)) throw new Error("Unexpected tarball location.");
 
-  const tar = await fetch(url, { headers: auth, signal: AbortSignal.timeout(60_000), cache: "no-store" });
+  const tar = await fetch(url, { headers: auth, signal: AbortSignal.timeout(60_000), ...(opts.noStore === false ? {} : { cache: "no-store" as const }) });
   if (!tar.ok || !tar.body) throw new Error(`Could not download tarball (${tar.status}).`);
   const declared = Number(tar.headers.get("content-length") ?? 0);
   if (declared > maxBytes) throw new Error(limitMsg);

@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { cache } from "react";
 import { Logo } from "@/components/Logo";
 import { allReports, formatBytes, formatNum, getReport, reportPath, slugFor, SITE_URL } from "@/lib/reports";
 import { ACTION_REF } from "@/lib/site";
 import { buildFix } from "@/lib/remediation";
 import { FixPanel } from "@/components/FixPanel";
+import { buildReport, isNpmName } from "@/lib/public-report";
 import type { NpmReport, PublicFinding } from "@/lib/reports-types";
 
-export const dynamicParams = false;
+// Crawled packages are prerendered. Any other valid npm name is scanned on first request
+// and cached for a day, so badge links and shared URLs never 404.
+export const dynamicParams = true;
+export const revalidate = 86400;
 
 type Props = { params: Promise<{ slug: string[] }> };
 
@@ -29,13 +34,32 @@ function headline(r: NpmReport): string {
 
 const ogImage = (name: string) => `${SITE_URL}/api/og/npm/${name}.png`;
 
+/** Crawled report, else a live scan of the latest tarball. Deduped across metadata + page. */
+const resolve = cache(async (slug: string[]): Promise<{ r: NpmReport; live: boolean } | null> => {
+  const name = nameFrom(slug);
+  const crawled = getReport(name);
+  if (crawled) return { r: crawled, live: false };
+  if (!isNpmName(name)) return null;
+  try {
+    return { r: await buildReport(name, undefined, true), live: true };
+  } catch {
+    return null;
+  }
+});
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const r = getReport(nameFrom((await params).slug));
-  if (!r) return {};
+  const res = await resolve((await params).slug);
+  if (!res) return {};
+  const { r, live } = res;
   const title = `What ships in ${r.name}@${r.version}? npm tarball audit`;
+  const description = `${headline(r)} Automated pre-publish audit of the ${r.name} npm package by ReleaseShield.`;
+  if (live) {
+    // Unbounded URL space: keep on-demand pages out of the index, follow their links.
+    return { title, description, robots: { index: false, follow: true }, openGraph: { title, description: headline(r), type: "article" } };
+  }
   return {
     title,
-    description: `${headline(r)} Automated pre-publish audit of the ${r.name} npm package by ReleaseShield.`,
+    description,
     alternates: { canonical: `${SITE_URL}${reportPath(r.name)}` },
     openGraph: { title, description: headline(r), type: "article", images: [{ url: ogImage(r.name), width: 1200, height: 630 }] },
     twitter: { card: "summary_large_image", title, description: headline(r), images: [ogImage(r.name)] },
@@ -62,8 +86,9 @@ function related(r: NpmReport): NpmReport[] {
 }
 
 export default async function PackageReport({ params }: Props) {
-  const r = getReport(nameFrom((await params).slug));
-  if (!r) notFound();
+  const res = await resolve((await params).slug);
+  if (!res) notFound();
+  const { r, live } = res;
   const groups = group(r.findings);
   const hasMaps = r.findings.some((f) => f.ruleId.startsWith("source-map"));
   const scanned = new Date(r.scannedAt).toISOString().slice(0, 10);
@@ -89,6 +114,12 @@ export default async function PackageReport({ params }: Props) {
         </p>
         <h1 style={{ wordBreak: "break-word" }}>What ships in {r.name}?</h1>
         <p className="muted">{headline(r)}</p>
+        {live && (
+          <p className="small muted">
+            Scanned on request (not in the nightly crawl). Cached for 24 hours; for a fresh result use the{" "}
+            <a href={`/?scan=${encodeURIComponent(r.name)}#check`}>live scanner</a>.
+          </p>
+        )}
         {r.description && <p className="small muted">“{r.description}”</p>}
 
         <div className="counts">

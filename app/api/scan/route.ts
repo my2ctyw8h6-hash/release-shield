@@ -3,6 +3,7 @@ import { fetchNpmTarball } from "@/lib/npm";
 import { scanArchive, scanEntries, type ScanReport } from "@/lib/scanner";
 import { SAMPLE_NAME, SAMPLE_VERSION, sampleEntries } from "@/lib/sample";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
+import { cleanRef } from "@/lib/stats";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -15,6 +16,18 @@ const MAX_UPLOAD_BYTES = 4 * 1024 * 1024;
  * /api/scan is unauthenticated, so it is counts-only: no file paths, line numbers or secret
  * evidence. Full detail comes from the CLI / Action, which scan locally. The demo package is fake, so it keeps detail.
  */
+/** Count a scan only once it has completed, from the server, so button clicks
+ * and forged beacons cannot inflate the funnel. Owner browsers are excluded. */
+function emitScanCompleted(req: Request, refRaw: unknown, path: string) {
+  try {
+    if ((req.headers.get("cookie") ?? "").includes("rs_owner=1")) return;
+    const ref = cleanRef(typeof refRaw === "string" ? refRaw : new URL(req.url).searchParams.get("ref"));
+    console.log(JSON.stringify({ rs_track: 1, src: "server", type: "scan_run", ref, path }));
+  } catch {
+    /* counting must never break a scan */
+  }
+}
+
 function redact(report: ScanReport) {
   return {
     ...report,
@@ -47,10 +60,11 @@ export async function POST(req: Request) {
       }
       const data = Buffer.from(await file.arrayBuffer());
       const report = scanArchive(data, { target: file.name, source: "upload" });
+      emitScanCompleted(req, form.get("ref"), "/");
       return NextResponse.json(redact(report));
     }
 
-    const body = (await req.json().catch(() => null)) as { package?: unknown; sample?: unknown } | null;
+    const body = (await req.json().catch(() => null)) as { package?: unknown; sample?: unknown; ref?: unknown } | null;
     if (body?.sample === true) {
       // Fake in-memory package for the homepage demo; runs the real scanner.
       const report = scanEntries(sampleEntries(), { target: SAMPLE_NAME, version: SAMPLE_VERSION, source: "npm" });
@@ -61,6 +75,7 @@ export async function POST(req: Request) {
 
     const pkg = await fetchNpmTarball(spec);
     const report = scanArchive(pkg.data, { target: pkg.name, version: pkg.version, source: "npm" });
+    emitScanCompleted(req, body?.ref, "/npm/" + pkg.name);
     return NextResponse.json(redact(report));
   } catch (err) {
     const message = err instanceof Error ? err.message : "Scan failed.";

@@ -2,21 +2,20 @@
 
 import { useState } from "react";
 import type { PublicPlan, PlanId } from "@/lib/plans";
-import { track } from "@/lib/track";
+import { currentRef } from "@/lib/track";
 
 export function PricingCards({ plans }: { plans: PublicPlan[] }) {
   const [loading, setLoading] = useState<PlanId | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   async function checkout(plan: PlanId) {
-    track("checkout_click", { plan });
     setLoading(plan);
     setError(null);
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ plan }),
+        body: JSON.stringify({ plan, ref: currentRef() }),
       });
       const data = await res.json();
       if (!res.ok || typeof data.url !== "string") throw new Error(data.error ?? "Checkout unavailable.");

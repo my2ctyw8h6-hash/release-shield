@@ -40,6 +40,13 @@ export function currentRef(): string | undefined {
 /** Fire-and-forget analytics event. Never throws, never blocks the UI. */
 export function track(type: TrackEvent, extra?: { plan?: string }): void {
   try {
+    // Owner exclusion: one visit with ?rs_owner=1 sets a year-long cookie; while
+    // it is set, this browser fires no analytics at all.
+    if (new URLSearchParams(window.location.search).get("rs_owner") === "1") {
+      document.cookie = "rs_owner=1; max-age=31536000; path=/; SameSite=Lax";
+      return;
+    }
+    if (document.cookie.includes("rs_owner=1")) return;
     const body = JSON.stringify({ type, ref: currentRef(), path: window.location.pathname, ...extra });
     // sendBeacon survives page navigation (e.g. redirect to Stripe checkout).
     if (typeof navigator !== "undefined" && navigator.sendBeacon?.("/api/track", new Blob([body], { type: "text/plain" }))) return;

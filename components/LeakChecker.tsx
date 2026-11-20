@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ScanReport, PublicScanFinding as Finding } from "@/lib/scanner";
-import { track } from "@/lib/track";
+import { currentRef } from "@/lib/track";
 import { buildFix, fixTargetFor } from "@/lib/remediation";
 import { FixPanel } from "./FixPanel";
 import { CopyBox } from "./CopyBox";
@@ -68,7 +68,6 @@ export function LeakChecker() {
 
   async function runScan(e?: React.FormEvent, override?: string, sample = false) {
     e?.preventDefault();
-    track("scan_run");
     setError(null);
     setReport(null);
     setLoading(true);
@@ -78,12 +77,13 @@ export function LeakChecker() {
         res = await fetch("/api/scan", {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ sample: true }),
+          body: JSON.stringify({ sample: true, ref: currentRef() }),
         });
       } else if (mode === "upload") {
         if (!file) throw new Error("Choose a .tgz file produced by `npm pack`.");
         const fd = new FormData();
         fd.append("file", file);
+        fd.append("ref", currentRef() ?? "");
         res = await fetch("/api/scan", { method: "POST", body: fd });
       } else {
         const target = (override ?? pkg).trim();
@@ -91,7 +91,7 @@ export function LeakChecker() {
         res = await fetch("/api/scan", {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ package: target }),
+          body: JSON.stringify({ package: target, ref: currentRef() }),
         });
       }
       const data = await res.json();

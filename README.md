@@ -1,10 +1,20 @@
 # ReleaseShield
 
+[![ReleaseShield scan](https://img.shields.io/badge/ReleaseShield-scan%20clean-brightgreen)](https://release-shield-app.vercel.app/?ref=badge)
+
 Scans the npm tarball (or PyPI wheel / Docker image) you're about to publish for `.env` files, private keys, source maps with embedded source, and hard-coded secrets.
 
 `npm publish` packs whatever is on disk, not what's in git. A `.npmignore` replaces `.gitignore` rather than adding to it, so as soon as one exists, files that git ignores (`.env`, `*.pem`, `dist/*.map`) get shipped. Git-side secret scanning never sees them because they were never committed. ReleaseShield runs `npm pack` and checks the actual artifact.
 
 Check a published package or upload a tarball, free and with no signup: https://release-shield-app.vercel.app/?ref=github-readme
+
+## Badge
+
+If ReleaseShield runs in your CI, show it — copy this into your README:
+
+```markdown
+[![ReleaseShield scan](https://img.shields.io/badge/ReleaseShield-scan%20clean-brightgreen)](https://release-shield-app.vercel.app/?ref=badge)
+```
 
 ## GitHub Action
 

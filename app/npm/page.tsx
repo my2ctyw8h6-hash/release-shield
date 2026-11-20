@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function NpmIndex() {
-  const reports = allReports().sort((a, b) => b.weeklyDownloads - a.weeklyDownloads);
+  const reports = allReports().sort((a, b) => (b.weeklyDownloads ?? 0) - (a.weeklyDownloads ?? 0));
   const withMaps = reports.filter((r) => r.findings.some((f) => f.ruleId.startsWith("source-map")));
   const embedded = reports.filter((r) => r.findings.some((f) => f.ruleId === "source-map-embedded"));
   const clean = reports.filter((r) => r.findings.length === 0 && r.withheld === 0);

@@ -6,7 +6,12 @@ import { PLANS } from "@/lib/plans";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// Crawlers, link previews and uptime monitors are not visitors; counting them inflated pageviews.
+const BOT_UA = /bot|crawler|spider|headless|curl|wget|uptime|preview/i;
+
 export async function POST(req: Request) {
+  if (BOT_UA.test(req.headers.get("user-agent") ?? "")) return new NextResponse(null, { status: 204 });
+
   // IP is used only as an in-memory rate-limit key; it is never stored.
   const rl = rateLimit(`track:${clientIp(req)}`, 60, 60_000);
   if (!rl.ok) return new NextResponse(null, { status: 429 });

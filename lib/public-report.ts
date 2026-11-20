@@ -46,9 +46,10 @@ async function getJson<T>(url: string): Promise<T | null> {
   }
 }
 
-export async function weeklyDownloads(name: string): Promise<number> {
+export async function weeklyDownloads(name: string): Promise<number | null> {
   const d = await getJson<{ downloads?: number }>(`https://api.npmjs.org/downloads/point/last-week/${name}`);
-  return d?.downloads ?? 0;
+  // 0 from a failed or empty lookup is a false zero; report unknown as null.
+  return d?.downloads || null;
 }
 
 /**

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { fetchNpmTarball } from "@/lib/npm";
-import { scanArchive, scanEntries } from "@/lib/scanner";
+import { scanArchive, scanEntries, type ScanReport } from "@/lib/scanner";
 import { SAMPLE_NAME, SAMPLE_VERSION, sampleEntries } from "@/lib/sample";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
 
@@ -10,6 +10,18 @@ export const maxDuration = 60;
 
 // Keep uploads under common serverless body limits (e.g. Vercel's 4.5 MB).
 const MAX_UPLOAD_BYTES = 4 * 1024 * 1024;
+
+/**
+ * /api/scan is unauthenticated, so it is counts-only: no file paths, line numbers or secret
+ * evidence. Full detail comes from the CLI / Action, which scan locally. The demo package is fake, so it keeps detail.
+ */
+function redact(report: ScanReport) {
+  return {
+    ...report,
+    redacted: true,
+    findings: report.findings.map(({ ruleId, title, severity, advice, occurrences }) => ({ ruleId, title, severity, advice, occurrences })),
+  };
+}
 
 export async function POST(req: Request) {
   const rl = rateLimit(`scan:${clientIp(req)}`, 12, 60_000);
@@ -35,7 +47,7 @@ export async function POST(req: Request) {
       }
       const data = Buffer.from(await file.arrayBuffer());
       const report = scanArchive(data, { target: file.name, source: "upload" });
-      return NextResponse.json(report);
+      return NextResponse.json(redact(report));
     }
 
     const body = (await req.json().catch(() => null)) as { package?: unknown; sample?: unknown } | null;
@@ -49,7 +61,7 @@ export async function POST(req: Request) {
 
     const pkg = await fetchNpmTarball(spec);
     const report = scanArchive(pkg.data, { target: pkg.name, version: pkg.version, source: "npm" });
-    return NextResponse.json(report);
+    return NextResponse.json(redact(report));
   } catch (err) {
     const message = err instanceof Error ? err.message : "Scan failed.";
     const status = /not found/i.test(message) ? 404 : 422;

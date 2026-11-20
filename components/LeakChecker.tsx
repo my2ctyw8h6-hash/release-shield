@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { ScanReport, Finding } from "@/lib/scanner";
+import type { ScanReport, PublicScanFinding as Finding } from "@/lib/scanner";
 import { track } from "@/lib/track";
 import { buildFix, fixTargetFor } from "@/lib/remediation";
 import { FixPanel } from "./FixPanel";
@@ -30,10 +30,13 @@ function FindingRow({ f, locked }: { f: Finding; locked: boolean }) {
       <span className={`sev sev-${f.severity}`}>{f.severity}</span>
       <div className="finding-body">
         <div className="finding-title">{f.title}</div>
-        <code className="finding-file">
-          {locked ? "•••••••/••••••••.•••" : f.file}
-          {!locked && f.line ? `:${f.line}` : ""}
-        </code>
+        {(locked || f.file) && (
+          <code className="finding-file">
+            {locked ? "•••••••/••••••••.•••" : f.file}
+            {!locked && f.line ? `:${f.line}` : ""}
+          </code>
+        )}
+        {!locked && f.occurrences && f.occurrences > 1 && !f.file && <div className="finding-evidence">{f.occurrences} files</div>}
         {!locked && f.evidence && <div className="finding-evidence">{f.evidence}</div>}
         {!locked && <div className="finding-advice">{f.advice}</div>}
       </div>
@@ -47,7 +50,7 @@ export function LeakChecker() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [report, setReport] = useState<(ScanReport & { sample?: boolean }) | null>(null);
+  const [report, setReport] = useState<(Omit<ScanReport, "findings"> & { findings: Finding[]; sample?: boolean; redacted?: boolean }) | null>(null);
   const [email, setEmail] = useState("");
   const [unlocked, setUnlocked] = useState(false);
   const [leadState, setLeadState] = useState<"idle" | "sending" | "error">("idle");
@@ -235,9 +238,15 @@ export function LeakChecker() {
           ) : (
             <ul className="findings">
               {report.findings.map((f, i) => (
-                <FindingRow key={`${f.ruleId}-${f.file}-${i}`} f={f} locked={!open && i >= FREE_VISIBLE} />
+                <FindingRow key={`${f.ruleId}-${i}`} f={f} locked={!open && i >= FREE_VISIBLE} />
               ))}
             </ul>
+          )}
+
+          {report.redacted && report.findings.length > 0 && (
+            <p className="small muted">
+              The web scan shows rule categories and counts only. Run the CLI locally (<code>npx releaseshield</code>) for exact file paths and line numbers.
+            </p>
           )}
 
           {report.findings.length > 0 && (

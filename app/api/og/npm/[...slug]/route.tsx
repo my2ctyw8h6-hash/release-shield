@@ -26,7 +26,7 @@ export async function GET(_req: Request, { params }: Ctx) {
       stats: [
         { value: formatNum(r.fileCount), label: "files" },
         { value: formatBytes(r.totalBytes), label: "unpacked" },
-        { value: formatNum(r.weeklyDownloads), label: "weekly downloads" },
+        ...(r.weeklyDownloads === null ? [] : [{ value: formatNum(r.weeklyDownloads), label: "weekly downloads" }]),
       ],
     },
     { "cache-control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800" },

@@ -33,6 +33,7 @@ export function formatBytes(n: number): string {
   return `${(n / 1024 / 1024).toFixed(1)} MB`;
 }
 
-export function formatNum(n: number): string {
+export function formatNum(n: number | null): string {
+  if (n === null) return "—";
   return new Intl.NumberFormat("en-US", { notation: n >= 10_000 ? "compact" : "standard" }).format(n);
 }

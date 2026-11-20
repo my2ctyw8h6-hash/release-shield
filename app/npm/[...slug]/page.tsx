@@ -82,7 +82,7 @@ function related(r: NpmReport): NpmReport[] {
   const scope = r.name.startsWith("@") ? r.name.split("/")[0] : null;
   const all = allReports().filter((x) => x.name !== r.name);
   const same = scope ? all.filter((x) => x.name.startsWith(scope + "/")) : [];
-  const popular = [...all].sort((a, b) => b.weeklyDownloads - a.weeklyDownloads);
+  const popular = [...all].sort((a, b) => (b.weeklyDownloads ?? 0) - (a.weeklyDownloads ?? 0));
   return [...new Map([...same, ...popular].map((x) => [x.name, x])).values()].slice(0, 12);
 }
 

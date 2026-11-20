@@ -15,6 +15,9 @@ export interface Finding {
   occurrences?: number;
 }
 
+/** Finding as returned by the unauthenticated /api/scan: file, line and evidence are omitted (counts-only). */
+export type PublicScanFinding = Omit<Finding, "file" | "line" | "evidence"> & Partial<Pick<Finding, "file" | "line" | "evidence">>;
+
 export interface ScanReport {
   target: string;
   version?: string;

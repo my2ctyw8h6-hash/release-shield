@@ -14,7 +14,8 @@ export interface NpmReport {
   name: string;
   version: string;
   description: string;
-  weeklyDownloads: number;
+  /** null = npm API gave no figure (never a fabricated 0). */
+  weeklyDownloads: number | null;
   grade: "A" | "B" | "C" | "D" | "F";
   score: number;
   fileCount: number;

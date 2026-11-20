@@ -10,7 +10,7 @@ const n = all.length;
 const pct = (k) => `${Math.round((k / n) * 100)}%`;
 const has = (pred) => all.filter((r) => r.findings.some((f) => pred(f.ruleId))).length;
 const bytes = (b) => (b < 1024 ? `${b} B` : b < 1048576 ? `${(b / 1024).toFixed(1)} KB` : `${(b / 1048576).toFixed(1)} MB`);
-const num = (x) => new Intl.NumberFormat("en-US", { notation: x >= 10_000 ? "compact" : "standard" }).format(x);
+const num = (x) => x === null ? "—" : new Intl.NumberFormat("en-US", { notation: x >= 10_000 ? "compact" : "standard" }).format(x);
 const link = (name) => `${SITE}/npm/${name}?ref=github-audit`;
 const cell = (s) => String(s).replace(/\|/g, "\\|");
 
@@ -24,7 +24,7 @@ const over1 = sizes.filter((s) => s > 1048576).length;
 
 const flagged = all
   .filter((r) => r.findings.length > 0)
-  .sort((a, b) => b.weeklyDownloads - a.weeklyDownloads || a.name.localeCompare(b.name));
+  .sort((a, b) => (b.weeklyDownloads ?? 0) - (a.weeklyDownloads ?? 0) || a.name.localeCompare(b.name));
 
 const rows = flagged.map((r) => {
   // Group per rule: titles already carry "(N files)" when a finding repeats, so strip that and re-sum.

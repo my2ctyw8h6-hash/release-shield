@@ -6,6 +6,7 @@ export const dynamic = "force-dynamic";
 
 const NO_STORE = { "cache-control": "no-store" };
 const STATUS_FILE = "studio-status.json";
+const SCRIPTS_FILE = "server-scripts-audit.txt";
 
 function keyMatches(given: string | null, expected: string | undefined): boolean {
   if (!given || !expected) return false;
@@ -32,7 +33,7 @@ function fail(error: string, status: number) {
   return NextResponse.json({ error }, { status, headers: NO_STORE });
 }
 
-/** Key-gated, scrubbed passthrough of studio-status.json from a private gist. */
+/** Key-gated, scrubbed passthrough of studio-status.json or server-scripts-audit.txt from a private gist. */
 export async function GET(req: NextRequest) {
   if (!keyMatches(req.nextUrl.searchParams.get("key"), process.env.MUSE_BRIEFING_KEY)) {
     return fail("unauthorized", 401);
@@ -47,6 +48,10 @@ export async function GET(req: NextRequest) {
     Accept: "application/vnd.github+json",
   };
 
+  const fileParam = req.nextUrl.searchParams.get("file");
+  const isScriptsFile = fileParam === "scripts";
+  const targetFile = isScriptsFile ? SCRIPTS_FILE : STATUS_FILE;
+
   try {
     const res = await fetch(`https://api.github.com/gists/${encodeURIComponent(gistId)}`, {
       headers,
@@ -55,8 +60,8 @@ export async function GET(req: NextRequest) {
     if (!res.ok) return fail(`upstream ${res.status}`, 502);
 
     const data = await res.json();
-    const file = data?.files?.[STATUS_FILE];
-    if (!file) return fail(`${STATUS_FILE} not found in gist`, 502);
+    const file = data?.files?.[targetFile];
+    if (!file) return fail(`${targetFile} not found in gist`, 502);
 
     // Gist API truncates file content over ~1MB; fall back to raw_url.
     let content: string = file.content ?? "";
@@ -66,6 +71,15 @@ export async function GET(req: NextRequest) {
       content = await raw.text();
     }
 
+    if (isScriptsFile) {
+      // Return scripts file as text/plain, scrubbed
+      return new NextResponse(scrub(content), {
+        status: 200,
+        headers: { ...NO_STORE, "content-type": "text/plain" },
+      });
+    }
+
+    // Return status file as JSON, scrubbed
     let parsed: unknown;
     try {
       parsed = JSON.parse(content);

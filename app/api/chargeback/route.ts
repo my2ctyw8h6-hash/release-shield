@@ -31,6 +31,10 @@ const ORIGINS = ["https://lineanswered.com", "https://www.lineanswered.com"];
  * "reserve-click" events record anonymous founding-reservation interest
  * on the tool page (tier clicks, and clicks on the reserve button — paid
  * status is verified from Stripe separately, never from the browser).
+ * A "view" event is one tool-page arrival per browser per session; the
+ * Dec 15 exposure floor (100 targeted merchant visitors) counts distinct
+ * bids among view events. Unknown event types are rejected with 400 —
+ * they must never fall through into the "complete" gate counter.
  * No other personal data.
  */
 
@@ -99,6 +103,26 @@ export async function POST(req: Request) {
     });
     console.info("[chargeback] " + body.type, { id, tier, stored });
     return NextResponse.json({ ok: true, id }, { headers });
+  }
+
+  if (body.type === "view") {
+    const bid = typeof body.bid === "string" ? body.bid.slice(0, 64) : "";
+    if (!bid) {
+      return NextResponse.json({ error: "Bad request." }, { status: 400, headers });
+    }
+    const id = randomUUID();
+    const stored = await appendChargebackEvent({
+      type: "view",
+      id,
+      bid,
+      createdAt: new Date().toISOString(),
+    });
+    console.info("[chargeback] view", { id, stored });
+    return NextResponse.json({ ok: true, id }, { headers });
+  }
+
+  if (body.type !== "complete") {
+    return NextResponse.json({ error: "Bad request." }, { status: 400, headers });
   }
 
   const reason =

@@ -10,6 +10,7 @@ import path from "node:path";
  *   { type: "email",    id, email, createdAt }
  *   { type: "tier-click",    id, bid, tier, createdAt }
  *   { type: "reserve-click", id, bid, tier, createdAt }
+ *   { type: "view", id, bid, createdAt }
  * `bid` is a random per-browser id from the tool page (no personal data);
  * distinct-merchant counting dedupes on it. A local data/ append runs as a
  * best-effort mirror.

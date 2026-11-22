@@ -1,6 +1,6 @@
 {
   "name": "releaseshield",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check what npm pack will actually publish: .env files, keys, tokens, source maps and internal files your .npmignore missed. Also scans PyPI wheels and Docker images.",
   "type": "module",
   "bin": { "releaseshield": "dist/releaseshield.mjs" },
@@ -9,7 +9,7 @@
     "prepublishOnly": "cd .. && node scripts/build-cli.mjs && cd cli && node dist/releaseshield.mjs scan"
   },
   "engines": { "node": ">=20" },
-  "homepage": "https://release-shield-app.vercel.app/?ref=npm",
+  "homepage": "https://releaseshield.lineanswered.com/?ref=npm",
   "repository": { "type": "git", "url": "git+https://github.com/my2ctyw8h6-hash/release-shield.git", "directory": "cli" },
   "bugs": { "url": "https://github.com/my2ctyw8h6-hash/release-shield/issues" },
   "keywords": ["npm-pack", "npmignore", "npm-publish", "prepublish", "publish", "secrets", "secret-scanning", "dotenv", "env", "source-maps", "leak", "security", "ci", "github-actions", "pypi", "docker"],

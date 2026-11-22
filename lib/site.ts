@@ -1,4 +1,4 @@
-const PRODUCTION_URL = "https://release-shield-app.vercel.app";
+const PRODUCTION_URL = "https://releaseshield.lineanswered.com";
 
 /** Normalize a base URL; reject junk like bare "https://vercel.app" (not our host, kills canonicals). */
 function validBase(raw: string | undefined): string | null {

@@ -1,19 +1,19 @@
 # ReleaseShield
 
-[![ReleaseShield scan](https://img.shields.io/badge/ReleaseShield-scan%20clean-brightgreen)](https://release-shield-app.vercel.app/?ref=badge)
+[![ReleaseShield scan](https://img.shields.io/badge/ReleaseShield-scan%20clean-brightgreen)](https://releaseshield.lineanswered.com/?ref=badge)
 
 Scans the npm tarball (or PyPI wheel / Docker image) you're about to publish for `.env` files, private keys, source maps with embedded source, and hard-coded secrets.
 
 `npm publish` packs whatever is on disk, not what's in git. A `.npmignore` replaces `.gitignore` rather than adding to it, so as soon as one exists, files that git ignores (`.env`, `*.pem`, `dist/*.map`) get shipped. Git-side secret scanning never sees them because they were never committed. ReleaseShield runs `npm pack` and checks the actual artifact.
 
-Check a published package or upload a tarball, free and with no signup: https://release-shield-app.vercel.app/?ref=github-readme
+Check a published package or upload a tarball, free and with no signup: https://releaseshield.lineanswered.com/?ref=github-readme
 
 ## Badge
 
 If ReleaseShield runs in your CI, show it — copy this into your README:
 
 ```markdown
-[![ReleaseShield scan](https://img.shields.io/badge/ReleaseShield-scan%20clean-brightgreen)](https://release-shield-app.vercel.app/?ref=badge)
+[![ReleaseShield scan](https://img.shields.io/badge/ReleaseShield-scan%20clean-brightgreen)](https://releaseshield.lineanswered.com/?ref=badge)
 ```
 
 ## GitHub Action
@@ -36,7 +36,7 @@ Without a `token`, it runs in free, report-only mode: findings show up as annota
 One dependency-free file, Node 20+:
 
 ```bash
-curl -fsSLo releaseshield.mjs https://release-shield-app.vercel.app/releaseshield.mjs
+curl -fsSLo releaseshield.mjs https://releaseshield.lineanswered.com/releaseshield.mjs
 node releaseshield.mjs scan                  # npm packs the cwd and scans the tarball
 node releaseshield.mjs scan npm:some-package # scan a published package
 node releaseshield.mjs scan dist/*.whl       # PyPI wheels/sdists; docker:<image> for images
@@ -44,7 +44,7 @@ node releaseshield.mjs scan dist/*.whl       # PyPI wheels/sdists; docker:<image
 
 Free mode prints the report. Licensed mode adds `--fail-on` exit codes, JSON/SARIF/Markdown output and policies.
 
-Guides: [the .npmignore trap](https://release-shield-app.vercel.app/guides/npmignore-trap?ref=github-readme) · [package.json "files"](https://release-shield-app.vercel.app/guides/package-json-files?ref=github-readme) · [source maps in npm packages](https://release-shield-app.vercel.app/guides/source-maps-npm?ref=github-readme)
+Guides: [the .npmignore trap](https://releaseshield.lineanswered.com/guides/npmignore-trap?ref=github-readme) · [package.json "files"](https://releaseshield.lineanswered.com/guides/package-json-files?ref=github-readme) · [source maps in npm packages](https://releaseshield.lineanswered.com/guides/source-maps-npm?ref=github-readme)
 
 Data: [AUDIT.md](AUDIT.md) lists every package in our crawl of popular npm tarballs that ships source maps, tests or build leftovers. It's regenerated nightly.
 

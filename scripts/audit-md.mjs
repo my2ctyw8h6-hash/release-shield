@@ -3,7 +3,7 @@
 // Usage: node scripts/audit-md.mjs
 import { readFileSync, writeFileSync } from "node:fs";
 
-const SITE = "https://release-shield-app.vercel.app";
+const SITE = "https://releaseshield.lineanswered.com";
 const { generatedAt, reports } = JSON.parse(readFileSync(new URL("../content/npm-reports.json", import.meta.url)));
 const all = Object.values(reports);
 const n = all.length;

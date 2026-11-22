@@ -4,7 +4,7 @@ import type { LicenseState } from "./license-client";
 import { VERSION } from "./version";
 
 /** Public site; hardcoded because the CLI bundle runs outside the Next.js env. */
-export const SITE = "https://release-shield-app.vercel.app";
+export const SITE = "https://releaseshield.lineanswered.com";
 
 export type Format = "text" | "json" | "sarif" | "markdown";
 export const FORMATS: Format[] = ["text", "json", "sarif", "markdown"];

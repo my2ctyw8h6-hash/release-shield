@@ -15,4 +15,4 @@ Standard ($79/mo, up to 5 packages/repos) unlocks `--fail-on` enforcement, json/
 
 Exit codes: `0` pass · `1` release blocked · `2` scan error. Run `releaseshield --help` for every option.
 
-Why `.npmignore` leaks: once it exists, npm stops reading `.gitignore`, so anything you didn't re-list ships. Details and the `files` allowlist fix: https://release-shield-app.vercel.app/guides/npmignore-trap?ref=npm
+Why `.npmignore` leaks: once it exists, npm stops reading `.gitignore`, so anything you didn't re-list ships. Details and the `files` allowlist fix: https://releaseshield.lineanswered.com/guides/npmignore-trap?ref=npm

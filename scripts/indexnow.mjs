@@ -6,7 +6,7 @@
 import { readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-const SITE = (process.env.INDEXNOW_SITE ?? "https://release-shield-app.vercel.app").replace(/\/$/, "");
+const SITE = (process.env.INDEXNOW_SITE ?? "https://releaseshield.lineanswered.com").replace(/\/$/, "");
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
 const sinceIdx = args.indexOf("--since-hours");

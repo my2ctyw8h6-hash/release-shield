@@ -745,10 +745,10 @@ function resolveTargets(specs, cwd, ws, opts) {
 }
 
 // cli/src/version.ts
-var VERSION = true ? "1.0.0" : "0.0.0-dev";
+var VERSION = true ? "1.0.1" : "0.0.0-dev";
 
 // cli/src/format.ts
-var SITE = "https://release-shield-app.vercel.app";
+var SITE = "https://releaseshield.lineanswered.com";
 var FORMATS = ["text", "json", "sarif", "markdown"];
 var SEV_ICON = { critical: "\u{1F6D1}", high: "\u{1F536}", medium: "\u{1F7E1}", low: "\u26AA" };
 function where(f) {

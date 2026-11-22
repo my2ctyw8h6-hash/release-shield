@@ -41,7 +41,7 @@ export default function Docs() {
         <h2>1. Get your license token</h2>
         <p className="muted">
           After checkout you land on a page that shows your token (<code>rs_…</code>). Add it to your CI secrets as{" "}
-          <code>RELEASESHIELD_TOKEN</code>. Standard ($19/mo) covers up to 5 packages or repos; Pro / Team ($49/mo) is unlimited.
+          <code>RELEASESHIELD_TOKEN</code>. Standard ($79/mo) covers up to 5 packages or repos; Pro / Team ($149/mo) is unlimited.
           Without a token everything still runs, in free report-only mode.
         </p>
 

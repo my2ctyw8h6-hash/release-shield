@@ -198,7 +198,7 @@ export default async function PackageReport({ params }: Props) {
     RELEASESHIELD_TOKEN: \${{ secrets.RELEASESHIELD_TOKEN }}`}</code>
         </pre>
         <p>
-          <a className="btn btn-primary" href="/#pricing">See plans: from $19/mo</a>{" "}
+          <a className="btn btn-primary" href="/#pricing">See plans: from $79/mo</a>{" "}
           <a className="btn btn-outline" href={`/?scan=${encodeURIComponent(r.name)}#check`}>Re-scan {r.name} live</a>
         </p>
 

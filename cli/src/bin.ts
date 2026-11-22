@@ -33,7 +33,7 @@ Options
   -v, --version         Show version
 
 Exit codes: 0 = pass, 1 = findings at/above --fail-on (licensed), 2 = scan error.
-Without a license the CLI runs in free, report-only mode.\nPlans: Standard $19/mo (up to 5 packages/repos) · Pro/Team $49/mo (unlimited).
+Without a license the CLI runs in free, report-only mode.\nPlans: Standard $79/mo (up to 5 packages/repos) · Pro/Team $149/mo (unlimited).
 `;
 
 class UsageError extends Error {}

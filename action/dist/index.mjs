@@ -788,7 +788,7 @@ function renderText(input2, color) {
       input2.failed ? c("1;31", `\u2716 ReleaseShield: findings at or above "${input2.failOn}". Release blocked.`) : c("1;32", `\u2713 ReleaseShield: no findings at or above "${input2.failOn}". Safe to publish.`)
     );
   } else if (input2.license.tier === "free") {
-    lines.push(c("33", `\u2139 Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $19/mo or Pro / Team $49/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts: ${SITE}/?ref=cli#pricing`));
+    lines.push(c("33", `\u2139 Free mode: report only. Add RELEASESHIELD_TOKEN (Standard $79/mo or Pro / Team $149/mo) to block releases in CI, plus SARIF/JSON output and Slack alerts: ${SITE}/?ref=cli#pricing`));
   }
   return lines.join("\n") + "\n";
 }
@@ -833,7 +833,7 @@ function renderMarkdown(input2) {
   for (const e of input2.errors) out.push("", `> \u274C **${e.target}**: ${e.message}`);
   out.push("");
   if (input2.license.tier === "free") {
-    out.push(`> Free mode: report only, this run can't fail the release. [Block publishes with findings in CI](${SITE}/?ref=action-summary#pricing) (Standard $19/mo, Pro / Team $49/mo).`);
+    out.push(`> Free mode: report only, this run can't fail the release. [Block publishes with findings in CI](${SITE}/?ref=action-summary#pricing) (Standard $79/mo, Pro / Team $149/mo).`);
   } else {
     out.push(`<sub>Scanned by [ReleaseShield](${SITE}/?ref=action-summary) v${VERSION}</sub>`);
   }

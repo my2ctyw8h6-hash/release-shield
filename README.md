@@ -29,7 +29,7 @@ If ReleaseShield runs in your CI, show it — copy this into your README:
 - run: npm publish
 ```
 
-Without a `token`, it runs in free, report-only mode: findings show up as annotations and in the job summary, but the job doesn't fail. A token ($19/mo Standard) turns on `fail-on` blocking, SARIF/JSON output and Slack alerts. See [action.yml](action.yml) for all inputs.
+Without a `token`, it runs in free, report-only mode: findings show up as annotations and in the job summary, but the job doesn't fail. A token ($79/mo Standard) turns on `fail-on` blocking, SARIF/JSON output and Slack alerts. See [action.yml](action.yml) for all inputs.
 
 ## CLI
 
@@ -58,7 +58,7 @@ Built with Next.js 16 (App Router) and Stripe.
 - **Free public leak checker** on the homepage. Scan any npm package (by name) or upload an `npm pack` tarball (≤4 MB). Files are scanned in memory and never stored.
   Detects: `.env` files, private keys, credential files, source maps (including embedded `sourcesContent`), `.git` metadata, DB dumps, internal docs, logs, backups, and hard-coded secrets (AWS, Stripe, GitHub, npm, Slack, OpenAI, Anthropic, Google, DB URLs, JWTs).
 - **Lead capture**: the first 3 findings are free, and the rest unlock with an email. Leads go to `LEAD_WEBHOOK_URL` (if set) and to `data/leads.jsonl` on writable filesystems.
-- **Paywall**: Standard ($19/mo, up to 5 packages/repos) and Pro / Team ($49/mo, unlimited packages/repos). `/api/checkout` uses `STRIPE_RESTRICTED_KEY` on the server only to find or create the Product, the monthly Price (by `lookup_key`) and an active **Stripe Payment Link**, then redirects the buyer to it. Links are reused, not duplicated. Plans live in `lib/plans.ts`: change `priceMonthly` there and the next checkout creates a new Stripe Price on the same Product, moves the lookup key to it, and deactivates Payment Links that still sell the old price.
+- **Paywall**: Standard ($79/mo, up to 5 packages/repos) and Pro / Team ($149/mo, unlimited packages/repos). `/api/checkout` uses `STRIPE_RESTRICTED_KEY` on the server only to find or create the Product, the monthly Price (by `lookup_key`) and an active **Stripe Payment Link**, then redirects the buyer to it. Links are reused, not duplicated. Plans live in `lib/plans.ts`: change `priceMonthly` there and the next checkout creates a new Stripe Price on the same Product, moves the lookup key to it, and deactivates Payment Links that still sell the old price.
 
 - **CLI** (`cli/`): `node releaseshield.mjs scan` (not on npm yet; the build copies the bundle to `public/` and the site serves it at `/releaseshield.mjs`). Scans npm tarballs, Python wheels/sdists and Docker images (`docker save`), with text/JSON/SARIF/Markdown output, `--fail-on` enforcement, Slack alerts, policies and release diffs. It's a single dependency-free bundle in `cli/dist/releaseshield.mjs`.
 - **GitHub Action** (`action.yml` at the repo root + `action/dist/index.mjs`): wraps the CLI and adds inline annotations, a job summary, SARIF and step outputs.

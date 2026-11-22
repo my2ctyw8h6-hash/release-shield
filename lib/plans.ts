@@ -21,7 +21,7 @@ export const PLANS: Record<PlanId, Plan> = {
   standard: {
     id: "standard",
     name: "Standard",
-    priceMonthly: 19,
+    priceMonthly: 79,
     lookupKey: "release_shield_standard_monthly",
     legacyLookupKeys: ["release_shield_standard_monthly_usd_79"],
     packageLimit: 5,
@@ -40,7 +40,7 @@ export const PLANS: Record<PlanId, Plan> = {
   pro: {
     id: "pro",
     name: "Pro / Team",
-    priceMonthly: 49,
+    priceMonthly: 149,
     lookupKey: "release_shield_pro_monthly",
     legacyLookupKeys: ["release_shield_pro_monthly_usd_249"],
     packageLimit: null,

@@ -65,10 +65,15 @@ export async function POST(req: Request) {
         { status: 400, headers },
       );
     }
+    const deadline =
+      typeof body.deadline === "string" && /^\d{4}-\d{2}-\d{2}$/.test(body.deadline)
+        ? body.deadline
+        : undefined;
     const stored = await appendChargebackEvent({
       type: "email",
       id,
       email,
+      deadline,
       createdAt: new Date().toISOString(),
     });
     console.info("[chargeback] email captured", { id, stored });

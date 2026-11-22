@@ -1,6 +1,7 @@
 import { Logo } from "@/components/Logo";
 import { LeakChecker } from "@/components/LeakChecker";
 import { PricingCards } from "@/components/PricingCards";
+import { SubscribeForm } from "@/components/SubscribeForm";
 import { PLANS, toPublicPlan } from "@/lib/plans";
 import { ACTION_REF, CLI_GET } from "@/lib/site";
 
@@ -130,6 +131,15 @@ node releaseshield.mjs scan --fail-on critical`}</code>
                 <p className="muted">{f.a}</p>
               </details>
             ))}
+          </div>
+        </section>
+        <section className="section">
+          <div className="container narrow">
+            <SubscribeForm
+              heading="The monthly npm leak digest"
+              blurb="Once a month: what the nightly crawl found shipping in popular npm packages — source maps with full source, stray .env files, credential patterns — and an alert when a report you follow changes. Free, no spam, unsubscribe anytime."
+              source="homepage-digest"
+            />
           </div>
         </section>
       </main>

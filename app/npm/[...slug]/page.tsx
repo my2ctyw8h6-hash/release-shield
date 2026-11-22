@@ -7,6 +7,7 @@ import { ACTION_REF } from "@/lib/site";
 import { buildFix } from "@/lib/remediation";
 import { FixPanel } from "@/components/FixPanel";
 import { ScanOwnForm } from "@/components/ScanOwnForm";
+import { SubscribeForm } from "@/components/SubscribeForm";
 import { buildReport, isNpmName } from "@/lib/public-report";
 import type { NpmReport, PublicFinding } from "@/lib/reports-types";
 
@@ -123,6 +124,11 @@ export default async function PackageReport({ params }: Props) {
         )}
         {r.description && <p className="small muted">“{r.description}”</p>}
         <ScanOwnForm />
+        <SubscribeForm
+          heading={`Track this package`}
+          blurb={`Get an email when the ${r.name} report changes — a new release, new findings, or a finding that disappears. No marketing, unsubscribe anytime.`}
+          source={`npm-report:${r.name}`}
+        />
 
         <div className="counts">
           <div className="count"><strong>{r.version}</strong><span>version</span></div>

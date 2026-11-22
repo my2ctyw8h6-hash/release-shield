@@ -8,6 +8,8 @@ import path from "node:path";
  * append-only. Event shapes:
  *   { type: "complete", id, bid, reason, productType, hasTracking, hasComms, createdAt }
  *   { type: "email",    id, email, createdAt }
+ *   { type: "tier-click",    id, bid, tier, createdAt }
+ *   { type: "reserve-click", id, bid, tier, createdAt }
  * `bid` is a random per-browser id from the tool page (no personal data);
  * distinct-merchant counting dedupes on it. A local data/ append runs as a
  * best-effort mirror.

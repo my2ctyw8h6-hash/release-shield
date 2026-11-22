@@ -18,6 +18,7 @@ const REASONS = [
   "general",
 ];
 const PRODUCT_TYPES = ["physical", "digital", "subscription", "unknown"];
+const TIERS = ["evidence-pack", "evidence-pack-plus"];
 const ORIGINS = ["https://lineanswered.com", "https://www.lineanswered.com"];
 
 /**
@@ -26,7 +27,11 @@ const ORIGINS = ["https://lineanswered.com", "https://www.lineanswered.com"];
  * Cloudflare Pages; this route is its only server side. A "complete" event
  * is one generated checklist (the Dec 15 validation gate counts them,
  * deduped on the per-browser `bid`); an "email" event attaches the optional
- * template/reminder email to a completion id. No other personal data.
+ * template/reminder email to a completion id. "tier-click" and
+ * "reserve-click" events record anonymous founding-reservation interest
+ * on the tool page (tier clicks, and clicks on the reserve button — paid
+ * status is verified from Stripe separately, never from the browser).
+ * No other personal data.
  */
 
 function corsHeaders(req: Request): Record<string, string> {
@@ -78,6 +83,22 @@ export async function POST(req: Request) {
     });
     console.info("[chargeback] email captured", { id, stored });
     return NextResponse.json({ ok: true }, { headers });
+  }
+
+  if (body.type === "tier-click" || body.type === "reserve-click") {
+    const tier =
+      typeof body.tier === "string" && TIERS.includes(body.tier) ? body.tier : "unknown";
+    const bid = typeof body.bid === "string" ? body.bid.slice(0, 64) : "";
+    const id = randomUUID();
+    const stored = await appendChargebackEvent({
+      type: body.type,
+      id,
+      bid,
+      tier,
+      createdAt: new Date().toISOString(),
+    });
+    console.info("[chargeback] " + body.type, { id, tier, stored });
+    return NextResponse.json({ ok: true, id }, { headers });
   }
 
   const reason =

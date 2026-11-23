@@ -745,7 +745,7 @@ function resolveTargets(specs, cwd, ws, opts) {
 }
 
 // cli/src/version.ts
-var VERSION = true ? "1.0.1" : "0.0.0-dev";
+var VERSION = true ? "1.0.2" : "0.0.0-dev";
 
 // cli/src/format.ts
 var SITE = "https://releaseshield.lineanswered.com";

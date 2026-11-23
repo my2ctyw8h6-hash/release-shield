@@ -1,6 +1,6 @@
 # releaseshield
 
-Scan the artifact you're about to publish (npm tarball, Python wheel/sdist, Docker image) for source maps, `.env` files, keys, tokens and internal files, and block the release in CI.
+`.env` files, private keys and source maps get published to npm every day — `npm pack` ships whatever is on disk, not what's in git. releaseshield finds the secrets in your npm tarball before you publish: it scans the artifact you're about to ship (npm tarball, Python wheel/sdist, Docker image) for `.env` files, keys, tokens, source maps with embedded source and internal files, and blocks the release in CI.
 
 ```bash
 npx releaseshield scan                      # npm pack the current package and scan it

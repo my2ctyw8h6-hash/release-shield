@@ -1,17 +1,52 @@
 {
   "name": "releaseshield",
-  "version": "1.0.1",
-  "description": "Check what npm pack will actually publish: .env files, keys, tokens, source maps and internal files your .npmignore missed. Also scans PyPI wheels and Docker images.",
+  "version": "1.0.2",
+  "description": "Find secrets in your npm tarball before you publish: scans npm pack output for .env files, keys, tokens and source maps your .npmignore missed. Also scans PyPI wheels and Docker images.",
   "type": "module",
-  "bin": { "releaseshield": "dist/releaseshield.mjs" },
-  "files": ["dist", "README.md"],
+  "bin": {
+    "releaseshield": "dist/releaseshield.mjs"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "prepublishOnly": "cd .. && node scripts/build-cli.mjs && cd cli && node dist/releaseshield.mjs scan"
   },
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "homepage": "https://releaseshield.lineanswered.com/?ref=npm",
-  "repository": { "type": "git", "url": "git+https://github.com/my2ctyw8h6-hash/release-shield.git", "directory": "cli" },
-  "bugs": { "url": "https://github.com/my2ctyw8h6-hash/release-shield/issues" },
-  "keywords": ["npm-pack", "npmignore", "npm-publish", "prepublish", "publish", "secrets", "secret-scanning", "dotenv", "env", "source-maps", "leak", "security", "ci", "github-actions", "pypi", "docker"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/my2ctyw8h6-hash/release-shield.git",
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://github.com/my2ctyw8h6-hash/release-shield/issues"
+  },
+  "keywords": [
+    "npm-pack",
+    "npm-tarball",
+    "tarball",
+    "npm-pack-leak",
+    "npmignore",
+    "npm-publish",
+    "prepublish",
+    "pre-publish",
+    "secrets",
+    "secret-scanning",
+    "dotenv",
+    "env",
+    "env-leak",
+    "source-maps",
+    "leak",
+    "publish-leak",
+    "security",
+    "ci",
+    "github-actions",
+    "pypi",
+    "docker"
+  ],
   "license": "UNLICENSED"
 }

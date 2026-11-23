@@ -1,5 +1,5 @@
 name: "ReleaseShield Scan"
-description: "Scan the npm / PyPI / Docker artifact you are about to publish for source maps, .env files, secrets and internal code."
+description: "Find secrets in your npm tarball before you publish — scan the npm / PyPI / Docker artifact for .env files, keys, tokens, source maps and internal code."
 author: "ReleaseShield"
 branding:
   icon: "shield"

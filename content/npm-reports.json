@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-22T03:17:34.981Z",
+ "generatedAt": "2026-11-23T03:17:36.117Z",
  "reports": {
   "@0xinsider/sdk": {
    "name": "@0xinsider/sdk",
@@ -149,6 +149,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:44.294Z"
+  },
+  "@agentskit/core": {
+   "name": "@agentskit/core",
+   "version": "1.15.0",
+   "description": "Portable AgentsKit runtime for chat orchestration, tools, memory, and retrieval.",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 64,
+   "fileCount": 153,
+   "totalBytes": 1579020,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (48 files)",
+     "severity": "high",
+     "file": "dist/a2a.cjs.map",
+     "occurrences": 48,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/chunk-5XGN7UAV.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:31.452Z"
   },
   "@ai-sdk/amazon-bedrock": {
    "name": "@ai-sdk/amazon-bedrock",
@@ -1738,6 +1774,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:24.451Z"
   },
+  "@assistant-ui/ai-sdk": {
+   "name": "@assistant-ui/ai-sdk",
+   "version": "0.0.20",
+   "description": "Vercel AI SDK adapter for assistant-ui",
+   "weeklyDownloads": 291535,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 212,
+   "totalBytes": 1557180,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (29 files)",
+     "severity": "high",
+     "file": "dist/runtime/AISDKChat.js.map",
+     "occurrences": 29,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (33 files)",
+     "severity": "medium",
+     "file": "dist/runtime/AISDKChat.d.ts.map",
+     "occurrences": 33,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:14.924Z"
+  },
   "@assistant-ui/core": {
    "name": "@assistant-ui/core",
    "version": "0.3.37",
@@ -1809,6 +1881,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:37.214Z"
+  },
+  "@assistant-ui/react-ai-sdk": {
+   "name": "@assistant-ui/react-ai-sdk",
+   "version": "1.4.25",
+   "description": "Vercel AI SDK adapter for assistant-ui",
+   "weeklyDownloads": 671270,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 13,
+   "totalBytes": 7968,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/index.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/index.native.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:14.170Z"
   },
   "@assistant-ui/react-markdown": {
    "name": "@assistant-ui/react-markdown",
@@ -1933,6 +2041,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:11.693Z"
+  },
+  "@azure/openai-assistants": {
+   "name": "@azure/openai-assistants",
+   "version": "1.0.0-beta.6",
+   "description": "An isomorphic client library for Azure OpenAI Assistants.",
+   "weeklyDownloads": 710345,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 89,
+   "totalBytes": 822117,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (21 files)",
+     "severity": "high",
+     "file": "dist-esm/src/assistantsClient.js.map",
+     "occurrences": 21,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (20 files)",
+     "severity": "medium",
+     "file": "types/src/assistantsClient.d.ts.map",
+     "occurrences": 20,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:13.311Z"
   },
   "@base-org/account": {
    "name": "@base-org/account",
@@ -2221,6 +2365,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:16.097Z"
+  },
+  "@code-yeongyu/senpi-ai": {
+   "name": "@code-yeongyu/senpi-ai",
+   "version": "2026.11.22-2",
+   "description": "Unified LLM API with automatic model discovery and provider configuration",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 875,
+   "totalBytes": 5073564,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:36.117Z"
   },
   "@coinbase/cdp-sdk": {
    "name": "@coinbase/cdp-sdk",
@@ -2948,6 +3111,62 @@
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:41.547Z"
   },
+  "@effect/ai-openai": {
+   "name": "@effect/ai-openai",
+   "version": "4.1.5",
+   "description": "An OpenAI provider integration for Effect AI SDK",
+   "weeklyDownloads": 306384,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 162,
+   "totalBytes": 18505486,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (30 files)",
+     "severity": "medium",
+     "file": "dist/internal/errors.d.ts.map",
+     "occurrences": 30,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:15.539Z"
+  },
+  "@effect/ai-openai-compat": {
+   "name": "@effect/ai-openai-compat",
+   "version": "4.1.5",
+   "description": "An OpenAI compat integration for Effect",
+   "weeklyDownloads": 192637,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 132,
+   "totalBytes": 595563,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (18 files)",
+     "severity": "medium",
+     "file": "dist/internal/errors.d.ts.map",
+     "occurrences": 18,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:17.231Z"
+  },
   "@expo/cli": {
    "name": "@expo/cli",
    "version": "58.1.20",
@@ -3149,6 +3368,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:50.824Z"
+  },
+  "@genkit-ai/compat-oai": {
+   "name": "@genkit-ai/compat-oai",
+   "version": "1.44.0",
+   "description": "Genkit AI framework plugin for OpenAI APIs.",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 119,
+   "totalBytes": 828091,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (38 files)",
+     "severity": "high",
+     "file": "lib/audio.js.map",
+     "occurrences": 38,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:35.664Z"
   },
   "@github/copilot-sdk": {
    "name": "@github/copilot-sdk",
@@ -3362,6 +3609,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:40.270Z"
+  },
+  "@humanspeak/svelte-markdown": {
+   "name": "@humanspeak/svelte-markdown",
+   "version": "2.3.0",
+   "description": "Markdown and HTML renderer for Svelte 5 — built for rendering streaming AI agent output from Claude Code, ChatGPT, and agentic workflows. XSS-safe defaults, streaming-aware sanitization, token caching",
+   "weeklyDownloads": 57048,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 372,
+   "totalBytes": 779211,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:23.129Z"
   },
   "@hvakr/client": {
    "name": "@hvakr/client",
@@ -4496,6 +4762,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:16.816Z"
   },
+  "@langfuse/codex-observability-plugin": {
+   "name": "@langfuse/codex-observability-plugin",
+   "version": "0.4.3",
+   "description": "Langfuse observability plugin for the OpenAI Codex coding agent for tracing prompts, agent turns, model generations, and tool calls.",
+   "weeklyDownloads": 28772,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 1531299,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:25.646Z"
+  },
   "@larksuiteoapi/node-sdk": {
    "name": "@larksuiteoapi/node-sdk",
    "version": "1.76.0",
@@ -4627,6 +4912,44 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:17.603Z"
+  },
+  "@lobehub/i18n-cli": {
+   "name": "@lobehub/i18n-cli",
+   "version": "1.29.3",
+   "description": "Lobe i18n is a CLI tool that automate translate your i18n localization with AI",
+   "weeklyDownloads": 48841,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 212828,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:27.604Z"
+  },
+  "@lobehub/seo-cli": {
+   "name": "@lobehub/seo-cli",
+   "version": "1.8.2",
+   "description": "Lobe seo is a CLI tool that automate generation seo content for mdx",
+   "weeklyDownloads": 41052,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 109794,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:24.805Z"
   },
   "@lokalise/node-api": {
    "name": "@lokalise/node-api",
@@ -4986,6 +5309,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:33.264Z"
+  },
+  "@metaharness/router": {
+   "name": "@metaharness/router",
+   "version": "0.4.1",
+   "description": "Cost-optimal model router for agent harnesses: sends each query to the cheapest model that is good enough, using k-NN over labelled embeddings.",
+   "weeklyDownloads": 106706,
+   "grade": "B",
+   "score": 89,
+   "fileCount": 19,
+   "totalBytes": 74994,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (8 files)",
+     "severity": "medium",
+     "file": "dist/calibration.d.ts.map",
+     "occurrences": 8,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:10.301Z"
   },
   "@microsoft/teams.api": {
    "name": "@microsoft/teams.api",
@@ -5575,6 +5926,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:06.597Z"
+  },
+  "@nitrostack/widgets": {
+   "name": "@nitrostack/widgets",
+   "version": "1.0.10",
+   "description": "Widget utilities for NitroStack - Build interactive UI widgets for MCP tools",
+   "weeklyDownloads": 95680,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 49,
+   "totalBytes": 557281,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (15 files)",
+     "severity": "medium",
+     "file": "dist/hooks/index.d.ts.map",
+     "occurrences": 15,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:20.582Z"
   },
   "@nktkas/hyperliquid": {
    "name": "@nktkas/hyperliquid",
@@ -6237,6 +6616,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:26.233Z"
   },
+  "@openai/agents-extensions": {
+   "name": "@openai/agents-extensions",
+   "version": "0.22.0",
+   "description": "Extensions for the OpenAI Agents SDK",
+   "weeklyDownloads": 225907,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 268,
+   "totalBytes": 2919530,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (106 files)",
+     "severity": "medium",
+     "file": "dist/sandbox/shared/archive.js.map",
+     "occurrences": 106,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:16.087Z"
+  },
   "@openai/agents-openai": {
    "name": "@openai/agents-openai",
    "version": "0.22.0",
@@ -6320,6 +6727,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:36.498Z"
+  },
+  "@openai/guardrails": {
+   "name": "@openai/guardrails",
+   "version": "0.3.0",
+   "description": "OpenAI Guardrails: A TypeScript framework for building safe and reliable AI systems",
+   "weeklyDownloads": null,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 263,
+   "totalBytes": 964816,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (130 files)",
+     "severity": "medium",
+     "file": "dist/agents.d.ts.map",
+     "occurrences": 130,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:33.469Z"
   },
   "@openapitools/openapi-generator-cli": {
    "name": "@openapitools/openapi-generator-cli",
@@ -6545,6 +6980,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:32.275Z"
   },
+  "@openuidev/react-headless": {
+   "name": "@openuidev/react-headless",
+   "version": "0.18.10",
+   "description": "Headless React primitives for AI chat — state management, streaming adapters for OpenAI, Vercel AI SDK, and AG-UI, message format converters, and thread management for OpenUI generative UI apps",
+   "weeklyDownloads": 198411,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 11,
+   "totalBytes": 1007123,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:10.969Z"
+  },
   "@openuidev/react-lang": {
    "name": "@openuidev/react-lang",
    "version": "1.1.1",
@@ -6647,6 +7118,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:22.753Z"
+  },
+  "@page-agent/llms": {
+   "name": "@page-agent/llms",
+   "version": "1.12.4",
+   "description": "LLM client with reflection-before-action mental model for page-agent",
+   "weeklyDownloads": 59209,
+   "grade": "B",
+   "score": 85,
+   "fileCount": 5,
+   "totalBytes": 52448,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/lib/page-agent-llms.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:23.769Z"
   },
   "@paypal/paypal-js": {
    "name": "@paypal/paypal-js",
@@ -6888,6 +7387,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:03.904Z"
+  },
+  "@remotion/install-whisper-cpp": {
+   "name": "@remotion/install-whisper-cpp",
+   "version": "4.0.545",
+   "description": "Helpers for installing and using Whisper.cpp",
+   "weeklyDownloads": 134568,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 20,
+   "totalBytes": 39313,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:17.729Z"
   },
   "@rootly/ts": {
    "name": "@rootly/ts",
@@ -7508,6 +8026,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:02.772Z"
   },
+  "@stacksjs/ai": {
+   "name": "@stacksjs/ai",
+   "version": "0.75.660",
+   "description": "Stacks Artificial Intelligence.",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 98,
+   "fileCount": 84,
+   "totalBytes": 286637,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+   },
+   "findings": [],
+   "withheld": 1,
+   "scannedAt": "2026-11-23T03:17:31.777Z"
+  },
   "@storybook/addon-mcp": {
    "name": "@storybook/addon-mcp",
    "version": "10.6.7",
@@ -7582,6 +8119,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:59.302Z"
+  },
+  "@syncfusion/ej2-interactive-chat": {
+   "name": "@syncfusion/ej2-interactive-chat",
+   "version": "35.2.12",
+   "description": "Essential JS 2 Component",
+   "weeklyDownloads": 167499,
+   "grade": "B",
+   "score": 76,
+   "fileCount": 58,
+   "totalBytes": 5616820,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "high",
+     "file": "dist/es6/ej2-interactive-chat.es2015.js.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:16.761Z"
   },
   "@syra.fm/sdk": {
    "name": "@syra.fm/sdk",
@@ -7666,6 +8231,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:24.698Z"
+  },
+  "@tanstack/ai-codex": {
+   "name": "@tanstack/ai-codex",
+   "version": "1.1.0",
+   "description": "Codex harness adapter for TanStack AI — run OpenAI Codex as a chat backend with local tool execution and stateful sessions.",
+   "weeklyDownloads": 125627,
+   "grade": "C",
+   "score": 71,
+   "fileCount": 42,
+   "totalBytes": 200794,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (8 files)",
+     "severity": "high",
+     "file": "dist/esm/byok.js.map",
+     "occurrences": 8,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:18.312Z"
   },
   "@tanstack/ai-event-client": {
    "name": "@tanstack/ai-event-client",
@@ -7795,6 +8388,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:11.000Z"
   },
+  "@tanstack/ai-skills": {
+   "name": "@tanstack/ai-skills",
+   "version": "1.0.3",
+   "description": "Portable Agent Skills (SKILL.md) as a first-class chat() middleware for TanStack AI.",
+   "weeklyDownloads": 190427,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 70,
+   "totalBytes": 260524,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (15 files)",
+     "severity": "high",
+     "file": "dist/esm/catalog.js.map",
+     "occurrences": 15,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:11.649Z"
+  },
   "@tanstack/ai-utils": {
    "name": "@tanstack/ai-utils",
    "version": "1.1.0",
@@ -7850,6 +8471,62 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:13.068Z"
+  },
+  "@tardie/ai-openai": {
+   "name": "@tardie/ai-openai",
+   "version": "4.0.0-rc.113-clavia.8",
+   "description": "An OpenAI provider integration for Effect AI SDK",
+   "weeklyDownloads": 32057,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 68,
+   "totalBytes": 11046985,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (26 files)",
+     "severity": "medium",
+     "file": "dist/internal/errors.d.ts.map",
+     "occurrences": 26,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:30.789Z"
+  },
+  "@tardie/ai-openai-compat": {
+   "name": "@tardie/ai-openai-compat",
+   "version": "4.0.0-rc.113-clavia.9",
+   "description": "An OpenAI compat integration for Effect",
+   "weeklyDownloads": null,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 48,
+   "totalBytes": 403778,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (18 files)",
+     "severity": "medium",
+     "file": "dist/internal/errors.d.ts.map",
+     "occurrences": 18,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:32.556Z"
   },
   "@team-plain/graphql": {
    "name": "@team-plain/graphql",
@@ -8384,6 +9061,90 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:31.569Z"
   },
+  "@traceloop/instrumentation-anthropic": {
+   "name": "@traceloop/instrumentation-anthropic",
+   "version": "0.27.0",
+   "description": "Anthropic Instrumentaion",
+   "weeklyDownloads": 4278898,
+   "grade": "B",
+   "score": 85,
+   "fileCount": 10,
+   "totalBytes": 86731,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:12.743Z"
+  },
+  "@traceloop/instrumentation-azure": {
+   "name": "@traceloop/instrumentation-azure",
+   "version": "0.14.0",
+   "description": "Azure OpenAI Instrumentaion",
+   "weeklyDownloads": 67705,
+   "grade": "B",
+   "score": 85,
+   "fileCount": 11,
+   "totalBytes": 59379,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:19.907Z"
+  },
+  "@traceloop/instrumentation-openai": {
+   "name": "@traceloop/instrumentation-openai",
+   "version": "0.27.0",
+   "description": "OpenAI Instrumentaion",
+   "weeklyDownloads": 376333,
+   "grade": "B",
+   "score": 85,
+   "fileCount": 12,
+   "totalBytes": 276701,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:13.743Z"
+  },
   "@traceloop/instrumentation-utils": {
    "name": "@traceloop/instrumentation-utils",
    "version": "0.27.0",
@@ -8680,6 +9441,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:22.939Z"
   },
+  "@vercel/ai-sdk-openai-websocket-fetch": {
+   "name": "@vercel/ai-sdk-openai-websocket-fetch",
+   "version": "1.0.0",
+   "description": "WebSocket transport for the AI SDK OpenAI provider — drop-in fetch replacement that routes streaming requests through a persistent WebSocket connection.",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 8,
+   "totalBytes": 34035,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:35.178Z"
+  },
   "@vercel/detect-agent": {
    "name": "@vercel/detect-agent",
    "version": "1.2.7",
@@ -8864,6 +9661,139 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:25.229Z"
+  },
+  "@xsai-ext/responses": {
+   "name": "@xsai-ext/responses",
+   "version": "0.5.1",
+   "description": "extra-small AI SDK.",
+   "weeklyDownloads": 43541,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 60931,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:26.171Z"
+  },
+  "@xsai/generate-text": {
+   "name": "@xsai/generate-text",
+   "version": "0.5.1",
+   "description": "extra-small AI SDK.",
+   "weeklyDownloads": 41762,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 7475,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:26.994Z"
+  },
+  "@xsai/shared": {
+   "name": "@xsai/shared",
+   "version": "1.0.0-beta.9",
+   "description": "extra-small AI SDK: shared utilities for xsAI packages.",
+   "weeklyDownloads": 49461,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 22980,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:22.832Z"
+  },
+  "@xsai/shared-chat": {
+   "name": "@xsai/shared-chat",
+   "version": "0.5.1",
+   "description": "extra-small AI SDK.",
+   "weeklyDownloads": 42591,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 20274,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:30.046Z"
+  },
+  "@xsai/shared-stream": {
+   "name": "@xsai/shared-stream",
+   "version": "0.5.1",
+   "description": "extra-small AI SDK.",
+   "weeklyDownloads": 37749,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 11394,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:29.395Z"
+  },
+  "@xsai/stream-text": {
+   "name": "@xsai/stream-text",
+   "version": "0.5.1",
+   "description": "extra-small AI SDK.",
+   "weeklyDownloads": 39823,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 13340,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:28.165Z"
+  },
+  "@xsai/tool": {
+   "name": "@xsai/tool",
+   "version": "0.5.1",
+   "description": "extra-small AI SDK.",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 4772,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:32.095Z"
   },
   "@zapier/kitcore": {
    "name": "@zapier/kitcore",
@@ -9127,6 +10057,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:26.484Z"
   },
+  "ai-sdk-provider-codex-cli": {
+   "name": "ai-sdk-provider-codex-cli",
+   "version": "2.4.0",
+   "description": "AI SDK v7 provider for OpenAI Codex CLI (use ChatGPT Plus/Pro subscription)",
+   "weeklyDownloads": 50243,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 294722,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:26.574Z"
+  },
   "ai-sdk-provider-opencode-sdk": {
    "name": "ai-sdk-provider-opencode-sdk",
    "version": "5.0.1",
@@ -9350,6 +10299,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:39.381Z"
+  },
+  "arcjet": {
+   "name": "arcjet",
+   "version": "1.16.0",
+   "description": "Arcjet runtime security SDK — bot protection, rate limiting, prompt injection detection, PII blocking, and WAF for JavaScript and TypeScript apps",
+   "weeklyDownloads": 103010,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 153536,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:12.287Z"
   },
   "argparse": {
    "name": "argparse",
@@ -10197,6 +11165,44 @@
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:07.622Z"
   },
+  "cz-git": {
+   "name": "cz-git",
+   "version": "1.14.0",
+   "description": "A better customizable and git support commitizen adapter",
+   "weeklyDownloads": 186352,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 1854439,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:18.731Z"
+  },
+  "czg": {
+   "name": "czg",
+   "version": "1.14.0",
+   "description": "Interactive Commitizen CLI that generate standardized git commit message",
+   "weeklyDownloads": 81189,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 8,
+   "totalBytes": 1383917,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:21.965Z"
+  },
   "dargs": {
    "name": "dargs",
    "version": "8.1.0",
@@ -10234,6 +11240,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:18.200Z"
+  },
+  "deep-chat": {
+   "name": "deep-chat",
+   "version": "2.5.1",
+   "description": "Customizable chat component for AI APIs",
+   "weeklyDownloads": 40299,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 682,
+   "totalBytes": 6883036,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (337 files)",
+     "severity": "medium",
+     "file": "dist/types/APIKey.d.ts.map",
+     "occurrences": 337,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:28.671Z"
   },
   "deepagents": {
    "name": "deepagents",
@@ -10695,6 +11729,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:15.885Z"
   },
+  "glin-profanity": {
+   "name": "glin-profanity",
+   "version": "4.0.1",
+   "description": "Glin-Profanity is a lightweight and efficient npm package designed to detect and filter profane language in text inputs across multiple languages. Whether you’re building a chat application, a comment",
+   "weeklyDownloads": 40390,
+   "grade": "F",
+   "score": 0,
+   "fileCount": 72,
+   "totalBytes": 4806386,
+   "counts": {
+    "critical": 4,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 4,
+   "scannedAt": "2026-11-23T03:17:24.315Z"
+  },
   "grab-url": {
    "name": "grab-url",
    "version": "3.0.10",
@@ -10741,6 +11794,53 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.607Z"
+  },
+  "headroom-ai": {
+   "name": "headroom-ai",
+   "version": "0.45.0",
+   "description": "Compress tool outputs, logs, JSON and chat history before each LLM call. Fewer input tokens, same answers. Adapters for OpenAI, Anthropic, Gemini and the Vercel AI SDK. Runs against the local Headroom",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 38,
+   "totalBytes": 628557,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (12 files)",
+     "severity": "high",
+     "file": "dist/adapters/anthropic.cjs.map",
+     "occurrences": 12,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:33.769Z"
+  },
+  "hercai": {
+   "name": "hercai",
+   "version": "14.0.3",
+   "description": "A powerful library for interacting with the Herc.ai API",
+   "weeklyDownloads": 747,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 24,
+   "totalBytes": 1018789,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:20.076Z"
   },
   "html-minifier": {
    "name": "html-minifier",
@@ -11454,6 +12554,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:25.831Z"
   },
+  "llm-polyglot": {
+   "name": "llm-polyglot",
+   "version": "3.0.0",
+   "description": "A universal LLM client - provides adapters for various LLM providers to adhere to a universal interface - the openai sdk - allows you to use providers like anthropic using the same openai interface an",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 8,
+   "totalBytes": 129811,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:33.632Z"
+  },
   "log-symbols": {
    "name": "log-symbols",
    "version": "7.0.1",
@@ -11491,6 +12627,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:11.739Z"
+  },
+  "loki-mode": {
+   "name": "loki-mode",
+   "version": "11.177.0",
+   "description": "An autonomous software factory that knows what it is supposed to deliver, and proves it did.",
+   "weeklyDownloads": null,
+   "grade": "F",
+   "score": 27,
+   "fileCount": 780,
+   "totalBytes": 31430426,
+   "counts": {
+    "critical": 1,
+    "high": 1,
+    "medium": 0,
+    "low": 2
+   },
+   "findings": [
+    {
+     "ruleId": "ci-config",
+     "title": "CI / infra configuration",
+     "severity": "low",
+     "file": "web-app/docker-compose.purple-lab.yml",
+     "occurrences": 1,
+     "advice": "Infra config can reveal internal hostnames, account IDs and deployment topology."
+    }
+   ],
+   "withheld": 10,
+   "scannedAt": "2026-11-23T03:17:34.693Z"
   },
   "mana": {
    "name": "mana",
@@ -11750,6 +12914,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:15.867Z"
   },
+  "n8n-nodes-palatine-speech": {
+   "name": "n8n-nodes-palatine-speech",
+   "version": "1.2.1",
+   "description": "n8n node for integrating Palatine Speech API into workflow",
+   "weeklyDownloads": 122757,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 32,
+   "totalBytes": 3499356,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:12.041Z"
+  },
   "nexaapi": {
    "name": "nexaapi",
    "version": "1.0.0",
@@ -11777,6 +12960,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:11.780Z"
+  },
+  "ngx-ai-devtools": {
+   "name": "ngx-ai-devtools",
+   "version": "0.2.1",
+   "description": "Network-tab-style DevTools for LLM calls in Angular apps. See every prompt, response, token, and dollar your app spends — without leaving the browser.",
+   "weeklyDownloads": 164,
+   "grade": "C",
+   "score": 73,
+   "fileCount": 28,
+   "totalBytes": 197780,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "fesm2022/ngx-ai-devtools.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (11 files)",
+     "severity": "medium",
+     "file": "lib/ai-devtools.component.d.ts.map",
+     "occurrences": 11,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:25.150Z"
   },
   "node-zendesk": {
    "name": "node-zendesk",
@@ -11946,6 +13165,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:35.175Z"
   },
+  "omniglyph": {
+   "name": "omniglyph",
+   "version": "1.4.0",
+   "description": "Context-as-image compression proxy for LLMs: renders bulky context (system prompt, tool docs, history) as dense PNG pages with exact per-provider billing math (Anthropic/OpenAI/Gemini). Node and Cloud",
+   "weeklyDownloads": 83042,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 128,
+   "totalBytes": 15830381,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:20.956Z"
+  },
   "onehook-api-client": {
    "name": "onehook-api-client",
    "version": "1.0.45",
@@ -11964,6 +13202,42 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:12.298Z"
+  },
+  "openai-harmony-js": {
+   "name": "openai-harmony-js",
+   "version": "1.0.0",
+   "description": "TypeScript/JavaScript utilities for the GPT‑OSS Harmony format: renderers, parsers, tokenizers, and streaming helpers",
+   "weeklyDownloads": 115863,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 7,
+   "totalBytes": 62378,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/index.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:19.185Z"
   },
   "openapi-shape": {
    "name": "openapi-shape",
@@ -12983,6 +14257,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:25.936Z"
   },
+  "tokscale": {
+   "name": "tokscale",
+   "version": "4.23.1",
+   "description": "Alias for @tokscale/cli — A high-performance CLI tool and visualization dashboard for tracking AI coding assistant token usage and costs across multiple platforms.",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 3,
+   "totalBytes": 969,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:33.091Z"
+  },
   "trello.js": {
    "name": "trello.js",
    "version": "2.3.0",
@@ -13211,6 +14504,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:32.529Z"
   },
+  "vectra": {
+   "name": "vectra",
+   "version": "0.15.0",
+   "description": "A lightweight, file-backed vector database for Node.js and browsers with Pinecone-compatible filtering and hybrid BM25 search.",
+   "weeklyDownloads": null,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 456,
+   "totalBytes": 2182380,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (168 files)",
+     "severity": "medium",
+     "file": "lib/browser.d.ts.map",
+     "occurrences": 168,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:30.979Z"
+  },
   "vercel-api-js": {
    "name": "vercel-api-js",
    "version": "2.44.0",
@@ -13292,6 +14613,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:20.223Z"
+  },
+  "whisper.rn": {
+   "name": "whisper.rn",
+   "version": "0.7.4",
+   "description": "React Native binding of whisper.cpp",
+   "weeklyDownloads": 75966,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 450,
+   "totalBytes": 26233290,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (48 files)",
+     "severity": "medium",
+     "file": "lib/typescript/realtime-transcription/adapters/AudioPcmStreamAdapter.d.ts.map",
+     "occurrences": 48,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-23T03:17:21.627Z"
   },
   "widest-line": {
    "name": "widest-line",

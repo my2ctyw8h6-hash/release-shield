@@ -101,7 +101,7 @@ export default function TarballAudit2026() {
         <p>
           Smaller but real: {ciConfig} package{ciConfig === 1 ? "" : "s"} shipped CI config, {ideConfig} shipped editor config and{" "}
           {coverage} shipped test-coverage output. {withheld} package{withheld === 1 ? "" : "s"} ({pct(withheld)}) matched a secret
-          pattern or sensitive-file rule. We don&apos;t publish which ones or what matched; some are test fixtures, and the rest
+          pattern or sensitive-file rule. We publish only a count per package — never which files matched or what they contain; some are test fixtures, and the rest
           belong with the maintainer, not on a web page.
         </p>
 

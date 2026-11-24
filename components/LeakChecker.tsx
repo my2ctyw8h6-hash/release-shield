@@ -54,6 +54,8 @@ export function LeakChecker() {
   const [email, setEmail] = useState("");
   const [unlocked, setUnlocked] = useState(false);
   const [leadState, setLeadState] = useState<"idle" | "sending" | "error">("idle");
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
+  const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
 
   // Deep link from /npm/<pkg> report pages: /?scan=<pkg> runs a live scan on load.
@@ -126,6 +128,28 @@ export function LeakChecker() {
       setLeadState("error");
     }
   }
+
+  // Item 12: pay prompt at the value moment - direct checkout start after a
+  // critical/high finding, reusing the PricingCards /api/checkout contract.
+  async function startCheckout() {
+    setCheckoutLoading(true);
+    setCheckoutError(null);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ plan: "pro", ref: currentRef() }),
+      });
+      const data = await res.json();
+      if (!res.ok || typeof data.url !== "string") throw new Error(data.error ?? "Checkout unavailable.");
+      window.location.href = data.url;
+    } catch (err) {
+      setCheckoutError(err instanceof Error ? err.message : "Checkout unavailable.");
+      setCheckoutLoading(false);
+    }
+  }
+
+  const hasBlockingFinding = !!report?.findings.some((f) => f.severity === "critical" || f.severity === "high");
 
   // The demo package is fake, so show everything and skip the email gate.
   const open = unlocked || !!report?.sample;
@@ -258,6 +282,15 @@ export function LeakChecker() {
               <p className="small muted">
                 The ignore file fixes this release. To stop it coming back, <a href="#pricing">fail the publish in CI</a> when a new leak shows up.
               </p>
+              {hasBlockingFinding && (
+                <div style={{ marginTop: 12 }}>
+                  <button className="btn btn-primary" onClick={startCheckout} disabled={checkoutLoading}>
+                    {checkoutLoading ? "…" : "Block this in CI — start Pro · $149/mo"}
+                  </button>
+                  {checkoutError && <div className="alert small">{checkoutError}</div>}
+                  <p className="small muted">Secure checkout by Stripe · Cancel anytime</p>
+                </div>
+              )}
             </>
           )}
 

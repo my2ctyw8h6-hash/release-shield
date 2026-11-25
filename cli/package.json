@@ -1,6 +1,6 @@
 {
   "name": "releaseshield",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Find secrets in your npm tarball before you publish: scans npm pack output for .env files, keys, tokens and source maps your .npmignore missed. Also scans PyPI wheels and Docker images.",
   "type": "module",
   "bin": {

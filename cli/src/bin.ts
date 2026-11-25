@@ -156,7 +156,7 @@ async function main() {
   if (o.command === "license") {
     const l = await resolveLicense(token);
     process.stdout.write(`plan:   ${l.tier}\nstatus: ${l.status}\n${l.email ? `email:  ${l.email}\n` : ""}${l.message ? `note:   ${l.message}\n` : ""}`);
-    process.exit(l.status === "invalid" || l.status === "inactive" ? 1 : 0);
+    process.exit(l.status === "invalid" || l.status === "inactive" || l.status === "expired" ? 1 : 0);
   }
 
   const color = o.color ?? (!o.output && process.stdout.isTTY === true && !process.env.NO_COLOR);

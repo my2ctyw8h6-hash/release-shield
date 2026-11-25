@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 // cli/src/bin.ts
-import { writeFileSync } from "node:fs";
+import { writeFileSync as writeFileSync2 } from "node:fs";
 
 // cli/src/core.ts
-import { existsSync as existsSync2, readFileSync as readFileSync2 } from "node:fs";
+import { existsSync as existsSync2, readFileSync as readFileSync3 } from "node:fs";
 import path2 from "node:path";
 
 // lib/tar.ts
@@ -544,6 +544,11 @@ async function fetchNpmTarball(spec, opts = {}) {
   return { name, version, data: Buffer.concat(chunks) };
 }
 
+// cli/src/license-client.ts
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { homedir } from "node:os";
+import { dirname, join } from "node:path";
+
 // lib/license.ts
 import { createPublicKey, verify } from "node:crypto";
 
@@ -554,23 +559,42 @@ MCowBQYDK2VwAyEAWX09v5yLHCaBGentnfODHhGVFcCIoAJAK8TA444gKWU=
 
 // lib/license.ts
 var TOKEN_PREFIX = "rs_";
+var LICENSE_TTL_SECONDS = 30 * 24 * 3600;
 function verifyLicenseToken(token, publicKeyPem = LICENSE_PUBLIC_KEY_PEM) {
+  const r = verifyLicenseTokenDetailed(token, publicKeyPem);
+  return r.ok ? r.payload : null;
+}
+function verifyLicenseTokenDetailed(token, publicKeyPem = LICENSE_PUBLIC_KEY_PEM) {
   const t = token.trim();
-  if (!t.startsWith(TOKEN_PREFIX)) return null;
+  if (!t.startsWith(TOKEN_PREFIX)) return { ok: false, reason: "invalid" };
   const [body, sig] = t.slice(TOKEN_PREFIX.length).split(".");
-  if (!body || !sig) return null;
+  if (!body || !sig) return { ok: false, reason: "invalid" };
   try {
     const ok = verify(null, Buffer.from(body), createPublicKey(publicKeyPem), Buffer.from(sig, "base64url"));
-    if (!ok) return null;
+    if (!ok) return { ok: false, reason: "invalid" };
     const payload = JSON.parse(Buffer.from(body, "base64url").toString("utf8"));
-    if (payload.v !== 1 || !payload.sub || payload.plan !== "standard" && payload.plan !== "pro") return null;
-    return payload;
+    if (payload.v !== 1 || !payload.sub || payload.plan !== "standard" && payload.plan !== "pro") return { ok: false, reason: "invalid" };
+    if (!payload.exp || payload.exp <= Math.floor(Date.now() / 1e3)) return { ok: false, reason: "expired" };
+    return { ok: true, payload };
+  } catch {
+    return { ok: false, reason: "invalid" };
+  }
+}
+function decodeLicensePayload(token) {
+  try {
+    const t = token.trim();
+    if (!t.startsWith(TOKEN_PREFIX)) return null;
+    const [body] = t.slice(TOKEN_PREFIX.length).split(".");
+    if (!body) return null;
+    return JSON.parse(Buffer.from(body, "base64url").toString("utf8"));
   } catch {
     return null;
   }
 }
 
 // cli/src/license-client.ts
+var OFFLINE_GRACE_SECONDS = 72 * 3600;
+var DAY_SECONDS = 24 * 3600;
 function allowedIssuer(iss) {
   try {
     const u = new URL(iss);
@@ -579,28 +603,95 @@ function allowedIssuer(iss) {
     return false;
   }
 }
+function cachePath() {
+  const base = process.env.XDG_CACHE_HOME?.trim() || join(homedir(), ".cache");
+  return join(base, "releaseshield", "license-state.json");
+}
+function readCache() {
+  try {
+    return JSON.parse(readFileSync(cachePath(), "utf8"));
+  } catch {
+    return {};
+  }
+}
+function writeCache(next) {
+  try {
+    const p = cachePath();
+    mkdirSync(dirname(p), { recursive: true });
+    writeFileSync(p, JSON.stringify(next), { mode: 384 });
+  } catch {
+  }
+}
+function graceMessage(ageSeconds, graceEndsAt) {
+  const ends = new Date(graceEndsAt * 1e3).toISOString().slice(0, 16).replace("T", " ");
+  if (ageSeconds < DAY_SECONDS) return "Couldn't reach the license server; using your signed license offline.";
+  if (ageSeconds < 2 * DAY_SECONDS)
+    return `Couldn't reach the license server for over a day; using your signed license offline (grace ends ${ends} UTC).`;
+  return `Couldn't reach the license server for over 2 days; using your signed license offline \u2014 it stops working ${ends} UTC unless the server is reachable.`;
+}
 async function resolveLicense(token) {
   if (!token?.trim()) return { tier: "free", status: "none" };
-  const payload = verifyLicenseToken(token);
-  if (!payload) return { tier: "free", status: "invalid", message: "RELEASESHIELD_TOKEN is not a valid ReleaseShield license token." };
+  const trimmed = token.trim();
+  const cache = readCache();
+  const now = Math.floor(Date.now() / 1e3);
+  let payload = verifyLicenseToken(trimmed);
+  let effectiveToken = trimmed;
+  if (!payload) {
+    const detail = verifyLicenseTokenDetailed(trimmed);
+    if (!detail.ok && detail.reason === "expired") {
+      const old = decodeLicensePayload(trimmed);
+      const cached = cache.token ? verifyLicenseToken(cache.token) : null;
+      if (cached && old && cache.sub === old.sub && cached.sub === old.sub) {
+        payload = cached;
+        effectiveToken = cache.token;
+      } else {
+        const expDate = old?.exp ? new Date(old.exp * 1e3).toISOString().slice(0, 10) : "unknown";
+        const base2 = old?.iss ?? "https://releaseshield.lineanswered.com";
+        return {
+          tier: "free",
+          status: "expired",
+          email: old?.email,
+          message: `Your ReleaseShield license token expired on ${expDate}. Refresh it at ${base2}/#pricing or revisit your checkout success link.`
+        };
+      }
+    } else {
+      return { tier: "free", status: "invalid", message: "RELEASESHIELD_TOKEN is not a valid ReleaseShield license token." };
+    }
+  }
   const base = (process.env.RELEASESHIELD_API_URL ?? payload.iss).replace(/\/$/, "");
-  const grace = {
-    tier: payload.plan,
-    status: "offline-grace",
-    email: payload.email,
-    message: "Couldn't reach the license server; using your signed license offline."
+  const offlineGrace = () => {
+    const anchor = cache.lastVerifiedAt ?? payload.iat;
+    const age = now - anchor;
+    const graceEndsAt = anchor + OFFLINE_GRACE_SECONDS;
+    if (age > OFFLINE_GRACE_SECONDS) {
+      return {
+        tier: "free",
+        status: "inactive",
+        email: payload.email,
+        message: `License hasn't been verified for over 72 hours; connect to the license server or refresh your token at ${base}/#pricing.`
+      };
+    }
+    return { tier: payload.plan, status: "offline-grace", email: payload.email, message: graceMessage(age, graceEndsAt) };
   };
-  if (!allowedIssuer(base)) return grace;
+  if (!allowedIssuer(base)) return offlineGrace();
   try {
     const res = await fetch(`${base}/api/license/verify`, {
       method: "POST",
       headers: { "content-type": "application/json", "user-agent": "releaseshield-cli" },
-      body: JSON.stringify({ token: token.trim() }),
+      body: JSON.stringify({ token: effectiveToken }),
       signal: AbortSignal.timeout(6e3)
     });
-    if (!res.ok) return grace;
+    if (!res.ok) return offlineGrace();
     const data = await res.json();
-    if (data.valid) return { tier: data.plan === "pro" ? "pro" : "standard", status: "verified", email: payload.email };
+    if (data.valid) {
+      let cacheToken = effectiveToken;
+      if (typeof data.token === "string") {
+        const fresh = verifyLicenseToken(data.token);
+        if (fresh && fresh.sub === payload.sub) cacheToken = data.token;
+      }
+      writeCache({ token: cacheToken, sub: payload.sub, lastVerifiedAt: now });
+      return { tier: data.plan === "pro" ? "pro" : "standard", status: "verified", email: payload.email };
+    }
     return {
       tier: "free",
       status: "inactive",
@@ -608,13 +699,13 @@ async function resolveLicense(token) {
       message: `License is no longer active (${data.status ?? data.reason ?? "unknown"}). Renew at ${base}/#pricing`
     };
   } catch {
-    return grace;
+    return offlineGrace();
   }
 }
 
 // cli/src/targets.ts
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync } from "node:fs";
+import { existsSync, mkdtempSync, readdirSync, readFileSync as readFileSync2, rmSync, statSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 var ARCHIVE_RE = /\.(tgz|tar\.gz|tar|whl|zip)$/i;
@@ -634,7 +725,7 @@ var Workspace = class {
 };
 function readPkgName(dir) {
   try {
-    return JSON.parse(readFileSync(path.join(dir, "package.json"), "utf8")).name;
+    return JSON.parse(readFileSync2(path.join(dir, "package.json"), "utf8")).name;
   } catch {
     return void 0;
   }
@@ -659,10 +750,10 @@ function npmPackTarget(dir, ws, opts) {
       if (!tgz) throw new Error("`npm pack` did not produce a tarball.");
       let version;
       try {
-        version = JSON.parse(readFileSync(path.join(dir, "package.json"), "utf8")).version;
+        version = JSON.parse(readFileSync2(path.join(dir, "package.json"), "utf8")).version;
       } catch {
       }
-      return { data: readFileSync(path.join(out, tgz)), version };
+      return { data: readFileSync2(path.join(out, tgz)), version };
     }
   };
 }
@@ -673,7 +764,7 @@ function fileTarget(file, opts) {
     load: async () => {
       const size = statSync(file).size;
       if (size > opts.maxBytes) throw new Error(`${file} is larger than the ${Math.round(opts.maxBytes / 1024 / 1024)} MB limit.`);
-      return { data: readFileSync(file) };
+      return { data: readFileSync2(file) };
     }
   };
 }
@@ -746,7 +837,7 @@ function resolveTargets(specs, cwd, ws, opts) {
 }
 
 // cli/src/version.ts
-var VERSION = true ? "1.0.2" : "0.0.0-dev";
+var VERSION = true ? "1.0.3" : "0.0.0-dev";
 
 // cli/src/format.ts
 var SITE = "https://releaseshield.lineanswered.com";
@@ -910,7 +1001,7 @@ function loadConfig(cwd, explicit) {
     return {};
   }
   try {
-    const cfg = JSON.parse(readFileSync2(file, "utf8"));
+    const cfg = JSON.parse(readFileSync3(file, "utf8"));
     if (cfg.failOn && !FAIL_LEVELS.includes(cfg.failOn)) throw new Error(`invalid failOn "${cfg.failOn}"`);
     return cfg;
   } catch (e) {
@@ -932,7 +1023,7 @@ async function loadBaselineFiles(spec, target, cwd, opts) {
     data = r.data;
     label = `${r.name}@${r.version}`;
   } else {
-    data = readFileSync2(path2.resolve(cwd, spec));
+    data = readFileSync3(path2.resolve(cwd, spec));
     label = spec;
   }
   const { entries } = readArchive(data, CLI_LIMITS);
@@ -1194,7 +1285,7 @@ status: ${l.status}
 ${l.email ? `email:  ${l.email}
 ` : ""}${l.message ? `note:   ${l.message}
 ` : ""}`);
-    process.exit(l.status === "invalid" || l.status === "inactive" ? 1 : 0);
+    process.exit(l.status === "invalid" || l.status === "inactive" || l.status === "expired" ? 1 : 0);
   }
   const color = o.color ?? (!o.output && process.stdout.isTTY === true && !process.env.NO_COLOR);
   const result = await run({
@@ -1214,7 +1305,7 @@ ${l.email ? `email:  ${l.email}
     log
   });
   if (o.output) {
-    writeFileSync(o.output, result.output);
+    writeFileSync2(o.output, result.output);
     log(`Report written to ${o.output}`);
     if (result.format !== "text") process.stderr.write(result.failed && result.enforced ? "\u2716 Release blocked by ReleaseShield\n" : "\u2713 ReleaseShield passed\n");
   } else process.stdout.write(result.output);

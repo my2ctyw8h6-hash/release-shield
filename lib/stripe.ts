@@ -158,7 +158,9 @@ export type LicenseIssueResult =
 
 /**
  * Turns a completed Checkout Session (from the Payment Link redirect) into a signed license token.
- * Deterministic for a given session, so revisiting the success page re-shows the same token.
+ * Revisiting the success page re-issues a fresh token (same subscription and plan,
+ * refreshed 30-day window) — tokens expire 30 days after issuance, and every
+ * successful online verify re-issues them, so a live subscription stays fresh.
  * Requires restricted-key read access to Checkout Sessions and Subscriptions.
  */
 export async function issueLicenseForSession(sessionId: string, siteUrl: string): Promise<LicenseIssueResult> {
@@ -181,7 +183,7 @@ export async function issueLicenseForSession(sessionId: string, siteUrl: string)
       cus: typeof session.customer === "string" ? session.customer : session.customer?.id,
       plan,
       email,
-      iat: session.created,
+      iat: Math.floor(Date.now() / 1000),
       iss: siteUrl.replace(/\/$/, ""),
     });
     return { ok: true, token, plan, email };

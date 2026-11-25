@@ -4,6 +4,7 @@ import { getPaymentLinkUrl } from "@/lib/stripe";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
 import { configuredSiteUrl } from "@/lib/site";
 import { cleanRef } from "@/lib/stats";
+import { appendCountedEvent } from "@/lib/counted-events";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -29,7 +30,23 @@ export async function POST(req: Request) {
     const url = await getPaymentLinkUrl(body.plan, siteUrl(req));
     // Server-witnessed checkout start: validated plan, rate-limited, owner-excluded.
     if (!(req.headers.get("cookie") ?? "").includes("rs_owner=1")) {
-      console.log(JSON.stringify({ rs_track: 1, src: "server", type: "checkout_started", ref: cleanRef(body.ref), plan: body.plan, path: "/pricing" }));
+      // One stable id for this event, shared by the log line and the durable gist
+      // store so the counter dedupes the two paths against each other (item 17).
+      const eventId = crypto.randomUUID();
+      const ref = cleanRef(body.ref);
+      console.log(JSON.stringify({ rs_track: 1, id: eventId, src: "server", type: "checkout_started", ref, plan: body.plan, path: "/pricing" }));
+      // Durable event store (item 17): awaited-with-catch — a failed write is
+      // logged inside appendCountedEvent and never breaks the checkout; the
+      // log-window path still counts the event.
+      await appendCountedEvent({
+        id: eventId,
+        type: "checkout_started",
+        ref,
+        plan: body.plan,
+        path: "/pricing",
+        src: "server",
+        createdAt: new Date().toISOString(),
+      });
     }
     return NextResponse.json({ url });
   } catch (err) {

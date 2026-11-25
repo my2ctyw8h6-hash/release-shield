@@ -4,6 +4,7 @@ import { scanArchive, scanEntries, type ScanReport } from "@/lib/scanner";
 import { SAMPLE_NAME, SAMPLE_VERSION, sampleEntries } from "@/lib/sample";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
 import { cleanRef } from "@/lib/stats";
+import { appendCountedEvent } from "@/lib/counted-events";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -18,11 +19,25 @@ const MAX_UPLOAD_BYTES = 4 * 1024 * 1024;
  */
 /** Count a scan only once it has completed, from the server, so button clicks
  * and forged beacons cannot inflate the funnel. Owner browsers are excluded. */
-function emitScanCompleted(req: Request, refRaw: unknown, path: string) {
+async function emitScanCompleted(req: Request, refRaw: unknown, path: string) {
   try {
     if ((req.headers.get("cookie") ?? "").includes("rs_owner=1")) return;
     const ref = cleanRef(typeof refRaw === "string" ? refRaw : new URL(req.url).searchParams.get("ref"));
-    console.log(JSON.stringify({ rs_track: 1, src: "server", type: "scan_run", ref, path }));
+    // One stable id for this event, shared by the log line and the durable gist
+    // store so the counter dedupes the two paths against each other (item 17).
+    const eventId = crypto.randomUUID();
+    console.log(JSON.stringify({ rs_track: 1, id: eventId, src: "server", type: "scan_run", ref, path }));
+    // Durable event store (item 17): awaited-with-catch — a failed write is
+    // logged inside appendCountedEvent and never breaks the scan; the
+    // log-window path still counts the event.
+    await appendCountedEvent({
+      id: eventId,
+      type: "scan_run",
+      ref,
+      path,
+      src: "server",
+      createdAt: new Date().toISOString(),
+    });
   } catch {
     /* counting must never break a scan */
   }
@@ -60,7 +75,7 @@ export async function POST(req: Request) {
       }
       const data = Buffer.from(await file.arrayBuffer());
       const report = scanArchive(data, { target: file.name, source: "upload" });
-      emitScanCompleted(req, form.get("ref"), "/");
+      await emitScanCompleted(req, form.get("ref"), "/");
       return NextResponse.json(redact(report));
     }
 
@@ -75,7 +90,7 @@ export async function POST(req: Request) {
 
     const pkg = await fetchNpmTarball(spec);
     const report = scanArchive(pkg.data, { target: pkg.name, version: pkg.version, source: "npm" });
-    emitScanCompleted(req, body?.ref, "/npm/" + pkg.name);
+    await emitScanCompleted(req, body?.ref, "/npm/" + pkg.name);
     return NextResponse.json(redact(report));
   } catch (err) {
     const message = err instanceof Error ? err.message : "Scan failed.";

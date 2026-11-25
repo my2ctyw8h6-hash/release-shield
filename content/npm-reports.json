@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-24T03:17:43.670Z",
+ "generatedAt": "2026-11-25T03:17:42.248Z",
  "reports": {
   "@0xinsider/sdk": {
    "name": "@0xinsider/sdk",
@@ -83,6 +83,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:24.501Z"
+  },
+  "@aashari/mcp-server-atlassian-bitbucket": {
+   "name": "@aashari/mcp-server-atlassian-bitbucket",
+   "version": "3.1.0",
+   "description": "Node.js/TypeScript MCP server for Atlassian Bitbucket. Enables AI systems (LLMs) to interact with workspaces, repositories, and pull requests via tools (list, get, comment, search). Connects AI direct",
+   "weeklyDownloads": null,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 82,
+   "totalBytes": 428020,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "backup-file",
+     "title": "Backup / editor temp file",
+     "severity": "medium",
+     "file": "dist/utils/constants.util.js.bak",
+     "occurrences": 1,
+     "advice": "Backup files often hold stale secrets or unreviewed code."
+    },
+    {
+     "ruleId": "backup-file",
+     "title": "Backup / editor temp file",
+     "severity": "medium",
+     "file": "package.json.bak",
+     "occurrences": 1,
+     "advice": "Backup files often hold stale secrets or unreviewed code."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:37.935Z"
   },
   "@aashari/mcp-server-atlassian-jira": {
    "name": "@aashari/mcp-server-atlassian-jira",
@@ -185,6 +221,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:44.294Z"
+  },
+  "@agentic/core": {
+   "name": "@agentic/core",
+   "version": "8.4.4",
+   "description": "Agentic AI utils which work with any LLM and TypeScript AI SDK.",
+   "weeklyDownloads": 16153,
+   "grade": "B",
+   "score": 85,
+   "fileCount": 5,
+   "totalBytes": 129111,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:25.337Z"
   },
   "@agentskit/adapters": {
    "name": "@agentskit/adapters",
@@ -310,6 +374,70 @@
    "withheld": 0,
    "scannedAt": "2026-11-24T03:17:42.306Z"
   },
+  "@agentskit/ink": {
+   "name": "@agentskit/ink",
+   "version": "1.0.0",
+   "description": "Ink terminal components and hooks for AgentsKit.",
+   "weeklyDownloads": 2643,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 8,
+   "totalBytes": 186069,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:32.004Z"
+  },
+  "@agentskit/integrations": {
+   "name": "@agentskit/integrations",
+   "version": "0.9.0",
+   "description": "Unified, plug-and-play service integrations for AgentsKit agents — one descriptor per service projected into tools, connectors, triggers, and auth.",
+   "weeklyDownloads": 9686,
+   "grade": "B",
+   "score": 76,
+   "fileCount": 16,
+   "totalBytes": 1218025,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:31.348Z"
+  },
   "@agentskit/memory": {
    "name": "@agentskit/memory",
    "version": "1.0.0",
@@ -353,6 +481,138 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-24T03:17:24.953Z"
+  },
+  "@agentskit/observability": {
+   "name": "@agentskit/observability",
+   "version": "1.0.0",
+   "description": "Logging and tracing layer for AgentsKit agents.",
+   "weeklyDownloads": 26027,
+   "grade": "D",
+   "score": 52,
+   "fileCount": 56,
+   "totalBytes": 1280917,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 3,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (15 files)",
+     "severity": "high",
+     "file": "dist/chunk-2SZQ5SIY.js.map",
+     "occurrences": 15,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/cost-guard.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/cost-store.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/trace-tracker.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:23.183Z"
+  },
+  "@agentskit/runtime": {
+   "name": "@agentskit/runtime",
+   "version": "1.0.0",
+   "description": "Standalone agent runtime with ReAct loop for AgentsKit.",
+   "weeklyDownloads": 33514,
+   "grade": "C",
+   "score": 67,
+   "fileCount": 22,
+   "totalBytes": 768711,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (6 files)",
+     "severity": "high",
+     "file": "dist/chunk-2CKUB2PI.js.map",
+     "occurrences": 6,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/shared-context.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:22.497Z"
+  },
+  "@agentskit/tools": {
+   "name": "@agentskit/tools",
+   "version": "1.0.0",
+   "description": "Reusable executable tools for AgentsKit agents.",
+   "weeklyDownloads": 9534,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 44,
+   "totalBytes": 3583211,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (12 files)",
+     "severity": "high",
+     "file": "dist/chunk-CL4SOJWM.js.map",
+     "occurrences": 12,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/chunk-YLJ4XMA6.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/validation.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:29.669Z"
   },
   "@ai-sdk/amazon-bedrock": {
    "name": "@ai-sdk/amazon-bedrock",
@@ -653,6 +913,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:30.384Z"
+  },
+  "@ai-sdk/elevenlabs": {
+   "name": "@ai-sdk/elevenlabs",
+   "version": "3.0.88",
+   "description": "The **[ElevenLabs provider](https://ai-sdk.dev/providers/ai-sdk-providers/elevenlabs)** for the [AI SDK](https://ai-sdk.dev/docs) contains speech generation plus batch and realtime transcription suppo",
+   "weeklyDownloads": 535388,
+   "grade": "B",
+   "score": 79,
+   "fileCount": 26,
+   "totalBytes": 464482,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/index.d.ts.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:15.283Z"
   },
   "@ai-sdk/fireworks": {
    "name": "@ai-sdk/fireworks",
@@ -2234,6 +2530,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:15.662Z"
   },
+  "@assistant-ui/react-streamdown": {
+   "name": "@assistant-ui/react-streamdown",
+   "version": "0.3.23",
+   "description": "Streamdown-based markdown rendering for assistant-ui",
+   "weeklyDownloads": 343871,
+   "grade": "C",
+   "score": 59,
+   "fileCount": 69,
+   "totalBytes": 411668,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (9 files)",
+     "severity": "high",
+     "file": "dist/adapters/code-adapter.js.map",
+     "occurrences": 9,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (11 files)",
+     "severity": "medium",
+     "file": "dist/adapters/code-adapter.d.ts.map",
+     "occurrences": 11,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:13.001Z"
+  },
   "@authup/core-http-kit": {
    "name": "@authup/core-http-kit",
    "version": "1.0.0-beta.76",
@@ -2405,6 +2737,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:31.271Z"
   },
+  "@bastani/pi-ai": {
+   "name": "@bastani/pi-ai",
+   "version": "0.9.87",
+   "description": "Bastani-branded unified LLM API with automatic model discovery and provider configuration",
+   "weeklyDownloads": 9458,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 999,
+   "totalBytes": 5653533,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (237 files)",
+     "severity": "high",
+     "file": "dist/utils/abort-signals.js.map",
+     "occurrences": 237,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (237 files)",
+     "severity": "medium",
+     "file": "dist/utils/abort-signals.d.ts.map",
+     "occurrences": 237,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:34.509Z"
+  },
   "@brizz/sdk": {
    "name": "@brizz/sdk",
    "version": "0.2.4",
@@ -2487,6 +2855,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:21.089Z"
+  },
+  "@carderne/sandbox-runtime": {
+   "name": "@carderne/sandbox-runtime",
+   "version": "0.0.80",
+   "description": "Anthropic Sandbox Runtime (ASRT) - A general-purpose tool for wrapping security boundaries around arbitrary processes",
+   "weeklyDownloads": 15567,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 141,
+   "totalBytes": 8079574,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (66 files)",
+     "severity": "medium",
+     "file": "dist/cli.d.ts.map",
+     "occurrences": 66,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:36.262Z"
   },
   "@cargo-ai/api": {
    "name": "@cargo-ai/api",
@@ -2721,6 +3117,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:16.097Z"
   },
+  "@cloudflare/think": {
+   "name": "@cloudflare/think",
+   "version": "0.24.0",
+   "description": "Opinionated chat agent with agentic loop, stream resumption, client tools, and extensions",
+   "weeklyDownloads": 292895,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 59,
+   "totalBytes": 2482186,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (13 files)",
+     "severity": "high",
+     "file": "dist/tools/browser.js.map",
+     "occurrences": 13,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:14.089Z"
+  },
   "@code-yeongyu/senpi-ai": {
    "name": "@code-yeongyu/senpi-ai",
    "version": "2026.11.22-2",
@@ -2739,6 +3163,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-23T03:17:36.117Z"
+  },
+  "@codemieai/code": {
+   "name": "@codemieai/code",
+   "version": "0.17.2",
+   "description": "Unified AI coding assistant CLI - Manage Claude Code, Gemini & custom agents. Multi-provider support (OpenAI, Azure, LiteLLM, SSO). Built-in CodeMie agent with file operations & git integration.",
+   "weeklyDownloads": 10572,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 3524,
+   "totalBytes": 16201748,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (1694 files)",
+     "severity": "medium",
+     "file": "dist/migrations/001-config-rename.migration.d.ts.map",
+     "occurrences": 1694,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:30.688Z"
   },
   "@coinbase/cdp-sdk": {
    "name": "@coinbase/cdp-sdk",
@@ -3062,6 +3514,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-24T03:17:16.096Z"
+  },
+  "@copilotkit/channels-ui": {
+   "name": "@copilotkit/channels-ui",
+   "version": "0.13.0",
+   "description": "JSX runtime, IR, and cross-platform component vocabulary for CopilotKit channels.",
+   "weeklyDownloads": 467869,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 60,
+   "totalBytes": 105833,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (19 files)",
+     "severity": "medium",
+     "file": "dist/bind.d.ts.map",
+     "occurrences": 19,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:13.329Z"
   },
   "@copilotkit/mcp-apps-renderer": {
    "name": "@copilotkit/mcp-apps-renderer",
@@ -3836,6 +4316,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:21.822Z"
   },
+  "@framers/agentos": {
+   "name": "@framers/agentos",
+   "version": "0.21.2",
+   "description": "AgentOS: open-source TypeScript framework for autonomous AI agents. Unified graph orchestration, cognitive memory, runtime tool forging, multi-tier guardrails, voice pipeline, and 11 LLM providers.",
+   "weeklyDownloads": 10171,
+   "grade": "C",
+   "score": 73,
+   "fileCount": 5524,
+   "totalBytes": 34164879,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (2752 files)",
+     "severity": "medium",
+     "file": "dist/safety/claims/tooling/AbsenceEvidence.d.ts.map",
+     "occurrences": 2752,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-25T03:17:27.006Z"
+  },
   "@fullstory/browser": {
    "name": "@fullstory/browser",
    "version": "2.1.2",
@@ -3918,6 +4426,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:50.824Z"
+  },
+  "@genkit-ai/anthropic": {
+   "name": "@genkit-ai/anthropic",
+   "version": "0.7.0",
+   "description": "Genkit AI framework plugin for Anthropic APIs.",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 64,
+   "fileCount": 86,
+   "totalBytes": 1300160,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (27 files)",
+     "severity": "high",
+     "file": "lib/runner/base.js.map",
+     "occurrences": 27,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "lib/runner/types.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:36.663Z"
   },
   "@genkit-ai/compat-oai": {
    "name": "@genkit-ai/compat-oai",
@@ -4059,6 +4603,61 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:46.817Z"
+  },
+  "@helicone/ai-sdk-provider": {
+   "name": "@helicone/ai-sdk-provider",
+   "version": "1.0.12",
+   "description": "Helicone provider for Vercel AI SDK",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 8,
+   "totalBytes": 1330812,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:42.248Z"
+  },
+  "@helicone/helpers": {
+   "name": "@helicone/helpers",
+   "version": "1.8.3",
+   "description": "A Node.js wrapper for some of Helicone's common functionalities",
+   "weeklyDownloads": 25352,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 102828,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:33.264Z"
   },
   "@hey-api/openapi-python": {
    "name": "@hey-api/openapi-python",
@@ -4695,6 +5294,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.959Z"
+  },
+  "@iobroker/ai-core": {
+   "name": "@iobroker/ai-core",
+   "version": "0.0.6",
+   "description": "ioBroker AI backend: LLM providers, credentials and the sendTo protocol shared by admin, javascript and vis-2",
+   "weeklyDownloads": null,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 45,
+   "totalBytes": 166340,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (14 files)",
+     "severity": "medium",
+     "file": "build/node/AiBackend.js.map",
+     "occurrences": 14,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:41.842Z"
   },
   "@isaacs/cliui": {
    "name": "@isaacs/cliui",
@@ -5487,6 +6114,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:58.981Z"
   },
+  "@letoribo/mcp-graphql-enhanced": {
+   "name": "@letoribo/mcp-graphql-enhanced",
+   "version": "4.18.0",
+   "description": "Enhanced MCP server for GraphQL with dynamic headers and robust variables parsing — a drop-in replacement for mcp-graphql.",
+   "weeklyDownloads": 65066,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 41,
+   "totalBytes": 144577,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (12 files)",
+     "severity": "medium",
+     "file": "dist/helpers/container.d.ts.map",
+     "occurrences": 12,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:18.138Z"
+  },
   "@line/bot-sdk": {
    "name": "@line/bot-sdk",
    "version": "11.4.0",
@@ -5728,6 +6383,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:25.352Z"
+  },
+  "@mastra/core": {
+   "name": "@mastra/core",
+   "version": "1.86.0",
+   "description": "Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+   "weeklyDownloads": 3841364,
+   "grade": "C",
+   "score": 60,
+   "fileCount": 2449,
+   "totalBytes": 42084905,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 1,
+   "scannedAt": "2026-11-25T03:17:12.575Z"
   },
   "@mastra/rag": {
    "name": "@mastra/rag",
@@ -6005,6 +6679,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-23T03:17:10.301Z"
+  },
+  "@metamask/client-mcp-core": {
+   "name": "@metamask/client-mcp-core",
+   "version": "0.14.0",
+   "description": "HTTP daemon and CLI for agent-driven browser extension testing with Playwright",
+   "weeklyDownloads": 56390,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 638,
+   "totalBytes": 3698125,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (158 files)",
+     "severity": "high",
+     "file": "dist/capabilities/context.cjs.map",
+     "occurrences": 158,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:20.097Z"
   },
   "@microsoft/teams.api": {
    "name": "@microsoft/teams.api",
@@ -6309,6 +7011,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:38.890Z"
   },
+  "@mux/ai": {
+   "name": "@mux/ai",
+   "version": "0.70.0",
+   "description": "AI library for Mux",
+   "weeklyDownloads": null,
+   "grade": "B",
+   "score": 76,
+   "fileCount": 19,
+   "totalBytes": 4508212,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:37.331Z"
+  },
   "@nationaldesignstudio/rampart-edge": {
    "name": "@nationaldesignstudio/rampart-edge",
    "version": "2.0.5",
@@ -6594,6 +7324,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:06.597Z"
+  },
+  "@nitrostack/core": {
+   "name": "@nitrostack/core",
+   "version": "1.1.3",
+   "description": "NitroStack Core - Build powerful MCP servers with TypeScript",
+   "weeklyDownloads": 80104,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 452,
+   "totalBytes": 2236111,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (224 files)",
+     "severity": "medium",
+     "file": "dist/core/transports/accept.d.ts.map",
+     "occurrences": 224,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:17.046Z"
   },
   "@nitrostack/widgets": {
    "name": "@nitrostack/widgets",
@@ -8056,6 +8814,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:03.904Z"
   },
+  "@remnic/import-claude": {
+   "name": "@remnic/import-claude",
+   "version": "9.69.56",
+   "description": "Import conversation history from Claude.ai data exports into Remnic (issue #568)",
+   "weeklyDownloads": 8531,
+   "grade": "B",
+   "score": 85,
+   "fileCount": 6,
+   "totalBytes": 45889,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:35.663Z"
+  },
   "@remotion/install-whisper-cpp": {
    "name": "@remotion/install-whisper-cpp",
    "version": "4.0.545",
@@ -8684,6 +9470,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:34.606Z"
   },
+  "@skej/studio": {
+   "name": "@skej/studio",
+   "version": "1.0.21",
+   "description": "Manifest-based LLM executor for Studio agents with CLI",
+   "weeklyDownloads": null,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 79,
+   "totalBytes": 307351,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (38 files)",
+     "severity": "medium",
+     "file": "dist/providers/anthropic.d.ts.map",
+     "occurrences": 38,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:39.115Z"
+  },
   "@smartytalent/api-client": {
    "name": "@smartytalent/api-client",
    "version": "0.9.83",
@@ -8806,6 +9620,25 @@
    "findings": [],
    "withheld": 1,
    "scannedAt": "2026-11-23T03:17:31.777Z"
+  },
+  "@stll/folio-agents": {
+   "name": "@stll/folio-agents",
+   "version": "0.17.2",
+   "description": "Framework-neutral LLM tool layer over folio's ai-edits engine: function-calling tools so an agent can read and mutate .docx documents through @stll/folio-core.",
+   "weeklyDownloads": 85552,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 33,
+   "totalBytes": 245059,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:16.168Z"
   },
   "@storybook/addon-mcp": {
    "name": "@storybook/addon-mcp",
@@ -9106,6 +9939,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:24.698Z"
+  },
+  "@tanstack/ai-code-mode": {
+   "name": "@tanstack/ai-code-mode",
+   "version": "1.1.2",
+   "description": "Secure TypeScript Code Mode for TanStack AI agents to execute sandboxed tool orchestration programs.",
+   "weeklyDownloads": 120227,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 53,
+   "totalBytes": 283521,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (11 files)",
+     "severity": "high",
+     "file": "dist/esm/agent-store.js.map",
+     "occurrences": 11,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:19.097Z"
   },
   "@tanstack/ai-codex": {
    "name": "@tanstack/ai-codex",
@@ -9458,6 +10319,50 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:09.665Z"
+  },
+  "@the-next-ai/ai-gateway": {
+   "name": "@the-next-ai/ai-gateway",
+   "version": "1.0.21",
+   "description": "TypeScript Fastify AI protocol gateway for OpenAI, Anthropic, Gemini, MCP and agent workflows.",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 69,
+   "fileCount": 238,
+   "totalBytes": 4923935,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 2
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/plugins/sdk.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (111 files)",
+     "severity": "medium",
+     "file": "dist/adapters/builtins/source/anthropic-messages.d.ts.map",
+     "occurrences": 111,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "ci-config",
+     "title": "CI / infra configuration",
+     "severity": "low",
+     "file": "docker-compose.prod.yml",
+     "occurrences": 1,
+     "advice": "Infra config can reveal internal hostnames, account IDs and deployment topology."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-25T03:17:38.424Z"
   },
   "@tldraw/assets": {
    "name": "@tldraw/assets",
@@ -9944,6 +10849,50 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:27.415Z"
+  },
+  "@tonconnect/sdk": {
+   "name": "@tonconnect/sdk",
+   "version": "5.0.2",
+   "description": "Use it to connect your app to TON wallets via TonConnect protocol.  You can find more details and the protocol specification in the [docs](https://docs.ton.org/develop/dapps/ton-connect/overview). See",
+   "weeklyDownloads": 159481,
+   "grade": "C",
+   "score": 55,
+   "fileCount": 10,
+   "totalBytes": 2374188,
+   "counts": {
+    "critical": 0,
+    "high": 3,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/tonconnect-sdk.min.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "lib/cjs/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "lib/esm/index.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:08.534Z"
   },
   "@toon-format/toon": {
    "name": "@toon-format/toon",
@@ -10809,6 +11758,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:56.714Z"
   },
+  "acpx": {
+   "name": "acpx",
+   "version": "0.22.0",
+   "description": "Headless CLI client for the Agent Client Protocol (ACP) — talk to coding agents from the command line",
+   "weeklyDownloads": 632144,
+   "grade": "C",
+   "score": 59,
+   "fileCount": 40,
+   "totalBytes": 2983628,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (11 files)",
+     "severity": "high",
+     "file": "dist/agent-registry-CxpAF3nI.js.map",
+     "occurrences": 11,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (6 files)",
+     "severity": "medium",
+     "file": "dist/agent-registry.d.ts.map",
+     "occurrences": 6,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:14.638Z"
+  },
   "agent-cli-detector": {
    "name": "agent-cli-detector",
    "version": "0.1.8",
@@ -10836,6 +11821,61 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:11.385Z"
+  },
+  "agent-install": {
+   "name": "agent-install",
+   "version": "0.0.8",
+   "description": "Install SKILL.md files, MCP servers, and AGENTS.md guidance for any coding agent. Ships both a Node API and a CLI.",
+   "weeklyDownloads": 5261206,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 40,
+   "totalBytes": 342662,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:10.171Z"
+  },
+  "agentfootprint": {
+   "name": "agentfootprint",
+   "version": "18.1.0",
+   "description": "The explainable agent framework — backtrack a wrong answer to the exact context that caused it (evidence, not guesses). Built on footprintjs.",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 64,
+   "fileCount": 13345,
+   "totalBytes": 57517340,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 11
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (5712 files)",
+     "severity": "medium",
+     "file": "dist/types/adapters/hosting/a2aWire.d.ts.map",
+     "occurrences": 5712,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "test-coverage",
+     "title": "Coverage / test output (252 files)",
+     "severity": "low",
+     "file": "dist/esm/semantics/coverage/absent.js",
+     "occurrences": 252,
+     "advice": "Coverage output bloats the package and can embed full source."
+    }
+   ],
+   "withheld": 10,
+   "scannedAt": "2026-11-25T03:17:41.206Z"
   },
   "agentic-flow": {
    "name": "agentic-flow",
@@ -10995,6 +12035,25 @@
    ],
    "withheld": 1,
    "scannedAt": "2026-11-17T01:45:26.920Z"
+  },
+  "ai-ctrf": {
+   "name": "ai-ctrf",
+   "version": "0.2.0",
+   "description": "Generate AI summaries of test results using a wide range of AI models like OpenAI, Anthropic, Gemini, Mistral, Grok, DeepSeek, Azure, Perplexity, OpenRouter, and custom OpenAI-compatible APIs",
+   "weeklyDownloads": 14717,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 104097,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:24.421Z"
   },
   "ai-sdk-ollama": {
    "name": "ai-sdk-ollama",
@@ -11569,6 +12628,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-24T03:17:23.523Z"
   },
+  "bash-tool": {
+   "name": "bash-tool",
+   "version": "1.3.19",
+   "description": "Generic bash tool for AI agents, compatible with AI SDK",
+   "weeklyDownloads": 380000,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 68,
+   "totalBytes": 127186,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (32 files)",
+     "severity": "medium",
+     "file": "dist/tools/bash.d.ts.map",
+     "occurrences": 32,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:13.661Z"
+  },
   "bedrock-agentcore": {
    "name": "bedrock-agentcore",
    "version": "0.4.7",
@@ -11691,6 +12778,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.762Z"
   },
+  "bpe-lite": {
+   "name": "bpe-lite",
+   "version": "0.5.2",
+   "description": "Offline BPE tokenizer for OpenAI, Anthropic, and Gemini — zero dependencies",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 12,
+   "totalBytes": 7791905,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:37.632Z"
+  },
   "browser-use-sdk": {
    "name": "browser-use-sdk",
    "version": "3.12.1",
@@ -11726,6 +12832,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:07.434Z"
+  },
+  "call-ai": {
+   "name": "call-ai",
+   "version": "14.3.446",
+   "description": "Lightweight library for making AI API calls with streaming support",
+   "weeklyDownloads": 21512,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 36,
+   "totalBytes": 85212,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:27.221Z"
   },
   "cf": {
    "name": "cf",
@@ -11783,6 +12908,114 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.019Z"
+  },
+  "chromadb": {
+   "name": "chromadb",
+   "version": "3.5.0",
+   "description": "A JavaScript interface for chroma",
+   "weeklyDownloads": 299932,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 49,
+   "totalBytes": 1719030,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "high",
+     "file": "dist/cjs/chromadb.cjs.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/chunk-NSSMTXJJ.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:14.361Z"
+  },
+  "claude-flow": {
+   "name": "claude-flow",
+   "version": "3.80.7",
+   "description": "Ruflo - Enterprise AI agent orchestration for Claude Code. Deploy 60+ specialized agents in coordinated swarms with self-learning, fault-tolerant consensus, vector memory, and MCP integration",
+   "weeklyDownloads": 12809,
+   "grade": "D",
+   "score": 42,
+   "fileCount": 3042,
+   "totalBytes": 23142752,
+   "counts": {
+    "critical": 1,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (240 files)",
+     "severity": "medium",
+     "file": "node_modules/@claude-flow/plugin-agent-federation/dist/a2a/agent-card.d.ts.map",
+     "occurrences": 240,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "backup-file",
+     "title": "Backup / editor temp file",
+     "severity": "medium",
+     "file": ".claude/settings.json.bak",
+     "occurrences": 1,
+     "advice": "Backup files often hold stale secrets or unreviewed code."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-25T03:17:29.172Z"
+  },
+  "clean-jsdoc-theme": {
+   "name": "clean-jsdoc-theme",
+   "version": "5.3.0",
+   "description": "A modern JSDoc theme with dark mode, built-in search, i18n, and LLM-ready Markdown for every page. TypeDoc support via @clean-jsdoc-theme/typedoc.",
+   "weeklyDownloads": 66405,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 10,
+   "totalBytes": 541320,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/publish.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/publish.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:20.316Z"
   },
   "cli-boxes": {
    "name": "cli-boxes",
@@ -12431,6 +13664,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:02.513Z"
   },
+  "dsh-claude-style": {
+   "name": "dsh-claude-style",
+   "version": "0.22.2",
+   "description": "Claude Code Desktop theme for DeepSeek Harness (dsh) web GUI — visual & interaction overhaul",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 106,
+   "totalBytes": 3900131,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:38.654Z"
+  },
   "e2b": {
    "name": "e2b",
    "version": "2.64.0",
@@ -12670,6 +13922,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:11.595Z"
   },
+  "fastify-mcp": {
+   "name": "fastify-mcp",
+   "version": "3.0.0",
+   "description": "",
+   "weeklyDownloads": 14632,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 11,
+   "totalBytes": 25055,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:28.342Z"
+  },
   "feature-fetch": {
    "name": "feature-fetch",
    "version": "0.1.2",
@@ -12826,6 +14097,42 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:45.098Z"
+  },
+  "flare-redact": {
+   "name": "flare-redact",
+   "version": "1.11.0",
+   "description": "Keep secrets and PII out of logs, Sentry, LLM prompts and commits. Reads values, not field names. Zero dependencies.",
+   "weeklyDownloads": 15613,
+   "grade": "F",
+   "score": 0,
+   "fileCount": 231,
+   "totalBytes": 1548906,
+   "counts": {
+    "critical": 7,
+    "high": 1,
+    "medium": 2,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (102 files)",
+     "severity": "medium",
+     "file": "dist/agent.d.ts.map",
+     "occurrences": 102,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "ci-config",
+     "title": "CI / infra configuration",
+     "severity": "low",
+     "file": "docker/docker-compose.yml",
+     "occurrences": 1,
+     "advice": "Infra config can reveal internal hostnames, account IDs and deployment topology."
+    }
+   ],
+   "withheld": 9,
+   "scannedAt": "2026-11-25T03:17:35.043Z"
   },
   "gitlab-ai-provider": {
    "name": "gitlab-ai-provider",
@@ -13578,6 +14885,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:31.109Z"
   },
+  "langfuse-cli": {
+   "name": "langfuse-cli",
+   "version": "1.4.0",
+   "description": "Interact with Langfuse API from the command line",
+   "weeklyDownloads": 69186,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 13,
+   "totalBytes": 1191687,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:17.670Z"
+  },
   "langfuse-langchain": {
    "name": "langfuse-langchain",
    "version": "3.39.2",
@@ -13925,6 +15251,34 @@
    "withheld": 1,
    "scannedAt": "2026-11-21T03:17:21.274Z"
   },
+  "mcp-evals": {
+   "name": "mcp-evals",
+   "version": "2.0.1",
+   "description": "GitHub Action for evaluating MCP server tool calls using LLM-based scoring",
+   "weeklyDownloads": 58561,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 23,
+   "totalBytes": 45839,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (10 files)",
+     "severity": "medium",
+     "file": "dist/cli.d.ts.map",
+     "occurrences": 10,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:18.361Z"
+  },
   "mcp-framework": {
    "name": "mcp-framework",
    "version": "0.2.22",
@@ -13943,6 +15297,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-24T03:17:34.467Z"
+  },
+  "mcp-from-openapi": {
+   "name": "mcp-from-openapi",
+   "version": "2.10.0",
+   "description": "Production-ready library for converting OpenAPI specifications into MCP tool definitions",
+   "weeklyDownloads": 13057,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 50,
+   "totalBytes": 1482329,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:34.748Z"
   },
   "mcp-handler": {
    "name": "mcp-handler",
@@ -14371,6 +15744,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:39.046Z"
+  },
+  "oh-my-opencode": {
+   "name": "oh-my-opencode",
+   "version": "5.1.83",
+   "description": "The Best AI Agent Harness - Batteries-Included OpenCode Plugin with Multi-Model Orchestration, Parallel Background Agents, and Crafted LSP/AST Tools",
+   "weeklyDownloads": 55063,
+   "grade": "A",
+   "score": 96,
+   "fileCount": 5684,
+   "totalBytes": 53893035,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "ci-config",
+     "title": "CI / infra configuration (7 files)",
+     "severity": "low",
+     "file": "packages/omo-codex/plugin/components/comment-checker/.github/workflows/ci.yml",
+     "occurrences": 7,
+     "advice": "Infra config can reveal internal hostnames, account IDs and deployment topology."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:21.767Z"
   },
   "ollama-ai-provider-v2": {
    "name": "ollama-ai-provider-v2",
@@ -14885,6 +16286,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:48:15.519Z"
   },
+  "prometiam-risk-api": {
+   "name": "prometiam-risk-api",
+   "version": "0.1.64",
+   "description": "Official TypeScript/JavaScript client for the Prometiam company data and KYB API: official company-register data for 52 countries (ES, FR, GB, IE, PL, NO, FI, SE, HR, BE, DK, EE, SK, CH, LV, CY, RO, L",
+   "weeklyDownloads": 3394,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 14,
+   "totalBytes": 1442284,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:10.984Z"
+  },
   "prompts": {
    "name": "prompts",
    "version": "2.4.2",
@@ -14931,6 +16351,25 @@
    ],
    "withheld": 2,
    "scannedAt": "2026-11-18T03:17:31.553Z"
+  },
+  "pxpipe-proxy": {
+   "name": "pxpipe-proxy",
+   "version": "0.16.0",
+   "description": "Token-saving proxy for Claude Code: renders bulky context (system prompt, tool docs, old history) as dense PNGs to cut input tokens. Runs on Node and Cloudflare Workers.",
+   "weeklyDownloads": 11816,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 117,
+   "totalBytes": 16440709,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:33.808Z"
   },
   "railway": {
    "name": "railway",
@@ -15052,6 +16491,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-24T03:17:34.094Z"
+  },
+  "ruvector-attention-wasm": {
+   "name": "ruvector-attention-wasm",
+   "version": "2.1.0",
+   "description": "High-performance WebAssembly attention mechanisms: Multi-Head, Flash, Hyperbolic, MoE, CGT Sheaf Attention with GPU acceleration for transformers and LLMs",
+   "weeklyDownloads": 71725,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 234663,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-25T03:17:17.283Z"
   },
   "sa-sdk-javascript": {
    "name": "sa-sdk-javascript",
@@ -15410,6 +16868,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:12.484Z"
+  },
+  "task-master-ai": {
+   "name": "task-master-ai",
+   "version": "0.43.1",
+   "description": "A task management system for ambitious AI-driven development that doesn't overwhelm and confuse Cursor.",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 94,
+   "fileCount": 57,
+   "totalBytes": 1756063,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 1,
+   "scannedAt": "2026-11-25T03:17:41.322Z"
   },
   "tavily-mcp": {
    "name": "tavily-mcp",

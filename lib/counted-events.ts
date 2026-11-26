@@ -35,6 +35,14 @@ import path from "node:path";
  * append now verifies after write (re-read, confirm the event id is present)
  * and retries once on fresh content if absent. A duplicate line with the same
  * id is harmless: track-cumulative dedupes by id.
+ *
+ * P20 (Nov 26, 2026): the P18 retry only covers a PATCH that SUCCEEDS but
+ * whose verify re-read misses the id. Under a forced-concurrency burst the
+ * failure is at the WRITE itself — GitHub 409s concurrent gist PATCHes, and
+ * appendOnce throws before any verify runs, so nothing is retried (the Nov 26
+ * P19 drill lost 4 of 6 events exactly this way). The write itself is now
+ * retried once on fresh content after a short jittered backoff; the
+ * verify-after-write stays as the second layer.
  */
 
 const EVENTS_FILE = "counted-events.jsonl";
@@ -123,7 +131,19 @@ export async function appendCountedEvent(ev: CountedEvent): Promise<boolean> {
     return false;
   }
   try {
-    await appendOnce(cfg, ev);
+    try {
+      await appendOnce(cfg, ev);
+    } catch (writeErr) {
+      // P20 (Nov 26, 2026): the write itself can fail under concurrency
+      // (GitHub 409s concurrent gist PATCHes) — a failed write never reaches
+      // the verify step, so the P18 retry never fires. Retry the write once
+      // on fresh content after a short jittered backoff; the verify layer
+      // below still judges the outcome. A duplicate line (if the first
+      // PATCH actually landed) is harmless: track-cumulative dedupes by id.
+      console.error("[counted-events] write failed, retrying append", ev.id, writeErr);
+      await new Promise((r) => setTimeout(r, 250 + Math.random() * 500));
+      await appendOnce(cfg, ev);
+    }
     if (await eventPresent(cfg, ev.id)) {
       await appendLocal(ev);
       return true;

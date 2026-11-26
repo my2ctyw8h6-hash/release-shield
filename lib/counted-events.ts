@@ -27,6 +27,14 @@ import path from "node:path";
  * Only server-witnessed events are written (pageview from /api/track,
  * scan_run from /api/scan emitScanCompleted, checkout_started from
  * /api/checkout) — the same discipline as the log path.
+ *
+ * P18 (Nov 25, 2026): the gist store is a read-modify-write PATCH, so two
+ * concurrent appends can read the same base content and the second PATCH
+ * silently clobbers the first (last-write-wins). The Nov 25 drill lost one
+ * pageview exactly this way — a successful PATCH that never landed. Every
+ * append now verifies after write (re-read, confirm the event id is present)
+ * and retries once on fresh content if absent. A duplicate line with the same
+ * id is harmless: track-cumulative dedupes by id.
  */
 
 const EVENTS_FILE = "counted-events.jsonl";
@@ -79,6 +87,34 @@ async function appendLocal(ev: CountedEvent): Promise<void> {
   }
 }
 
+/** One read-modify-write PATCH attempt. Throws on read or write failure. */
+async function appendOnce(cfg: { gistId: string; token: string }, ev: CountedEvent): Promise<void> {
+  const existing = await readEvents(cfg.gistId, cfg.token);
+  const content = existing && !existing.endsWith("\n") ? existing + "\n" : existing;
+  const res = await fetch(`https://api.github.com/gists/${encodeURIComponent(cfg.gistId)}`, {
+    method: "PATCH",
+    headers: {
+      Authorization: `Bearer ${cfg.token}`,
+      Accept: "application/vnd.github+json",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      files: { [EVENTS_FILE]: { content: content + JSON.stringify(ev) + "\n" } },
+    }),
+  });
+  if (!res.ok) throw new Error(`gist write ${res.status}`);
+}
+
+/** Re-read the gist store and confirm this event id is present. */
+async function eventPresent(cfg: { gistId: string; token: string }, id: string): Promise<boolean> {
+  try {
+    const content = await readEvents(cfg.gistId, cfg.token);
+    return content.includes(`"id":"${id}"`);
+  } catch {
+    return false;
+  }
+}
+
 /** Append one counted event to the gist store. Never throws; returns false on failure. */
 export async function appendCountedEvent(ev: CountedEvent): Promise<boolean> {
   const cfg = gistConfig();
@@ -87,22 +123,24 @@ export async function appendCountedEvent(ev: CountedEvent): Promise<boolean> {
     return false;
   }
   try {
-    const existing = await readEvents(cfg.gistId, cfg.token);
-    const content = existing && !existing.endsWith("\n") ? existing + "\n" : existing;
-    const res = await fetch(`https://api.github.com/gists/${encodeURIComponent(cfg.gistId)}`, {
-      method: "PATCH",
-      headers: {
-        Authorization: `Bearer ${cfg.token}`,
-        Accept: "application/vnd.github+json",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        files: { [EVENTS_FILE]: { content: content + JSON.stringify(ev) + "\n" } },
-      }),
-    });
-    if (!res.ok) throw new Error(`gist write ${res.status}`);
+    await appendOnce(cfg, ev);
+    if (await eventPresent(cfg, ev.id)) {
+      await appendLocal(ev);
+      return true;
+    }
+    // The PATCH succeeded but the event is not in the store — a concurrent
+    // append read the same base content and its PATCH won (last-write-wins).
+    // Retry once on fresh content; the retry's read includes the winner's
+    // event, so nothing is lost twice.
+    console.error("[counted-events] verify failed, retrying append", ev.id);
+    await appendOnce(cfg, ev);
+    if (await eventPresent(cfg, ev.id)) {
+      await appendLocal(ev);
+      return true;
+    }
+    console.error("[counted-events] verify failed after retry — event NOT in gist store", ev.id);
     await appendLocal(ev);
-    return true;
+    return false;
   } catch (e) {
     console.error("[counted-events] gist store failed", e);
     await appendLocal(ev);

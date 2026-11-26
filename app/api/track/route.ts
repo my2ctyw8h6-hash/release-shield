@@ -1,4 +1,4 @@
-import { NextResponse, after } from "next/server";
+import { NextResponse } from "next/server";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
 import { cleanRef, isEventType, recordEvent } from "@/lib/stats";
 import { appendCountedEvent } from "@/lib/counted-events";
@@ -51,13 +51,13 @@ export async function POST(req: Request) {
   // Durable event store (item 17): only pageviews are appended here — scan_run
   // and checkout_click beacons are client-side and never counted; the server
   // emits scan_run / checkout_started itself from /api/scan and /api/checkout.
-  // Runs after the response via after(): never blocks the request, and the
-  // function is not frozen before the write lands. A failed write is logged
-  // inside appendCountedEvent; the log-window path still counts the event.
+  // P21 (Nov 26, 2026): awaited in the request path, NOT via after() - under
+  // burst load the after() callback can be dropped silently when the function
+  // freezes (P20 drill lost one pageview with no log line at all, L8). The
+  // write never throws and never breaks the request; a failed write is logged
+  // inside appendCountedEvent and the log-window path still counts the event.
   if (type === "pageview") {
-    after(async () => {
-      await appendCountedEvent({ id: eventId, type, ref, plan, path, createdAt });
-    });
+    await appendCountedEvent({ id: eventId, type, ref, plan, path, createdAt });
   }
 
   await recordEvent(type, ref, plan);

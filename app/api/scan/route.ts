@@ -4,7 +4,7 @@ import { scanArchive, scanEntries, type ScanReport } from "@/lib/scanner";
 import { SAMPLE_NAME, SAMPLE_VERSION, sampleEntries } from "@/lib/sample";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
 import { cleanRef } from "@/lib/stats";
-import { appendCountedEvent } from "@/lib/counted-events";
+import { appendCountedEvent, DEPLOY_SHA } from "@/lib/counted-events";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -26,7 +26,7 @@ async function emitScanCompleted(req: Request, refRaw: unknown, path: string) {
     // One stable id for this event, shared by the log line and the durable gist
     // store so the counter dedupes the two paths against each other (item 17).
     const eventId = crypto.randomUUID();
-    console.log(JSON.stringify({ rs_track: 1, id: eventId, src: "server", type: "scan_run", ref, path }));
+    console.log(JSON.stringify({ rs_track: 1, id: eventId, dep: DEPLOY_SHA, src: "server", type: "scan_run", ref, path }));
     // Durable event store (item 17): awaited-with-catch — a failed write is
     // logged inside appendCountedEvent and never breaks the scan; the
     // log-window path still counts the event.

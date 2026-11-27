@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
 import { cleanRef, isEventType, recordEvent } from "@/lib/stats";
-import { appendCountedEvent } from "@/lib/counted-events";
+import { appendCountedEvent, DEPLOY_SHA } from "@/lib/counted-events";
 import { PLANS } from "@/lib/plans";
 
 export const runtime = "nodejs";
@@ -46,7 +46,7 @@ export async function POST(req: Request) {
 
   // One JSON line per event: the per-instance counters below lose most events on Vercel,
   // so /root/track-cumulative.js counts from these function logs instead (deduped by requestId).
-  console.log(JSON.stringify({ rs_track: 1, id: eventId, type, ref, plan, path }));
+  console.log(JSON.stringify({ rs_track: 1, id: eventId, dep: DEPLOY_SHA, type, ref, plan, path }));
 
   // Durable event store (item 17): only pageviews are appended here — scan_run
   // and checkout_click beacons are client-side and never counted; the server

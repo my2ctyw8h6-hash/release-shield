@@ -4,7 +4,7 @@ import { getPaymentLinkUrl } from "@/lib/stripe";
 import { clientIp, rateLimit } from "@/lib/rateLimit";
 import { configuredSiteUrl } from "@/lib/site";
 import { cleanRef } from "@/lib/stats";
-import { appendCountedEvent } from "@/lib/counted-events";
+import { appendCountedEvent, DEPLOY_SHA } from "@/lib/counted-events";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -34,7 +34,7 @@ export async function POST(req: Request) {
       // store so the counter dedupes the two paths against each other (item 17).
       const eventId = crypto.randomUUID();
       const ref = cleanRef(body.ref);
-      console.log(JSON.stringify({ rs_track: 1, id: eventId, src: "server", type: "checkout_started", ref, plan: body.plan, path: "/pricing" }));
+      console.log(JSON.stringify({ rs_track: 1, id: eventId, dep: DEPLOY_SHA, src: "server", type: "checkout_started", ref, plan: body.plan, path: "/pricing" }));
       // Durable event store (item 17): awaited-with-catch — a failed write is
       // logged inside appendCountedEvent and never breaks the checkout; the
       // log-window path still counts the event.

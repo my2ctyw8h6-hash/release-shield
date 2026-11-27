@@ -56,6 +56,16 @@ import path from "node:path";
  * under burst load (P20 drill lost one pageview with no log line at all, L8).
  */
 
+/**
+ * P22 (Nov 26, 2026): deployment marker for the drill. Vercel sets
+ * VERCEL_GIT_COMMIT_SHA in the build environment; Next inlines it into the
+ * server bundle at build time, so every rs_track line carries the short SHA
+ * of the deployment that served it. A drill burst can then prove whether a
+ * lost event was served by the new code or a warm old instance (L9).
+ * Falls back to "dev" outside Vercel (local runs, tests).
+ */
+export const DEPLOY_SHA = (process.env.VERCEL_GIT_COMMIT_SHA || "dev").slice(0, 7);
+
 const EVENTS_FILE = "counted-events.jsonl";
 
 export interface CountedEvent {

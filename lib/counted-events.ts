@@ -54,6 +54,16 @@ import path from "node:path";
  * The emission layer is fixed separately: /api/track awaits its append in the
  * request path instead of after(), whose callback can be dropped silently
  * under burst load (P20 drill lost one pageview with no log line at all, L8).
+ *
+ * P23 (Nov 27, 2026): two retries still lose under a 6-way burst - the P22
+ * drill lost ee248f6a to three consecutive 409s (initial write + 2 retries),
+ * all inside the ~8s window the burst's PATCHes need to settle. The ladder
+ * is one rung short: a THIRD retry at ~9s backoff fires after the contention
+ * window closes. Backoffs are now 1s, 3s, 9s + jitter. Risk, named in the
+ * prediction: the third retry lengthens the awaited /api/track append toward
+ * the function timeout; if serialization is the real fix, this is one more
+ * ladder rung, not the answer (recovery so far: P19 2/6 -> P20 3/6 ->
+ * P21 4/6 -> P22 5/6).
  */
 
 /**
@@ -147,15 +157,17 @@ async function eventPresent(cfg: { gistId: string; token: string }, id: string):
 // P21 (Nov 26, 2026): one short-backoff retry is not a concurrency fix -
 // a 250-750ms backoff fires while the winning gist PATCHes are still landing
 // (~1s+ round-trip), so retries re-collide (P20 drill: 2 of 4 retries 409d
-// again). Backoff must exceed the write-settle time: up to 2 retries with
-// exponential backoff (1s, 3s + jitter). Every write attempt - initial and
+// again). Backoff must exceed the write-settle time: up to 3 retries with
+// exponential backoff (1s, 3s, 9s + jitter) - the third fires after the ~8s
+// contention window a 6-way burst needs to settle (P22 drill: ee248f6a lost
+// to three consecutive 409s, L10). Every write attempt - initial and
 // verify-retry - goes through this helper, so a failed write is always
 // retried and always logged (with the event id - the old final-failure line
 // carried none, which made P20's two lost events mappable only by
 // elimination).
-/** One gist write with up to 2 retries on failure. Returns true if a PATCH succeeded. */
+/** One gist write with up to 3 retries on failure. Returns true if a PATCH succeeded. */
 async function appendWithRetries(cfg: { gistId: string; token: string }, ev: CountedEvent): Promise<boolean> {
-  const backoffsMs = [1000, 3000];
+  const backoffsMs = [1000, 3000, 9000];
   for (let attempt = 0; attempt <= backoffsMs.length; attempt++) {
     try {
       await appendOnce(cfg, ev);
@@ -179,7 +191,7 @@ export async function appendCountedEvent(ev: CountedEvent): Promise<boolean> {
     await appendLocal(ev);
     return false;
   }
-  // Write layer (P20+P21): retry the write itself on failure, up to 2 times
+  // Write layer (P20+P21+P23): retry the write itself on failure, up to 3 times
   // with exponential backoff. A duplicate line (if a PATCH actually landed
   // before its error surfaced) is harmless: track-cumulative dedupes by id.
   if (!(await appendWithRetries(cfg, ev))) {

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T03:17:29.627Z",
+ "generatedAt": "2026-11-27T03:17:36.775Z",
  "reports": {
   "@0xinsider/sdk": {
    "name": "@0xinsider/sdk",
@@ -2646,6 +2646,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:39.887Z"
   },
+  "@azure/mcp": {
+   "name": "@azure/mcp",
+   "version": "4.0.0-beta.10",
+   "description": "Azure MCP Server - Model Context Protocol implementation for Azure",
+   "weeklyDownloads": 169870,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 68307,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:20.753Z"
+  },
   "@azure/openai": {
    "name": "@azure/openai",
    "version": "2.0.0",
@@ -2839,6 +2858,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-26T03:17:24.220Z"
   },
+  "@bike4mind/cli": {
+   "name": "@bike4mind/cli",
+   "version": "5.0.1",
+   "description": "Interactive CLI tool for Bike4Mind with ReAct agents",
+   "weeklyDownloads": 2032,
+   "grade": "A",
+   "score": 98,
+   "fileCount": 67,
+   "totalBytes": 4928352,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+   },
+   "findings": [],
+   "withheld": 1,
+   "scannedAt": "2026-11-27T03:17:33.056Z"
+  },
   "@blaxel/core": {
    "name": "@blaxel/core",
    "version": "0.3.41",
@@ -2857,6 +2895,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-26T03:17:29.447Z"
+  },
+  "@brave/brave-search-mcp-server": {
+   "name": "@brave/brave-search-mcp-server",
+   "version": "2.2.0",
+   "description": "Brave Search MCP Server: web results, images, videos, rich results, AI summaries, and more.",
+   "weeklyDownloads": 45839,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 74,
+   "totalBytes": 250137,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:33.910Z"
   },
   "@brizz/sdk": {
    "name": "@brizz/sdk",
@@ -2941,6 +2998,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:21.089Z"
   },
+  "@bytebase/dbhub": {
+   "name": "@bytebase/dbhub",
+   "version": "2.1.0",
+   "description": "Token-efficient database MCP server for PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, ClickHouse, SQLite",
+   "weeklyDownloads": 254765,
+   "grade": "C",
+   "score": 72,
+   "fileCount": 44,
+   "totalBytes": 2090274,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 7,
+   "scannedAt": "2026-11-27T03:17:28.555Z"
+  },
   "@carderne/sandbox-runtime": {
    "name": "@carderne/sandbox-runtime",
    "version": "0.0.80",
@@ -2996,6 +3072,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:25.721Z"
+  },
+  "@cargo-ai/cli": {
+   "name": "@cargo-ai/cli",
+   "version": "1.0.158",
+   "description": "Cargo, the go-to-market platform, from your terminal or coding agent: find and verify work emails, enrich companies and contacts, score leads and sync them to your CRM (HubSpot, Salesforce) across 130",
+   "weeklyDownloads": 120831,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 551,
+   "totalBytes": 1179226,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (183 files)",
+     "severity": "medium",
+     "file": "build/commands/connection/action.d.ts.map",
+     "occurrences": 183,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:33.488Z"
   },
   "@cavuno/board": {
    "name": "@cavuno/board",
@@ -4752,6 +4856,44 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:42.809Z"
   },
+  "@gitkraken/gk": {
+   "name": "@gitkraken/gk",
+   "version": "3.1.77",
+   "description": "gk is GitKraken on the command line. It makes working across multiple repos easier with Workspaces, provides access to pull requests and issues from multiple services (GitHub, GitLab, Bitbucket, etc.)",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 20339,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:36.408Z"
+  },
+  "@google-cloud/observability-mcp": {
+   "name": "@google-cloud/observability-mcp",
+   "version": "0.2.3",
+   "description": "MCP Server for GCP environment for interacting with various Observability APIs.",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 1493871,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:36.564Z"
+  },
   "@gotgenes/pi-anthropic-auth": {
    "name": "@gotgenes/pi-anthropic-auth",
    "version": "3.6.0",
@@ -4992,6 +5134,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:03.458Z"
   },
+  "@hostinger/mcp": {
+   "name": "@hostinger/mcp",
+   "version": "6.1.0",
+   "description": "MCP server for Hostinger API",
+   "weeklyDownloads": 263085,
+   "grade": "A",
+   "score": 98,
+   "fileCount": 150,
+   "totalBytes": 5785556,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "ci-config",
+     "title": "CI / infra configuration",
+     "severity": "low",
+     "file": ".github/workflows/build-release.yaml",
+     "occurrences": 1,
+     "advice": "Infra config can reveal internal hostnames, account IDs and deployment topology."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:15.187Z"
+  },
   "@hubspot/api-client": {
    "name": "@hubspot/api-client",
    "version": "14.1.3",
@@ -5187,6 +5357,42 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:09.285Z"
+  },
+  "@imgly/codesign-mcp": {
+   "name": "@imgly/codesign-mcp",
+   "version": "0.8.0",
+   "description": "A real design engine for your AI agent: generate designs, print-ready PDFs and videos with audio, over MCP.",
+   "weeklyDownloads": 72062,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 2107,
+   "totalBytes": 31967974,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (363 files)",
+     "severity": "high",
+     "file": "node_modules/@imgly/codesign-server/dist/services/workspace/access.js.map",
+     "occurrences": 363,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (363 files)",
+     "severity": "medium",
+     "file": "node_modules/@imgly/codesign-server/dist/services/workspace/access.d.ts.map",
+     "occurrences": 363,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:27.927Z"
   },
   "@infisical/sdk": {
    "name": "@infisical/sdk",
@@ -6010,6 +6216,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:24.932Z"
   },
+  "@kubb/mcp": {
+   "name": "@kubb/mcp",
+   "version": "5.28.0",
+   "description": "MCP server for Kubb. Exposes code generation as a tool over the Model Context Protocol so AI assistants like Claude, Cursor, and other MCP-compatible clients can generate TypeScript types, clients, an",
+   "weeklyDownloads": 151770,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 10,
+   "totalBytes": 230106,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:23.542Z"
+  },
   "@kubb/plugin-axios": {
    "name": "@kubb/plugin-axios",
    "version": "6.1.1",
@@ -6455,6 +6697,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:53.817Z"
+  },
+  "@launchdarkly/mcp-server": {
+   "name": "@launchdarkly/mcp-server",
+   "version": "0.7.2",
+   "description": "The local [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for [LaunchDarkly](https://launchdarkly.com/) federal and European Union (EU) environments.",
+   "weeklyDownloads": 129266,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 2842,
+   "totalBytes": 13327065,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (1258 files)",
+     "severity": "medium",
+     "file": "dist/commonjs/models/components/access.d.ts.map",
+     "occurrences": 1258,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:16.430Z"
   },
   "@lcdp/api": {
    "name": "@lcdp/api",
@@ -6966,6 +7236,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:17.207Z"
   },
+  "@mcpjam/sdk": {
+   "name": "@mcpjam/sdk",
+   "version": "10.15.2",
+   "description": "MCP server unit testing, end to end (e2e) testing, and server evals",
+   "weeklyDownloads": 36642,
+   "grade": "D",
+   "score": 45,
+   "fileCount": 106,
+   "totalBytes": 46644938,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (22 files)",
+     "severity": "high",
+     "file": "dist/internal/deployment.js.map",
+     "occurrences": 22,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (5 files)",
+     "severity": "medium",
+     "file": "dist/browser.js.map",
+     "occurrences": 5,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-27T03:17:29.994Z"
+  },
   "@mendable/firecrawl-js": {
    "name": "@mendable/firecrawl-js",
    "version": "4.54.0",
@@ -7381,6 +7687,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-26T03:17:21.773Z"
+  },
+  "@modelcontextprotocol/fastify": {
+   "name": "@modelcontextprotocol/fastify",
+   "version": "2.0.1",
+   "description": "Fastify adapters for the Model Context Protocol TypeScript server SDK - Fastify middleware",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 11,
+   "totalBytes": 63380,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:36.089Z"
   },
   "@modelcontextprotocol/hono": {
    "name": "@modelcontextprotocol/hono",
@@ -7943,6 +8285,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:06.597Z"
+  },
+  "@nitrostack/cli": {
+   "name": "@nitrostack/cli",
+   "version": "1.1.3",
+   "description": "CLI for NitroStack - Create and manage MCP server projects.",
+   "weeklyDownloads": 79815,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 229,
+   "totalBytes": 2766627,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (33 files)",
+     "severity": "medium",
+     "file": "dist/ui/branding.d.ts.map",
+     "occurrences": 33,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:26.878Z"
   },
   "@nitrostack/core": {
    "name": "@nitrostack/core",
@@ -8549,6 +8919,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:14.633Z"
+  },
+  "@oh-my-pi/pi-mnemopi": {
+   "name": "@oh-my-pi/pi-mnemopi",
+   "version": "19.2.1",
+   "description": "Local SQLite memory engine for omp agents",
+   "weeklyDownloads": 241781,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 138,
+   "totalBytes": 905860,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:13.472Z"
   },
   "@oh-my-pi/snapcompact": {
    "name": "@oh-my-pi/snapcompact",
@@ -9283,6 +9672,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:44.765Z"
   },
+  "@perplexity-ai/mcp-server": {
+   "name": "@perplexity-ai/mcp-server",
+   "version": "1.5.0",
+   "description": "Real-time web search, reasoning, and research through Perplexity's API",
+   "weeklyDownloads": 133136,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 16,
+   "totalBytes": 175935,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:24.006Z"
+  },
   "@polar-sh/sdk": {
    "name": "@polar-sh/sdk",
    "version": "1.3.0",
@@ -9485,6 +9893,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-26T03:17:17.817Z"
+  },
+  "@raishin/vanguard-frontier-agentic": {
+   "name": "@raishin/vanguard-frontier-agentic",
+   "version": "3.21.0",
+   "description": "Cloud and zero-trust agentic workflow marketplace for skills, agents, rules, MCP references, and compliance-aware architecture.",
+   "weeklyDownloads": 228359,
+   "grade": "F",
+   "score": 32,
+   "fileCount": 14598,
+   "totalBytes": 62367247,
+   "counts": {
+    "critical": 1,
+    "high": 1,
+    "medium": 1,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "internal-docs",
+     "title": "Internal documentation (8 files)",
+     "severity": "medium",
+     "file": "skills/aws/aws-private-ca-issuer-review/references/private-ca-issuer-trust-boundaries.md",
+     "occurrences": 8,
+     "advice": "Roadmaps and internal docs can reveal unreleased features. Keep them out of the package."
+    }
+   ],
+   "withheld": 3,
+   "scannedAt": "2026-11-27T03:17:19.001Z"
   },
   "@ravnexchange/sdk": {
    "name": "@ravnexchange/sdk",
@@ -9987,6 +10423,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:53.070Z"
   },
+  "@sap-ux/fiori-docs-embeddings": {
+   "name": "@sap-ux/fiori-docs-embeddings",
+   "version": "1.3.0",
+   "description": "SAP Fiori documentation indexing",
+   "weeklyDownloads": 84109,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 8607731,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:34.581Z"
+  },
   "@scalar/asyncapi-to-markdown": {
    "name": "@scalar/asyncapi-to-markdown",
    "version": "0.2.13",
@@ -10330,6 +10785,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:27.475Z"
   },
+  "@softeria/ms-365-mcp-server": {
+   "name": "@softeria/ms-365-mcp-server",
+   "version": "0.191.1",
+   "description": " A Model Context Protocol (MCP) server for interacting with Microsoft 365 and Office services through the Graph API",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 108,
+   "totalBytes": 2318688,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:36.275Z"
+  },
   "@splitsoftware/splitio": {
    "name": "@splitsoftware/splitio",
    "version": "11.12.1",
@@ -10632,6 +11106,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:29.342Z"
   },
+  "@tacticlaunch/mcp-linear": {
+   "name": "@tacticlaunch/mcp-linear",
+   "version": "1.4.6",
+   "description": "A Model Context Protocol (MCP) server implementation for the Linear GraphQL API that enables AI assistants to manage Linear projects and search issues by text, state, and date.",
+   "weeklyDownloads": 92487,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 63,
+   "totalBytes": 826903,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:21.717Z"
+  },
   "@tanstack/ai": {
    "name": "@tanstack/ai",
    "version": "1.7.0",
@@ -10843,6 +11336,34 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:17.522Z"
+  },
+  "@tanstack/ai-mcp": {
+   "name": "@tanstack/ai-mcp",
+   "version": "1.3.1",
+   "description": "Host-side Model Context Protocol client for TanStack AI: discover and run MCP server tools, resources, and prompts in any adapter's chat() loop, with generated end-to-end types.",
+   "weeklyDownloads": 257895,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 203,
+   "totalBytes": 7805412,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (40 files)",
+     "severity": "high",
+     "file": "dist/esm/server/auth.js.map",
+     "occurrences": 40,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:20.407Z"
   },
   "@tanstack/ai-openai": {
    "name": "@tanstack/ai-openai",
@@ -11167,6 +11688,42 @@
    ],
    "withheld": 1,
    "scannedAt": "2026-11-25T03:17:38.424Z"
+  },
+  "@theokit/sdk": {
+   "name": "@theokit/sdk",
+   "version": "15.3.0",
+   "description": "TypeScript SDK for the Theo agent harness — same surface, local or cloud.",
+   "weeklyDownloads": 19097,
+   "grade": "C",
+   "score": 56,
+   "fileCount": 1339,
+   "totalBytes": 17572001,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (232 files)",
+     "severity": "high",
+     "file": "dist/batch-55LLFTI6.cjs.map",
+     "occurrences": 232,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (66 files)",
+     "severity": "medium",
+     "file": "dist/agent-factory-registry-UU46BUMU.cjs.map",
+     "occurrences": 66,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-27T03:17:12.734Z"
   },
   "@tldraw/assets": {
    "name": "@tldraw/assets",
@@ -12059,6 +12616,53 @@
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:16.358Z"
   },
+  "@ui5/mcp-server": {
+   "name": "@ui5/mcp-server",
+   "version": "0.3.3",
+   "description": "MCP server for SAPUI5/OpenUI5 development",
+   "weeklyDownloads": 88702,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 281,
+   "totalBytes": 812441,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (52 files)",
+     "severity": "medium",
+     "file": "lib/api.js.map",
+     "occurrences": 52,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:23.036Z"
+  },
+  "@umituz/web-hono": {
+   "name": "@umituz/web-hono",
+   "version": "5.10.0",
+   "description": "API backend platform for Cloudflare Workers + Postgres: createApi skeleton + error envelope layer, full-CRUD resource factory (opt-in create/remove, list params), schema→client type bridge (ClientRow)",
+   "weeklyDownloads": 3243,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 32,
+   "totalBytes": 149912,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:09.471Z"
+  },
   "@uploadcare/upload-client": {
    "name": "@uploadcare/upload-client",
    "version": "6.25.1",
@@ -12581,6 +13185,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:56.714Z"
   },
+  "@zereight/mcp-gitlab": {
+   "name": "@zereight/mcp-gitlab",
+   "version": "3.1.0",
+   "description": "GitLab MCP server for projects, merge requests, issues, pipelines, wiki, releases, and more",
+   "weeklyDownloads": 198425,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 108,
+   "totalBytes": 1880859,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:13.812Z"
+  },
   "acpx": {
    "name": "acpx",
    "version": "0.22.0",
@@ -12701,6 +13324,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-25T03:17:10.171Z"
+  },
+  "agentdb": {
+   "name": "agentdb",
+   "version": "3.10.1",
+   "description": "Agent memory and vector database for AI agents: single-file HNSW search, episodic memory, causal graph, reinforcement learning and MCP tools.",
+   "weeklyDownloads": 107248,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 723,
+   "totalBytes": 5378746,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (358 files)",
+     "severity": "medium",
+     "file": "dist/src/backends/rvf/AdaptiveIndexTuner.d.ts.map",
+     "occurrences": 358,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 2,
+   "scannedAt": "2026-11-27T03:17:21.240Z"
   },
   "agentfootprint": {
    "name": "agentfootprint",
@@ -13592,6 +14243,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:22.593Z"
   },
+  "blume": {
+   "name": "blume",
+   "version": "2.2.7",
+   "description": "The open-source docs framework for humans and agents.",
+   "weeklyDownloads": 226702,
+   "grade": "F",
+   "score": 18,
+   "fileCount": 1462,
+   "totalBytes": 16122290,
+   "counts": {
+    "critical": 1,
+    "high": 1,
+    "medium": 1,
+    "low": 3
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (45 files)",
+     "severity": "high",
+     "file": "dist/cli/chunk-05r1v3fd.js.map",
+     "occurrences": 45,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/cli/chunk-vnr4fm5s.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 4,
+   "scannedAt": "2026-11-27T03:17:14.551Z"
+  },
   "box-node-sdk": {
    "name": "box-node-sdk",
    "version": "10.19.0",
@@ -13861,6 +14548,34 @@
    "withheld": 1,
    "scannedAt": "2026-11-25T03:17:29.172Z"
   },
+  "claude-mem": {
+   "name": "claude-mem",
+   "version": "17.0.2",
+   "description": "Persistent memory for AI coding agents: the next session starts where the last one left off. Works with Claude Code, Codex, Cursor, OpenCode and more.",
+   "weeklyDownloads": 195650,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 315,
+   "totalBytes": 38773937,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (12 files)",
+     "severity": "medium",
+     "file": "plugin/scripts/claude-mem-launcher.cjs.map",
+     "occurrences": 12,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 2,
+   "scannedAt": "2026-11-27T03:17:25.683Z"
+  },
   "clean-jsdoc-theme": {
    "name": "clean-jsdoc-theme",
    "version": "5.3.0",
@@ -13896,6 +14611,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-25T03:17:20.316Z"
+  },
+  "clerk": {
+   "name": "clerk",
+   "version": "4.4.0",
+   "description": "The official Clerk CLI. Add authentication to your app with npx -y clerk@latest init (Next.js, React Router, Astro, Nuxt, TanStack Start, Expo, and more). No Clerk account needed to start. Manage user",
+   "weeklyDownloads": 170832,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 4,
+   "totalBytes": 11933,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:23.614Z"
   },
   "cli-boxes": {
    "name": "cli-boxes",
@@ -14077,6 +14811,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:09.027Z"
   },
+  "cline": {
+   "name": "cline",
+   "version": "3.0.76",
+   "description": "Autonomous coding agent CLI - capable of creating/editing files, running commands, using the browser, and more",
+   "weeklyDownloads": 82630,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 2311738,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:28.350Z"
+  },
   "clipanion": {
    "name": "clipanion",
    "version": "4.0.0-rc.4",
@@ -14186,6 +14939,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:29.770Z"
+  },
+  "codex-multi-profile": {
+   "name": "codex-multi-profile",
+   "version": "2.0.1",
+   "description": "Multi-workspace profile router, MCP server isolation auditor, and CLAUDE.md <-> AGENTS.md instruction bridge for Claude Code and OpenAI Codex.",
+   "weeklyDownloads": 255,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 11,
+   "totalBytes": 44985,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:26.263Z"
   },
   "coingecko-api": {
    "name": "coingecko-api",
@@ -14345,6 +15117,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.566Z"
+  },
+  "context-mode": {
+   "name": "context-mode",
+   "version": "2.2.4",
+   "description": "Context window saver for 11 coding agents. Local and free: sandboxed code execution, FTS5 search, session continuity.",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 40,
+   "totalBytes": 6779900,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:36.775Z"
   },
   "convertapi": {
    "name": "convertapi",
@@ -14562,6 +15353,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-25T03:17:38.654Z"
+  },
+  "dsh-windows-mcp": {
+   "name": "dsh-windows-mcp",
+   "version": "0.2.13",
+   "description": "Windows desktop automation for DeepSeek Harness — plugs CursorTouch/Windows-MCP (screenshot, UI automation, input, clipboard, processes, registry) into DSH through the official MCP client bridge.",
+   "weeklyDownloads": 121445,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 16,
+   "totalBytes": 361895,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:13.600Z"
   },
   "e2b": {
    "name": "e2b",
@@ -14960,6 +15770,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-24T03:17:36.778Z"
+  },
+  "figma-developer-mcp": {
+   "name": "figma-developer-mcp",
+   "version": "0.13.2",
+   "description": "Give your coding agent access to your Figma data. Implement designs in any framework in one-shot.",
+   "weeklyDownloads": 143202,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 15,
+   "totalBytes": 92441,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:24.504Z"
   },
   "figures": {
    "name": "figures",
@@ -15816,6 +16645,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:15.713Z"
   },
+  "kordoc": {
+   "name": "kordoc",
+   "version": "4.25.24",
+   "description": "Parse Korean documents (HWP3-5, HWPX, HWPML, PDF, XLS(X), DOCX) to Markdown — CLI + MCP server with lossless patch/roundtrip, form-filler, document diff, print & layout-preserving SVG renderer",
+   "weeklyDownloads": 84173,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 166,
+   "totalBytes": 32697724,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (56 files)",
+     "severity": "high",
+     "file": "dist/chunk-37HQ5S2F.js.map",
+     "occurrences": 56,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (16 files)",
+     "severity": "medium",
+     "file": "dist/chunks-M2PN7VGE.js.map",
+     "occurrences": 16,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:35.405Z"
+  },
   "kubb": {
    "name": "kubb",
    "version": "5.21.0",
@@ -16124,6 +16989,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-22T03:17:25.831Z"
+  },
+  "llm-info": {
+   "name": "llm-info",
+   "version": "1.0.71",
+   "description": "Information on LLM models, context window token limit, output token limit, pricing and more",
+   "weeklyDownloads": 9302,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 23,
+   "totalBytes": 188338,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:11.447Z"
   },
   "llm-polyglot": {
    "name": "llm-polyglot",
@@ -16532,6 +17416,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:00.818Z"
   },
+  "metaharness": {
+   "name": "metaharness",
+   "version": "0.4.25",
+   "description": "Scaffold, check and score a custom AI agent harness for Claude Code, Codex, Copilot, GitHub Actions and six more hosts: `npx metaharness new <name>`, then `harness doctor` and `harness score`.",
+   "weeklyDownloads": 80382,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 530,
+   "totalBytes": 1410525,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (94 files)",
+     "severity": "medium",
+     "file": "dist/analyze-repo.d.ts.map",
+     "occurrences": 94,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:20.594Z"
+  },
   "microsoft-cognitiveservices-speech-sdk": {
    "name": "microsoft-cognitiveservices-speech-sdk",
    "version": "1.53.0",
@@ -16662,6 +17574,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:15.867Z"
+  },
+  "n8n-nodes-mcp": {
+   "name": "n8n-nodes-mcp",
+   "version": "0.1.37",
+   "description": "MCP nodes for n8n ",
+   "weeklyDownloads": 34165,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 38,
+   "totalBytes": 159112,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (10 files)",
+     "severity": "medium",
+     "file": "dist/nodes/McpClient/__tests__/listTools.schema.test.js.map",
+     "occurrences": 10,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:24.809Z"
   },
   "n8n-nodes-palatine-speech": {
    "name": "n8n-nodes-palatine-speech",
@@ -16840,6 +17780,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:05.922Z"
+  },
+  "nx-mcp": {
+   "name": "nx-mcp",
+   "version": "0.25.4",
+   "description": "A Model Context Protocol server implementation for Nx",
+   "weeklyDownloads": 105137,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 3,
+   "totalBytes": 3000811,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:20.979Z"
   },
   "octokit": {
    "name": "octokit",
@@ -17288,6 +18247,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:34.782Z"
   },
+  "pi-mcp-extension": {
+   "name": "pi-mcp-extension",
+   "version": "1.16.5",
+   "description": "Full-featured, lightweight MCP extension for the Pi coding agent: stdio, SSE & Streamable HTTP transports, OAuth 2.1 (PKCE + DCR), lazy/eager lifecycles — minimal dependencies, zero bloat.",
+   "weeklyDownloads": 75786,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 53,
+   "totalBytes": 694541,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:21.873Z"
+  },
   "pi-web-search": {
    "name": "pi-web-search",
    "version": "1.7.0",
@@ -17589,6 +18567,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:46.157Z"
   },
+  "rapidoc": {
+   "name": "rapidoc",
+   "version": "15.0.0",
+   "description": "RapiDoc: interactive API reference web components for OpenAPI and Arazzo (<rapi-doc>, <rapi-doc-mini>, <rapi-flow>), with Try, an in-browser mock and MCP server export",
+   "weeklyDownloads": 108995,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 116,
+   "totalBytes": 2337936,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:24.376Z"
+  },
   "realtime-avatar": {
    "name": "realtime-avatar",
    "version": "0.40.0",
@@ -17700,6 +18697,34 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-24T03:17:34.094Z"
+  },
+  "ruvector": {
+   "name": "ruvector",
+   "version": "0.3.29",
+   "description": "Self-learning vector database for Node.js: native HNSW vector search, ONNX embeddings, GNN, attention, SONA routing and an MCP server for agents.",
+   "weeklyDownloads": 171901,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 189,
+   "totalBytes": 13643158,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (43 files)",
+     "severity": "medium",
+     "file": "dist/core/adaptive-embedder.d.ts.map",
+     "occurrences": 43,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:15.801Z"
   },
   "ruvector-attention-wasm": {
    "name": "ruvector-attention-wasm",
@@ -18058,6 +19083,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.286Z"
+  },
+  "supergateway": {
+   "name": "supergateway",
+   "version": "4.3.0",
+   "description": "Run MCP stdio servers over SSE, Streamable HTTP or visa versa",
+   "weeklyDownloads": 139850,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 114,
+   "totalBytes": 427204,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:33.566Z"
   },
   "supports-color": {
    "name": "supports-color",
@@ -18584,6 +19628,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:32.529Z"
   },
+  "use-webmcp-tool": {
+   "name": "use-webmcp-tool",
+   "version": "0.4.0",
+   "description": "React hook for registering WebMCP tools (document.modelContext) with lifecycle-managed registration and MCP result normalization.",
+   "weeklyDownloads": 86134,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 26392,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:22.512Z"
+  },
   "vectra": {
    "name": "vectra",
    "version": "0.15.0",
@@ -18814,6 +19877,50 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:03.947Z"
+  },
+  "xcodebuildmcp": {
+   "name": "xcodebuildmcp",
+   "version": "2.7.0",
+   "description": "XcodeBuildMCP is a Model Context Protocol server that provides tools for Xcode project management, simulator management, and app utilities.",
+   "weeklyDownloads": 78365,
+   "grade": "C",
+   "score": 55,
+   "fileCount": 1055,
+   "totalBytes": 44457537,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (356 files)",
+     "severity": "high",
+     "file": "build/mcp/tools/simulator-management/_keyboard_shortcut.js.map",
+     "occurrences": 356,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (12 files)",
+     "severity": "medium",
+     "file": "build/utils/debugger/backends/DebuggerBackend.js.map",
+     "occurrences": 12,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "test-coverage",
+     "title": "Coverage / test output (4 files)",
+     "severity": "low",
+     "file": "build/mcp/tools/coverage/get_coverage_report.js",
+     "occurrences": 4,
+     "advice": "Coverage output bloats the package and can embed full source."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-27T03:17:19.752Z"
   },
   "yargs": {
    "name": "yargs",

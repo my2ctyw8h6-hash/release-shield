@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-27T03:17:36.775Z",
+ "generatedAt": "2026-11-28T03:17:20.134Z",
  "reports": {
   "@0xinsider/sdk": {
    "name": "@0xinsider/sdk",
@@ -193,6 +193,50 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:28.552Z"
+  },
+  "@adobe/css-tools": {
+   "name": "@adobe/css-tools",
+   "version": "5.0.0",
+   "description": "A modern CSS parser and stringifier with TypeScript support",
+   "weeklyDownloads": 86833778,
+   "grade": "C",
+   "score": 73,
+   "fileCount": 27,
+   "totalBytes": 1137806,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/umd/adobe-css-tools.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/cjs/adobe-css-tools.cjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/esm/adobe-css-tools.mjs.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:16.441Z"
   },
   "@agentclientprotocol/claude-agent-acp": {
    "name": "@agentclientprotocol/claude-agent-acp",
@@ -2736,6 +2780,72 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-23T03:17:13.311Z"
+  },
+  "@babel/plugin-syntax-typescript": {
+   "name": "@babel/plugin-syntax-typescript",
+   "version": "8.0.3",
+   "description": "Allow parsing of TypeScript syntax",
+   "weeklyDownloads": 111536110,
+   "grade": "B",
+   "score": 85,
+   "fileCount": 6,
+   "totalBytes": 4283,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "lib/index.js.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:15.830Z"
+  },
+  "@babel/plugin-transform-typescript": {
+   "name": "@babel/plugin-transform-typescript",
+   "version": "8.1.4",
+   "description": "Transform TypeScript into ES.next",
+   "weeklyDownloads": 81888390,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 39577,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:16.948Z"
+  },
+  "@babel/preset-typescript": {
+   "name": "@babel/preset-typescript",
+   "version": "8.0.7",
+   "description": "Babel preset for TypeScript.",
+   "weeklyDownloads": 76175575,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 8764,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:16.518Z"
   },
   "@base-org/account": {
    "name": "@base-org/account",
@@ -9570,6 +9680,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:39.213Z"
   },
+  "@oxc-parser/binding-linux-x64-gnu": {
+   "name": "@oxc-parser/binding-linux-x64-gnu",
+   "version": "0.160.0",
+   "description": "Oxc Parser Node API",
+   "weeklyDownloads": 94245680,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 3,
+   "totalBytes": 3113656,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:17.212Z"
+  },
   "@oxy.so/core": {
    "name": "@oxy.so/core",
    "version": "7.55.0",
@@ -9690,6 +9819,42 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-27T03:17:24.006Z"
+  },
+  "@photon-ai/advanced-imessage": {
+   "name": "@photon-ai/advanced-imessage",
+   "version": "2.5.0",
+   "description": "TypeScript SDK for Advanced iMessage API",
+   "weeklyDownloads": 796194,
+   "grade": "C",
+   "score": 65,
+   "fileCount": 43,
+   "totalBytes": 2461179,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (5 files)",
+     "severity": "high",
+     "file": "dist/chunk-2QQYMPUW.js.map",
+     "occurrences": 5,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (4 files)",
+     "severity": "medium",
+     "file": "dist/chunk-RMGO3D5T.js.map",
+     "occurrences": 4,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:08.100Z"
   },
   "@polar-sh/sdk": {
    "name": "@polar-sh/sdk",
@@ -10710,6 +10875,44 @@
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:34.606Z"
   },
+  "@sinclair/typebox": {
+   "name": "@sinclair/typebox",
+   "version": "0.34.52",
+   "description": "Json Schema Type Builder with Static Type Resolution for TypeScript",
+   "weeklyDownloads": 162283579,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 1074,
+   "totalBytes": 1907776,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:14.529Z"
+  },
+  "@sindresorhus/is": {
+   "name": "@sindresorhus/is",
+   "version": "8.1.0",
+   "description": "Type check values",
+   "weeklyDownloads": 99397289,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 123119,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:19.165Z"
+  },
   "@skej/studio": {
    "name": "@skej/studio",
    "version": "1.0.21",
@@ -10880,6 +11083,25 @@
    "withheld": 1,
    "scannedAt": "2026-11-23T03:17:31.777Z"
   },
+  "@standard-schema/spec": {
+   "name": "@standard-schema/spec",
+   "version": "1.1.0",
+   "description": "A family of specs for interoperable TypeScript",
+   "weeklyDownloads": 196408631,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 22634,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:14.284Z"
+  },
   "@stll/folio-agents": {
    "name": "@stll/folio-agents",
    "version": "0.17.2",
@@ -10965,6 +11187,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:54.723Z"
   },
+  "@supabase/storage-js": {
+   "name": "@supabase/storage-js",
+   "version": "2.119.2",
+   "description": "Isomorphic storage client for Supabase.",
+   "weeklyDownloads": 66784168,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 35,
+   "totalBytes": 1128866,
+   "counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.cjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source",
+     "severity": "high",
+     "file": "dist/index.mjs.map",
+     "occurrences": 1,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:19.493Z"
+  },
   "@supercode-sh/claude-install-mac": {
    "name": "@supercode-sh/claude-install-mac",
    "version": "0.1.11",
@@ -11049,6 +11307,25 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:59.302Z"
+  },
+  "@swc/core": {
+   "name": "@swc/core",
+   "version": "1.16.22",
+   "description": "Super-fast alternative for babel",
+   "weeklyDownloads": 58406555,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 14,
+   "totalBytes": 134795,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:19.680Z"
   },
   "@syncfusion/ej2-interactive-chat": {
    "name": "@syncfusion/ej2-interactive-chat",
@@ -12496,6 +12773,196 @@
    "withheld": 4,
    "scannedAt": "2026-11-17T01:45:37.897Z"
   },
+  "@typescript-eslint/eslint-plugin": {
+   "name": "@typescript-eslint/eslint-plugin",
+   "version": "8.74.0",
+   "description": "TypeScript plugin for ESLint",
+   "weeklyDownloads": 172166405,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 482,
+   "totalBytes": 2103286,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:13.320Z"
+  },
+  "@typescript-eslint/parser": {
+   "name": "@typescript-eslint/parser",
+   "version": "8.74.0",
+   "description": "An ESLint custom parser which leverages TypeScript ESTree",
+   "weeklyDownloads": 180442597,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 16724,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:14.917Z"
+  },
+  "@typescript-eslint/project-service": {
+   "name": "@typescript-eslint/project-service",
+   "version": "8.74.0",
+   "description": "Standalone TypeScript project service wrapper for linting.",
+   "weeklyDownloads": 172242671,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 11,
+   "totalBytes": 16200,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:14.216Z"
+  },
+  "@typescript-eslint/scope-manager": {
+   "name": "@typescript-eslint/scope-manager",
+   "version": "8.74.0",
+   "description": "TypeScript scope analyser for ESLint",
+   "weeklyDownloads": 213974091,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 359,
+   "totalBytes": 422314,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:12.846Z"
+  },
+  "@typescript-eslint/tsconfig-utils": {
+   "name": "@typescript-eslint/tsconfig-utils",
+   "version": "8.74.0",
+   "description": "Utilities for collecting TSConfigs for linting scenarios.",
+   "weeklyDownloads": 173682417,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 9472,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:13.818Z"
+  },
+  "@typescript-eslint/type-utils": {
+   "name": "@typescript-eslint/type-utils",
+   "version": "8.74.0",
+   "description": "Type utilities for working with TypeScript + ESLint together",
+   "weeklyDownloads": 172263658,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 49,
+   "totalBytes": 100771,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:14.104Z"
+  },
+  "@typescript-eslint/types": {
+   "name": "@typescript-eslint/types",
+   "version": "8.74.0",
+   "description": "Types for the TypeScript-ESTree AST spec",
+   "weeklyDownloads": 234739209,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 13,
+   "totalBytes": 119775,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:15.344Z"
+  },
+  "@typescript-eslint/typescript-estree": {
+   "name": "@typescript-eslint/typescript-estree",
+   "version": "8.74.0",
+   "description": "A parser that converts TypeScript source code into an ESTree compatible form",
+   "weeklyDownloads": 222566161,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 115,
+   "totalBytes": 500253,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:12.439Z"
+  },
+  "@typescript-eslint/utils": {
+   "name": "@typescript-eslint/utils",
+   "version": "8.74.0",
+   "description": "Utilities for working with TypeScript + ESLint together",
+   "weeklyDownloads": 201094972,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 81,
+   "totalBytes": 200615,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:13.592Z"
+  },
+  "@typescript-eslint/visitor-keys": {
+   "name": "@typescript-eslint/visitor-keys",
+   "version": "8.74.0",
+   "description": "Visitor keys used to help traverse the TypeScript-ESTree AST",
+   "weeklyDownloads": 221413871,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 9,
+   "totalBytes": 13520,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:15.633Z"
+  },
   "@typia/core": {
    "name": "@typia/core",
    "version": "12.1.1",
@@ -13479,6 +13946,25 @@
    ],
    "withheld": 5,
    "scannedAt": "2026-11-20T03:17:23.629Z"
+  },
+  "agnost": {
+   "name": "agnost",
+   "version": "0.2.4",
+   "description": "Agnost AI SDK for MCP servers: sends tool calls, errors and latency to Agnost AI, which monitors AI agents in production.",
+   "weeklyDownloads": 50117,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 89431,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:11.376Z"
   },
   "ai": {
    "name": "ai",
@@ -15156,6 +15642,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-20T03:17:07.622Z"
   },
+  "csstype": {
+   "name": "csstype",
+   "version": "3.2.4",
+   "description": "Strict TypeScript and Flow types for style based on MDN data",
+   "weeklyDownloads": 247208075,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 1346277,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:11.919Z"
+  },
   "cz-git": {
    "name": "cz-git",
    "version": "1.14.0",
@@ -15494,6 +15999,53 @@
    "withheld": 4,
    "scannedAt": "2026-11-24T03:17:43.670Z"
   },
+  "effect": {
+   "name": "effect",
+   "version": "4.1.7",
+   "description": "The missing standard library for TypeScript, for writing production-grade software.",
+   "weeklyDownloads": 67840098,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 3243,
+   "totalBytes": 64269971,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (1262 files)",
+     "severity": "medium",
+     "file": "dist/workflow/Activity.d.ts.map",
+     "occurrences": 1262,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:18.751Z"
+  },
+  "emittery": {
+   "name": "emittery",
+   "version": "2.2.0",
+   "description": "Simple and modern async event emitter",
+   "weeklyDownloads": 59076946,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 83356,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:16.765Z"
+  },
   "enquirer": {
    "name": "enquirer",
    "version": "2.4.1",
@@ -15550,6 +16102,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-26T03:17:25.142Z"
+  },
+  "expect-type": {
+   "name": "expect-type",
+   "version": "1.4.0",
+   "description": "[![CI](https://github.com/mmkal/expect-type/actions/workflows/ci.yml/badge.svg)](https://github.com/mmkal/expect-type/actions/workflows/ci.yml) ![npm](https://img.shields.io/npm/dt/expect-type) [![X F",
+   "weeklyDownloads": 161147756,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 14,
+   "totalBytes": 138163,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:13.653Z"
   },
   "facebook-nodejs-business-sdk": {
    "name": "facebook-nodejs-business-sdk",
@@ -15938,6 +16509,25 @@
    "withheld": 9,
    "scannedAt": "2026-11-25T03:17:35.043Z"
   },
+  "get-tsconfig": {
+   "name": "get-tsconfig",
+   "version": "4.14.3",
+   "description": "Find and parse the tsconfig.json file from a directory path",
+   "weeklyDownloads": 162276678,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 163865,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:14.344Z"
+  },
   "gitlab-ai-provider": {
    "name": "gitlab-ai-provider",
    "version": "6.24.0",
@@ -16256,6 +16846,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:01.605Z"
   },
+  "human-signals": {
+   "name": "human-signals",
+   "version": "8.0.1",
+   "description": "Human-friendly process signals",
+   "weeklyDownloads": 205536462,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 8,
+   "totalBytes": 28040,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:13.710Z"
+  },
   "hyparquet": {
    "name": "hyparquet",
    "version": "1.33.1",
@@ -16517,6 +17126,80 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:12.140Z"
   },
+  "jest": {
+   "name": "jest",
+   "version": "30.5.2",
+   "description": "Delightful JavaScript Testing.",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 6698,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:20.134Z"
+  },
+  "jest-cli": {
+   "name": "jest-cli",
+   "version": "30.5.2",
+   "description": "Delightful JavaScript Testing.",
+   "weeklyDownloads": 59228639,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 7,
+   "totalBytes": 35340,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:19.285Z"
+  },
+  "json-schema-to-ts": {
+   "name": "json-schema-to-ts",
+   "version": "3.1.1",
+   "description": "Infer typescript types from your JSON schemas!",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 58,
+   "fileCount": 267,
+   "totalBytes": 121555,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (14 files)",
+     "severity": "high",
+     "file": "lib/cjs/utils/asConst.js.map",
+     "occurrences": 14,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (74 files)",
+     "severity": "medium",
+     "file": "lib/cjs/parse-schema/allOf.js.map",
+     "occurrences": 74,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:20.006Z"
+  },
   "json-schema-to-zod": {
    "name": "json-schema-to-zod",
    "version": "2.8.1",
@@ -16535,6 +17218,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:20.314Z"
+  },
+  "json-schema-typed": {
+   "name": "json-schema-typed",
+   "version": "9.0.0",
+   "description": "JSON Schema TypeScript definitions with complete inline documentation.",
+   "weeklyDownloads": 92384314,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 17,
+   "totalBytes": 300283,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:18.987Z"
   },
   "json-to-pretty-yaml": {
    "name": "json-to-pretty-yaml",
@@ -17444,6 +18146,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-27T03:17:20.594Z"
   },
+  "micromark-util-types": {
+   "name": "micromark-util-types",
+   "version": "2.0.3",
+   "description": "micromark utility with a couple of typescript types",
+   "weeklyDownloads": 104928580,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 5,
+   "totalBytes": 38308,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:16.215Z"
+  },
   "microsoft-cognitiveservices-speech-sdk": {
    "name": "microsoft-cognitiveservices-speech-sdk",
    "version": "1.53.0",
@@ -18164,6 +18885,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.145Z"
   },
+  "oxc-parser": {
+   "name": "oxc-parser",
+   "version": "0.160.0",
+   "description": "Oxc Parser Node API",
+   "weeklyDownloads": 110155728,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 35,
+   "totalBytes": 3200115,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:16.156Z"
+  },
   "password-prompt": {
    "name": "password-prompt",
    "version": "1.1.3",
@@ -18492,6 +19232,34 @@
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.333Z"
   },
+  "protobufjs": {
+   "name": "protobufjs",
+   "version": "8.8.1",
+   "description": "Protocol Buffers for JavaScript & TypeScript.",
+   "weeklyDownloads": 127614510,
+   "grade": "C",
+   "score": 73,
+   "fileCount": 110,
+   "totalBytes": 3778568,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (6 files)",
+     "severity": "high",
+     "file": "dist/light/protobuf.js.map",
+     "occurrences": 6,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:15.058Z"
+  },
   "pushpad": {
    "name": "pushpad",
    "version": "2.0.0",
@@ -18585,6 +19353,42 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-27T03:17:24.376Z"
+  },
+  "react-hook-form": {
+   "name": "react-hook-form",
+   "version": "7.92.0",
+   "description": "Performant, flexible and extensible forms library for React Hooks",
+   "weeklyDownloads": null,
+   "grade": "C",
+   "score": 64,
+   "fileCount": 235,
+   "totalBytes": 1676510,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "high",
+     "file": "dist/index.cjs.js.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (112 files)",
+     "severity": "medium",
+     "file": "dist/utils/append.d.ts.map",
+     "occurrences": 112,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:19.838Z"
   },
   "realtime-avatar": {
    "name": "realtime-avatar",
@@ -19065,6 +19869,42 @@
    "withheld": 0,
    "scannedAt": "2026-11-19T03:17:07.514Z"
   },
+  "standardwebhooks": {
+   "name": "standardwebhooks",
+   "version": "1.3.0",
+   "description": "Standard Webhooks for TypeScript",
+   "weeklyDownloads": 60102070,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 8,
+   "totalBytes": 16163,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/timing_safe_equal.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:18.919Z"
+  },
   "string-width": {
    "name": "string-width",
    "version": "9.0.0",
@@ -19083,6 +19923,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:04.286Z"
+  },
+  "sucrase": {
+   "name": "sucrase",
+   "version": "3.35.1",
+   "description": "Super-fast alternative to Babel for when you can target modern JS runtimes",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 190,
+   "totalBytes": 1137073,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:20.077Z"
   },
   "supergateway": {
    "name": "supergateway",
@@ -19255,6 +20114,25 @@
    "withheld": 0,
    "scannedAt": "2026-11-21T03:17:11.773Z"
   },
+  "tinyspy": {
+   "name": "tinyspy",
+   "version": "4.0.6",
+   "description": "A minimal fork of nanospy, with more features",
+   "weeklyDownloads": 70101654,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 11039,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:18.854Z"
+  },
   "tldraw": {
    "name": "tldraw",
    "version": "5.6.1",
@@ -19314,6 +20192,42 @@
    ],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:45:51.616Z"
+  },
+  "tldts": {
+   "name": "tldts",
+   "version": "7.6.2",
+   "description": "Library to work against complex domain names, subdomains and URIs.",
+   "weeklyDownloads": 146247314,
+   "grade": "C",
+   "score": 64,
+   "fileCount": 30,
+   "totalBytes": 3191794,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 1
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (4 files)",
+     "severity": "high",
+     "file": "dist/index.cjs.min.js.map",
+     "occurrences": 4,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published (5 files)",
+     "severity": "medium",
+     "file": "dist/es6/index.js.map",
+     "occurrences": 5,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 1,
+   "scannedAt": "2026-11-28T03:17:16.035Z"
   },
   "tokenjuice": {
    "name": "tokenjuice",
@@ -19472,6 +20386,89 @@
    "withheld": 0,
    "scannedAt": "2026-11-18T03:17:11.697Z"
   },
+  "ts-dedent": {
+   "name": "ts-dedent",
+   "version": "2.3.0",
+   "description": "TypeScript package which smartly trims and strips indentation from multi-line strings",
+   "weeklyDownloads": null,
+   "grade": "B",
+   "score": 88,
+   "fileCount": 13,
+   "totalBytes": 27376,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "dist/index.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    },
+    {
+     "ruleId": "source-map",
+     "title": "Source map published",
+     "severity": "medium",
+     "file": "esm/index.js.map",
+     "occurrences": 1,
+     "advice": "Source maps expose original file names and structure, and can reconstruct source. Strip *.map from release builds or upload them privately to your error tracker."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:19.880Z"
+  },
+  "ts-morph": {
+   "name": "ts-morph",
+   "version": "28.0.0",
+   "description": "TypeScript compiler wrapper for static analysis and code manipulation.",
+   "weeklyDownloads": null,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 6,
+   "totalBytes": 1481221,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:19.952Z"
+  },
+  "ts-node": {
+   "name": "ts-node",
+   "version": "10.9.2",
+   "description": "TypeScript execution environment and REPL for node.js, with source map support",
+   "weeklyDownloads": 58033262,
+   "grade": "C",
+   "score": 70,
+   "fileCount": 117,
+   "totalBytes": 757333,
+   "counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [
+    {
+     "ruleId": "source-map-embedded",
+     "title": "Source map embeds full original source (28 files)",
+     "severity": "high",
+     "file": "dist/child/argv-payload.js.map",
+     "occurrences": 28,
+     "advice": "Anyone can rebuild your original, unminified source from this file. Remove it from the release."
+    }
+   ],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:16.873Z"
+  },
   "tsx": {
    "name": "tsx",
    "version": "4.23.15",
@@ -19490,6 +20487,44 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T01:46:06.399Z"
+  },
+  "type-fest": {
+   "name": "type-fest",
+   "version": "6.0.3",
+   "description": "A collection of essential TypeScript types",
+   "weeklyDownloads": 522563321,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 328,
+   "totalBytes": 1216772,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:11.492Z"
+  },
+  "typescript-eslint": {
+   "name": "typescript-eslint",
+   "version": "8.74.0",
+   "description": "Tooling which enables you to use TypeScript with ESLint",
+   "weeklyDownloads": 115438857,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 13,
+   "totalBytes": 42700,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:15.756Z"
   },
   "typesense": {
    "name": "typesense",
@@ -20035,6 +21070,25 @@
    "findings": [],
    "withheld": 0,
    "scannedAt": "2026-11-17T03:17:17.649Z"
+  },
+  "zod": {
+   "name": "zod",
+   "version": "4.6.7",
+   "description": "TypeScript-first schema declaration and validation library with static type inference",
+   "weeklyDownloads": 450987513,
+   "grade": "A",
+   "score": 100,
+   "fileCount": 840,
+   "totalBytes": 6148944,
+   "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+   },
+   "findings": [],
+   "withheld": 0,
+   "scannedAt": "2026-11-28T03:17:11.836Z"
   },
   "zoom-api-js": {
    "name": "zoom-api-js",
